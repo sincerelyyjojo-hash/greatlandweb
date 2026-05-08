@@ -1,0 +1,1270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Greatland Construction | GTA's Trusted Builder</title>
+  <meta name="description" content="Full-service residential and commercial construction across the GTA. Licensed trades, WSIB coverage, 5-year workmanship warranty. Book your free on-site estimate today." />
+  <meta name="keywords" content="construction GTA, renovation Toronto, home renovation, commercial construction, basement finishing, kitchen renovation, outdoor living" />
+  <meta property="og:title" content="Greatland Construction | GTA's Trusted Builder" />
+  <meta property="og:description" content="No job is too big or too small! Full-service residential and commercial construction across the GTA." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/png" sizes="32x32" href="brand_assets/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="brand_assets/favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="brand_assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --y: #FCB816;
+      --yd: #E5A500;
+      --cr: #FFFFF6;
+      --bk: #010101;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: var(--bk); background: #fff; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+    h1,h2,h3,h4,.hd { font-family: 'Montserrat', sans-serif; font-weight: 900; letter-spacing: -0.03em; line-height: 1.05; }
+    .hd6 { font-family: 'Montserrat', sans-serif; font-weight: 700; letter-spacing: -0.01em; }
+
+    /* FADE ANIMATIONS */
+    .fu { opacity: 0; transform: translateY(30px); transition: opacity .75s cubic-bezier(.22,1,.36,1), transform .75s cubic-bezier(.22,1,.36,1); }
+    .fu.iv { opacity: 1; transform: none; }
+    .d1 { transition-delay: .07s; } .d2 { transition-delay: .14s; } .d3 { transition-delay: .21s; }
+    .d4 { transition-delay: .28s; } .d5 { transition-delay: .35s; } .d6 { transition-delay: .42s; }
+    .d7 { transition-delay: .49s; } .d8 { transition-delay: .56s; }
+
+    /* HERO ENTER */
+    .he  { animation: hein .9s cubic-bezier(.22,1,.36,1) both; }
+    .he2 { animation: hein .9s cubic-bezier(.22,1,.36,1) .15s both; }
+    .he3 { animation: hein .9s cubic-bezier(.22,1,.36,1) .30s both; }
+    .he4 { animation: hein 1s  cubic-bezier(.22,1,.36,1) .22s both; }
+    @keyframes hein { from { opacity:0; transform:translateY(22px); } to { opacity:1; transform:none; } }
+
+    /* BUTTONS */
+    .btn { display:inline-flex; align-items:center; gap:8px; font-family:'Montserrat',sans-serif; font-weight:700; font-size:.88rem; letter-spacing:-.01em; border-radius:100px; padding:14px 26px; cursor:pointer; border:none; text-decoration:none; white-space:nowrap; }
+    .bky { background:var(--y); color:var(--bk); box-shadow:0 4px 18px rgba(252,184,22,.32); transition:transform .2s cubic-bezier(.22,1,.36,1), box-shadow .2s cubic-bezier(.22,1,.36,1), background .2s; }
+    .bky:hover { transform:translateY(-2px); background:var(--yd); box-shadow:0 8px 28px rgba(252,184,22,.45); }
+    .bky:active { transform:none; }
+    .bky:focus-visible { outline:3px solid rgba(252,184,22,.6); outline-offset:2px; }
+    .bkk { background:var(--bk); color:#fff; box-shadow:0 4px 16px rgba(1,1,1,.18); transition:transform .2s cubic-bezier(.22,1,.36,1), box-shadow .2s, background .2s, color .2s; }
+    .bkk:hover { transform:translateY(-2px); box-shadow:0 8px 24px rgba(1,1,1,.28); }
+    .bkk:active { transform:none; }
+    .bkk:focus-visible { outline:3px solid rgba(1,1,1,.35); outline-offset:2px; }
+    .bkk.dm:hover { background:var(--y); color:var(--bk); box-shadow:0 8px 24px rgba(252,184,22,.4); }
+    .bkk-submit { background:var(--bk); color:var(--cr); box-shadow:0 4px 16px rgba(1,1,1,.18); transition:box-shadow .25s cubic-bezier(.22,1,.36,1), background .25s, color .25s; }
+    .bkk-submit:hover { background:var(--y); color:var(--bk); box-shadow:0 6px 28px rgba(252,184,22,.45); }
+    .bkk-submit:active { opacity:.9; }
+    .bkk-submit:focus-visible { outline:3px solid rgba(252,184,22,.6); outline-offset:2px; }
+    .bko { background:transparent; color:var(--bk); border:2px solid rgba(1,1,1,.3); transition:transform .2s cubic-bezier(.22,1,.36,1), background .2s, color .2s, border-color .2s; }
+    .bko:hover { background:var(--bk); color:#fff; border-color:var(--bk); transform:translateY(-2px); }
+    .bko:focus-visible { outline:3px solid rgba(1,1,1,.3); outline-offset:2px; }
+    .bko-w { background:transparent; color:#fff; border:2px solid rgba(255,255,255,.4); transition:transform .2s cubic-bezier(.22,1,.36,1), background .2s, color .2s, border-color .2s; }
+    .bko-w:hover { background:#fff; color:var(--bk); transform:translateY(-2px); }
+
+    /* NAV */
+    #nav { position:fixed; top:0; left:0; right:0; z-index:100; background:var(--cr); border-bottom:1px solid rgba(1,1,1,.07); transition:box-shadow .3s; }
+    #nav.sc { box-shadow:0 2px 20px rgba(1,1,1,.12); }
+    .nl { font-family:'Inter',sans-serif; font-weight:600; font-size:.9rem; color:var(--bk); text-decoration:none; position:relative; padding-bottom:2px; }
+    .nl::after { content:''; position:absolute; bottom:-2px; left:0; width:0; height:2px; background:var(--bk); transition:width .25s cubic-bezier(.22,1,.36,1); }
+    .nl:hover::after { width:100%; }
+    #mob-nav { display:none; background:var(--cr); padding:0 24px 24px; border-bottom:1px solid rgba(1,1,1,.08); }
+    #mob-nav.op { display:block; }
+    .hbg span { display:block; width:24px; height:2px; background:var(--bk); border-radius:2px; transition:transform .25s cubic-bezier(.22,1,.36,1), opacity .25s; }
+    .hbg { display:flex; flex-direction:column; gap:6px; background:none; border:none; padding:8px; cursor:pointer; }
+    .hbg.op span:nth-child(1) { transform:translateY(8px) rotate(45deg); }
+    .hbg.op span:nth-child(2) { opacity:0; }
+    .hbg.op span:nth-child(3) { transform:translateY(-8px) rotate(-45deg); }
+
+    /* TRUST BADGE */
+    .tbdg { width:48px; height:48px; background:var(--y); border-radius:14px; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+
+    /* SERVICE CAROUSEL */
+    .scarr { width:44px; height:44px; border-radius:50%; background:var(--bk); color:#fff; border:none; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:background .2s cubic-bezier(.22,1,.36,1), transform .2s, color .2s; flex-shrink:0; }
+    .scarr:hover { background:var(--y); color:var(--bk); transform:scale(1.06); }
+    .scarr:active { transform:scale(.96); }
+    .scarr:focus-visible { outline:3px solid rgba(252,184,22,.6); outline-offset:2px; }
+    .scarr:disabled { opacity:.35; cursor:default; transform:none !important; }
+    .svc-c { background:var(--cr); border-radius:20px; overflow:hidden; border:1.5px solid rgba(252,184,22,.38); transition:transform .28s cubic-bezier(.22,1,.36,1), border-color .28s cubic-bezier(.22,1,.36,1); cursor:pointer; flex-shrink:0; }
+    .svc-c:hover { transform:translateY(-6px); border-color:var(--y); }
+    .svc-c:focus-visible { outline:3px solid var(--y); outline-offset:2px; }
+    .svc-img { height:216px; overflow:hidden; position:relative; }
+    .svc-img img { width:100%; height:100%; object-fit:cover; transition:transform .5s cubic-bezier(.22,1,.36,1); }
+    .svc-c:hover .svc-img img { transform:scale(1.07); }
+    .svc-ov { position:absolute; inset:0; background:linear-gradient(to top,rgba(1,1,1,.26),transparent 60%); }
+    .svc-body { padding:20px 22px 22px; }
+    .svc-desc { font-size:.83rem; line-height:1.68; color:rgba(1,1,1,.52); margin-bottom:14px; }
+    .svc-cta { display:inline-flex; align-items:center; gap:5px; font-family:'Montserrat',sans-serif; font-weight:700; font-size:.78rem; letter-spacing:.01em; color:var(--bk); opacity:.65; transition:opacity .2s, gap .2s; }
+    .svc-c:hover .svc-cta { opacity:1; gap:9px; }
+    .sib { width:42px; height:42px; background:var(--y); border-radius:12px; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+
+    /* WHY CARDS */
+    .wc { background:#fff; border-radius:20px; border:1px solid rgba(1,1,1,.06); box-shadow:0 2px 8px rgba(1,1,1,.06); padding:26px; transition:transform .3s cubic-bezier(.22,1,.36,1), box-shadow .3s; }
+    .wc:hover { transform:translateY(-4px); box-shadow:0 8px 30px rgba(1,1,1,.1); }
+
+    /* GALLERY */
+    .gc { border-radius:20px; overflow:hidden; position:relative; cursor:pointer; display:block; text-decoration:none; color:inherit; }
+    .gc img { width:100%; height:100%; object-fit:cover; transition:transform .6s cubic-bezier(.22,1,.36,1); display:block; }
+    .gc:hover img { transform:scale(1.06); }
+    .gov { position:absolute; inset:0; background:linear-gradient(to top, rgba(1,1,1,.72) 0%, rgba(1,1,1,.12) 50%, transparent 100%); opacity:0; transition:opacity .4s; }
+    .gc:hover .gov { opacity:1; }
+    .gin { position:absolute; bottom:0; left:0; right:0; padding:22px; transform:translateY(8px); opacity:0; transition:transform .4s cubic-bezier(.22,1,.36,1), opacity .4s; }
+    .gc:hover .gin { opacity:1; transform:none; }
+
+    /* TESTIMONIALS */
+    .tc { background:#fff; border-radius:20px; padding:30px; border:1px solid rgba(1,1,1,.06); box-shadow:0 2px 8px rgba(1,1,1,.06); transition:transform .3s cubic-bezier(.22,1,.36,1), box-shadow .3s; }
+    .tc:hover { transform:translateY(-4px); box-shadow:0 8px 30px rgba(1,1,1,.1); }
+
+    /* FORM */
+    .fi { width:100%; padding:14px 17px; border:1.5px solid rgba(1,1,1,.12); border-radius:12px; font-family:'Inter',sans-serif; font-size:.93rem; color:var(--bk); background:#fff; transition:border-color .2s, box-shadow .2s; outline:none; }
+    .fi::placeholder { color:rgba(1,1,1,.32); }
+    .fi:focus { border-color:var(--y); box-shadow:0 0 0 3px rgba(252,184,22,.17); }
+    .fl { display:block; font-family:'Inter',sans-serif; font-weight:600; font-size:.84rem; color:var(--bk); margin-bottom:7px; }
+
+    /* SECTION LABEL */
+    .sl { display:inline-block; background:rgba(252,184,22,.15); color:var(--bk); font-family:'Montserrat',sans-serif; font-weight:700; font-size:.76rem; letter-spacing:.08em; text-transform:uppercase; padding:6px 14px; border-radius:100px; margin-bottom:16px; }
+
+    /* FILTER */
+    .fb { font-family:'Inter',sans-serif; font-weight:600; font-size:.84rem; padding:8px 18px; border-radius:100px; border:1.5px solid rgba(1,1,1,.14); background:transparent; color:var(--bk); cursor:pointer; transition:background .2s, border-color .2s, color .2s; }
+    .fb:hover, .fb.act { background:var(--y); border-color:var(--y); }
+
+    /* SCROLLBAR */
+    ::-webkit-scrollbar { width:5px; }
+    ::-webkit-scrollbar-track { background:#f5f5f0; }
+    ::-webkit-scrollbar-thumb { background:var(--y); border-radius:3px; }
+
+    /* RESPONSIVE HELPERS */
+    @media (max-width:768px) { .dm { display:none !important; } #hbtn { display:flex !important; } }
+    @media (min-width:769px) { #mob-nav { display:none !important; } }
+
+    /* HERO CAROUSEL */
+    .hsl { position:absolute; inset:0; opacity:0; transition:opacity .75s cubic-bezier(.22,1,.36,1); }
+    .hsl.act { opacity:1; }
+    .hsl img { width:100%; height:100%; object-fit:cover; transform:scale(1); }
+    .hsl.act img { transform:scale(1.05); transition:transform 5s ease-out; }
+    .hcarr { position:absolute; width:40px; height:40px; background:rgba(255,255,255,.88); border:none; border-radius:50%; cursor:pointer; display:flex; align-items:center; justify-content:center; backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px); z-index:3; box-shadow:0 2px 12px rgba(1,1,1,.15); transition:background .2s, box-shadow .2s; }
+    .hcarr:hover { background:#fff; box-shadow:0 4px 20px rgba(1,1,1,.22); }
+    .hcarr:focus-visible { outline:3px solid var(--y); outline-offset:2px; }
+    .hdot { width:8px; height:8px; border-radius:50%; background:rgba(1,1,1,.18); border:none; cursor:pointer; padding:0; flex-shrink:0; transition:background .3s cubic-bezier(.22,1,.36,1), width .3s cubic-bezier(.22,1,.36,1), border-radius .3s; }
+    .hdot.act { background:var(--bk); width:22px; border-radius:4px; }
+    .hdot:focus-visible { outline:3px solid var(--y); }
+
+    /* HERO CTA — lift only, no glow */
+
+    /* TRUST CARD HOVER */
+    .tcard { transition:transform .26s cubic-bezier(.22,1,.36,1), box-shadow .26s cubic-bezier(.22,1,.36,1), background .26s; }
+    .tcard:hover { transform:translateY(-6px) scale(1.018); box-shadow:0 16px 40px rgba(1,1,1,.1), 0 4px 14px rgba(252,184,22,.15); background:#fff !important; border-color:rgba(252,184,22,.35) !important; }
+    .tcard:hover .tbdg { transform:scale(1.1) rotate(-4deg); }
+    .tbdg { transition:transform .26s cubic-bezier(.22,1,.36,1); }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     NAVIGATION
+═══════════════════════════════════════════════════════════════ -->
+<header id="nav">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:13px 0;">
+      <a href="/" style="display:flex;align-items:center;">
+        <img src="brand_assets/brand_logo.png" alt="Greatland Construction" style="height:62px;width:auto;">
+      </a>
+      <nav class="dm" style="display:flex;align-items:center;gap:30px;">
+        <a href="/" class="nl">Home</a>
+        <a href="about.html" class="nl">About</a>
+        <a href="services/index.html" class="nl">Services</a>
+        <a href="projects/index.html" class="nl">Projects</a>
+        <a href="contact.html" class="nl">Contact</a>
+      </nav>
+      <a href="contact.html" class="btn bkk dm" style="font-size:.84rem;padding:11px 22px;">
+        Book Estimate
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <button id="hbtn" class="hbg" aria-label="Toggle menu" style="display:none;">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div id="mob-nav">
+    <div style="border-top:1px solid rgba(1,1,1,.1);padding-top:18px;display:flex;flex-direction:column;gap:2px;">
+      <a href="/" class="nl" style="padding:11px 0;border-bottom:1px solid rgba(1,1,1,.07);">Home</a>
+      <a href="about.html" class="nl" style="padding:11px 0;border-bottom:1px solid rgba(1,1,1,.07);">About</a>
+      <a href="services/index.html" class="nl" style="padding:11px 0;border-bottom:1px solid rgba(1,1,1,.07);">Services</a>
+      <a href="projects/index.html" class="nl" style="padding:11px 0;border-bottom:1px solid rgba(1,1,1,.07);">Projects</a>
+      <a href="contact.html" class="nl" style="padding:11px 0;">Contact</a>
+      <a href="contact.html" class="btn bkk" style="margin-top:14px;justify-content:center;">Book a Free Estimate</a>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════════════════════════ -->
+<section style="padding-top:88px;background:var(--y);min-height:100vh;display:flex;flex-direction:column;">
+  <div style="max-width:1280px;margin:0 auto;padding:26px 24px 40px;flex:1;display:flex;align-items:center;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;width:100%;" id="hg">
+
+      <!-- TEXT -->
+      <div class="he" style="max-width:560px;">
+        <h1 class="hd" style="font-size:clamp(2.8rem,5.2vw,5rem);margin-bottom:22px;">Build Better.<br>Renovate Smarter.</h1>
+        <p class="he2" style="font-size:1.08rem;line-height:1.78;color:rgba(1,1,1,.7);margin-bottom:34px;max-width:450px;">Full-service residential and commercial construction across the GTA, from dream kitchens to complete commercial builds. Every detail, handled.</p>
+        <div class="he2" style="display:flex;flex-wrap:wrap;gap:13px;margin-bottom:34px;">
+          <a href="contact.html" class="btn bkk hcta" style="font-size:.95rem;padding:16px 28px;">
+            Book a Free On-Site Estimate
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#services" class="btn bko" style="font-size:.95rem;padding:16px 28px;">View Our Services</a>
+        </div>
+        <div class="he3" style="display:flex;flex-wrap:wrap;gap:18px;">
+          <span style="display:flex;align-items:center;gap:6px;font-size:.8rem;font-weight:600;color:rgba(1,1,1,.58);">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Licensed & Insured</span>
+          <span style="display:flex;align-items:center;gap:6px;font-size:.8rem;font-weight:600;color:rgba(1,1,1,.58);">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>WSIB Coverage</span>
+          <span style="display:flex;align-items:center;gap:6px;font-size:.8rem;font-weight:600;color:rgba(1,1,1,.58);">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>5-Year Warranty</span>
+          <span style="display:flex;align-items:center;gap:6px;font-size:.8rem;font-weight:600;color:rgba(1,1,1,.58);">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>500+ Projects</span>
+        </div>
+      </div>
+
+      <!-- CAROUSEL -->
+      <div class="he4" style="position:relative;">
+        <div style="position:relative;">
+          <!-- Carousel viewport -->
+          <div id="hcar" style="border-radius:24px;overflow:hidden;aspect-ratio:4/3;box-shadow:0 24px 60px rgba(1,1,1,.2);position:relative;"
+               onmouseenter="hcPause()" onmouseleave="hcResume()">
+
+            <div class="hsl act" data-label="Full Home Renovation">
+              <img src="hero_section_photos/fullreno.png" alt="Full Home Renovation">
+            </div>
+            <div class="hsl" data-label="Kitchen & Bath">
+              <img src="hero_section_photos/kitchenbath.png" alt="Kitchen & Bath">
+            </div>
+            <div class="hsl" data-label="Outdoor Living">
+              <img src="hero_section_photos/yard.png" alt="Outdoor Living">
+            </div>
+            <div class="hsl" data-label="Commercial Construction">
+              <img src="hero_section_photos/commercial.png" alt="Commercial Construction">
+            </div>
+
+          </div>
+
+          <!-- Stat card: 500+ -->
+          <div style="position:absolute;bottom:-18px;left:-18px;z-index:10;background:#fff;border-radius:18px;padding:16px 20px;box-shadow:0 8px 32px rgba(1,1,1,.12);">
+            <div class="hd" style="font-size:2rem;color:var(--y);">500+</div>
+            <div style="font-size:.78rem;font-weight:600;color:rgba(1,1,1,.5);margin-top:2px;">Projects Completed</div>
+          </div>
+
+          <!-- Stat card: 10+ -->
+          <div style="position:absolute;top:-14px;right:-14px;z-index:10;background:var(--bk);border-radius:18px;padding:15px 18px;box-shadow:0 8px 32px rgba(1,1,1,.25);">
+            <div class="hd" style="font-size:1.7rem;color:var(--y);">10+</div>
+            <div style="font-size:.72rem;font-weight:600;color:rgba(255,255,255,.55);margin-top:2px;">Years in GTA</div>
+          </div>
+        </div>
+
+        <!-- Controls: arrows + dots -->
+        <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-top:36px;">
+          <button class="hcarr" onclick="hcNav(-1)" aria-label="Previous slide" style="position:relative;width:36px;height:36px;flex-shrink:0;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#010101" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <div style="display:flex;align-items:center;gap:7px;">
+            <button class="hdot act" onclick="hcGo(0)" aria-label="Slide 1"></button>
+            <button class="hdot" onclick="hcGo(1)" aria-label="Slide 2"></button>
+            <button class="hdot" onclick="hcGo(2)" aria-label="Slide 3"></button>
+            <button class="hdot" onclick="hcGo(3)" aria-label="Slide 4"></button>
+          </div>
+          <button class="hcarr" onclick="hcNav(1)" aria-label="Next slide" style="position:relative;width:36px;height:36px;flex-shrink:0;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#010101" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- Wave -->
+  <div style="line-height:0;margin-top:auto;">
+    <svg id="hero-wave" viewBox="0 0 1440 72" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;" preserveAspectRatio="none">
+      <path id="hero-wave-path" d="M0,28 C240,72 480,4 720,36 C960,68 1200,16 1440,42 L1440,72 L0,72 Z" fill="white"/>
+    </svg>
+  </div>
+</section>
+<style>
+  @media(max-width:900px){#hg{grid-template-columns:1fr!important;gap:36px!important;}}
+  @media(max-width:900px){.he4{margin-top:36px;}}
+</style>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     TRUST BAR
+═══════════════════════════════════════════════════════════════ -->
+<section style="padding:44px 0;background:#fff;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px;" id="tg">
+      <div class="fu tcard" style="display:flex;align-items:center;gap:15px;background:var(--cr);border-radius:18px;padding:18px 20px;border:1px solid rgba(252,184,22,.2);">
+        <div class="tbdg"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#010101" stroke-width="2"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
+        <div><div class="hd6" style="font-size:.92rem;">Licensed Trades</div><div style="font-size:.78rem;color:rgba(1,1,1,.48);margin-top:1px;">All permits handled</div></div>
+      </div>
+      <div class="fu d1 tcard" style="display:flex;align-items:center;gap:15px;background:var(--cr);border-radius:18px;padding:18px 20px;border:1px solid rgba(252,184,22,.2);">
+        <div class="tbdg"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#010101" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div><div class="hd6" style="font-size:.92rem;">WSIB Coverage</div><div style="font-size:.78rem;color:rgba(1,1,1,.48);margin-top:1px;">Full worker protection</div></div>
+      </div>
+      <div class="fu d2 tcard" style="display:flex;align-items:center;gap:15px;background:var(--cr);border-radius:18px;padding:18px 20px;border:1px solid rgba(252,184,22,.2);">
+        <div class="tbdg"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#010101" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <div><div class="hd6" style="font-size:.92rem;">One-Stop Management</div><div style="font-size:.78rem;color:rgba(1,1,1,.48);margin-top:1px;">Start to finish</div></div>
+      </div>
+      <div class="fu d3 tcard" style="display:flex;align-items:center;gap:15px;background:var(--cr);border-radius:18px;padding:18px 20px;border:1px solid rgba(252,184,22,.2);">
+        <div class="tbdg"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#010101" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+        <div><div class="hd6" style="font-size:.92rem;">5-Year Warranty</div><div style="font-size:.78rem;color:rgba(1,1,1,.48);margin-top:1px;">Workmanship guarantee</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  @media(max-width:900px){#tg{grid-template-columns:repeat(2,1fr)!important;}}
+  @media(max-width:480px){#tg{grid-template-columns:1fr!important;}}
+</style>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SERVICES
+═══════════════════════════════════════════════════════════════ -->
+<section id="services" style="padding:88px 0 100px;background:#fff;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
+
+    <!-- Header row -->
+    <div class="fu" style="display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:44px;flex-wrap:wrap;">
+      <div>
+        <h2 class="hd" style="font-size:clamp(2.2rem,3.8vw,3.4rem);margin-bottom:14px;">Our Services</h2>
+        <p style="font-size:1.02rem;line-height:1.75;color:rgba(1,1,1,.52);max-width:520px;">From a single room refresh to a complete commercial build, Greatland handles it all with licensed trades and experienced project coordination.</p>
+      </div>
+      <div style="display:flex;gap:10px;flex-shrink:0;padding-bottom:6px;">
+        <button class="scarr" id="sc-prev" onclick="scNav(-1)" aria-label="Previous services">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <button class="scarr" id="sc-next" onclick="scNav(1)" aria-label="Next services">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Carousel viewport — padding gives shadow room, negative margin keeps alignment -->
+    <div id="sc-clip" style="overflow:hidden;padding:8px 0 16px;">
+      <div id="sc-track" style="display:flex;gap:24px;will-change:transform;">
+
+        <!-- 1: Full Home Renovation -->
+        <a href="services/full-home-renovation.html" class="svc-c fu" style="text-decoration:none;color:inherit;">
+          <div class="svc-img"><img src="services_photos/fullreno.png" alt="Full Home Renovation" loading="lazy"><div class="svc-ov"></div></div>
+          <div class="svc-body">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+              <div class="sib"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#010101" stroke-width="2" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/></svg></div>
+              <h3 class="hd6" style="font-size:.95rem;">Full Home Renovation</h3>
+            </div>
+            <p class="svc-desc">Complete home transformations, every room, inside and out. We manage the whole project.</p>
+            <span class="svc-cta">Learn More <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </div>
+        </a>
+
+        <!-- 2: Kitchen & Bath -->
+        <a href="services/kitchen-bath.html" class="svc-c fu d1" style="text-decoration:none;color:inherit;">
+          <div class="svc-img"><img src="services_photos/kitchenbath.png" alt="Kitchen & Bath" loading="lazy"><div class="svc-ov"></div></div>
+          <div class="svc-body">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+              <div class="sib"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#010101" stroke-width="2" stroke-linecap="round"><rect x="2" y="7" width="20" height="15" rx="2"/><path d="M16 22V3.5a1.5 1.5 0 00-3 0V7"/></svg></div>
+              <h3 class="hd6" style="font-size:.95rem;">Kitchen & Bath</h3>
+            </div>
+            <p class="svc-desc">Custom kitchens and bathroom upgrades with cabinetry, tile, fixtures, and finishes.</p>
+            <span class="svc-cta">Learn More <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </div>
+        </a>
+
+        <!-- 3: Basement Finishing -->
+        <a href="services/basement-finishing.html" class="svc-c fu d2" style="text-decoration:none;color:inherit;">
+          <div class="svc-img"><img src="services_photos/basement.png" alt="Basement Finishing" loading="lazy"><div class="svc-ov"></div></div>
+          <div class="svc-body">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+              <div class="sib"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#010101" stroke-width="2" stroke-linecap="round"><path d="M2 20h20M4 20V10l8-6 8 6v10"/><path d="M10 20v-6h4v6"/></svg></div>
+              <h3 class="hd6" style="font-size:.95rem;">Basement Finishing</h3>
+            </div>
+            <p class="svc-desc">Legal suites, family rooms, home gyms, theatres, and more — unlock your lower level.</p>
+            <span class="svc-cta">Learn More <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </div>
+        </a>
+
+        <!-- 4: Outdoor Living -->
+        <a href="services/outdoor-living.html" class="svc-c fu d3" style="text-decoration:none;color:inherit;">
+          <div class="svc-img"><img src="services_photos/yard.png" alt="Outdoor Living" loading="lazy"><div class="svc-ov"></div></div>
+          <div class="svc-body">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+              <div class="sib"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#010101" stroke-width="2" stroke-linecap="round"><path d="M12 22V12M12 12C12 12 8 10 5 6c4 1 7 3 7 6zM12 12c0 0 4-2 7-6-4 1-7 3-7 6z"/><path d="M5 22h14"/></svg></div>
+              <h3 class="hd6" style="font-size:.95rem;">Outdoor Living</h3>
+            </div>
+            <p class="svc-desc">Patios, decks, pergolas, interlock, landscaping, and exterior upgrades.</p>
+            <span class="svc-cta">Learn More <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </div>
+        </a>
+
+        <!-- 5: Commercial Construction -->
+        <a href="services/commercial-construction.html" class="svc-c fu d4" style="text-decoration:none;color:inherit;">
+          <div class="svc-img"><img src="services_photos/commercial.png" alt="Commercial Construction" loading="lazy"><div class="svc-ov"></div></div>
+          <div class="svc-body">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+              <div class="sib"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#010101" stroke-width="2" stroke-linecap="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg></div>
+              <h3 class="hd6" style="font-size:.95rem;">Commercial Construction</h3>
+            </div>
+            <p class="svc-desc">Commercial builds, renovations, and fit-outs completed to code and on schedule.</p>
+            <span class="svc-cta">Learn More <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </div>
+        </a>
+
+        <!-- 6: Retail & Office -->
+        <a href="services/retail-office.html" class="svc-c fu d5" style="text-decoration:none;color:inherit;">
+          <div class="svc-img"><img src="services_photos/office.png" alt="Retail & Office" loading="lazy"><div class="svc-ov"></div></div>
+          <div class="svc-body">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+              <div class="sib"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#010101" stroke-width="2" stroke-linecap="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18"/><path d="M16 10a4 4 0 01-8 0"/></svg></div>
+              <h3 class="hd6" style="font-size:.95rem;">Retail & Office</h3>
+            </div>
+            <p class="svc-desc">Retail fit-outs and office renovations designed for productivity and client experience.</p>
+            <span class="svc-cta">Learn More <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </div>
+        </a>
+
+        <!-- 7: Institutional & Specialty -->
+        <a href="services/institutional-specialty.html" class="svc-c fu d6" style="text-decoration:none;color:inherit;">
+          <div class="svc-img"><img src="services_photos/institutional.png" alt="Institutional & Specialty" loading="lazy"><div class="svc-ov"></div></div>
+          <div class="svc-body">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+              <div class="sib"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#010101" stroke-width="2" stroke-linecap="round"><path d="M3 21h18M5 21V7l7-4 7 4v14"/><path d="M9 21V11h6v10"/></svg></div>
+              <h3 class="hd6" style="font-size:.95rem;">Institutional & Specialty</h3>
+            </div>
+            <p class="svc-desc">Schools, healthcare, sports, and specialty-use spaces with project-specific requirements.</p>
+            <span class="svc-cta">Learn More <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </div>
+        </a>
+
+        <!-- 8: Custom Build & Additions -->
+        <a href="services/custom-build-additions.html" class="svc-c fu d7" style="text-decoration:none;color:inherit;">
+          <div class="svc-img"><img src="services_photos/custom.png" alt="Custom Build & Additions" loading="lazy"><div class="svc-ov"></div></div>
+          <div class="svc-body">
+            <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+              <div class="sib"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#010101" stroke-width="2" stroke-linecap="round"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/><line x1="12" y1="22" x2="12" y2="15.5"/><polyline points="22 8.5 12 15.5 2 8.5"/></svg></div>
+              <h3 class="hd6" style="font-size:.95rem;">Custom Build & Additions</h3>
+            </div>
+            <p class="svc-desc">Home additions, custom builds, and major remodels designed around your long-term needs.</p>
+            <span class="svc-cta">Learn More <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     WHY CHOOSE GREATLAND
+═══════════════════════════════════════════════════════════════ -->
+<section id="about" style="padding:88px 0;background:var(--cr);">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;" id="wg">
+      <div class="fu">
+        <h2 class="hd" style="font-size:clamp(2rem,3.2vw,3rem);margin-bottom:20px;">Why Choose<br>Greatland?</h2>
+        <p style="font-size:1.02rem;line-height:1.82;color:rgba(1,1,1,.58);margin-bottom:34px;">We're not just builders, we're your neighbours. Greatland was built on the idea that GTA homeowners deserve a construction partner as invested in the outcome as they are.</p>
+        <a href="contact.html" class="btn bky" style="font-size:.93rem;">
+          Talk to Our Team
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+        <div class="wc fu d1">
+          <div style="width:40px;height:40px;background:var(--y);border-radius:11px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#010101" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+          <h3 class="hd6" style="font-size:.92rem;margin-bottom:7px;">One-Stop Team</h3>
+          <p style="font-size:.8rem;line-height:1.65;color:rgba(1,1,1,.52);">Construction, plumbing, electrical, and gas — all under one roof.</p>
+        </div>
+        <div class="wc fu d2">
+          <div style="width:40px;height:40px;background:var(--y);border-radius:11px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#010101" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg></div>
+          <h3 class="hd6" style="font-size:.92rem;margin-bottom:7px;">Experienced Team</h3>
+          <p style="font-size:.8rem;line-height:1.65;color:rgba(1,1,1,.52);">Skilled project coordinators with 10+ years in residential and commercial work.</p>
+        </div>
+        <div class="wc fu d3">
+          <div style="width:40px;height:40px;background:var(--y);border-radius:11px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#010101" stroke-width="2"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
+          <h3 class="hd6" style="font-size:.92rem;margin-bottom:7px;">Licensed & Covered</h3>
+          <p style="font-size:.8rem;line-height:1.65;color:rgba(1,1,1,.52);">Licensed plumbing, electrical, and gas trades with full WSIB coverage.</p>
+        </div>
+        <div class="wc fu d4">
+          <div style="width:40px;height:40px;background:var(--y);border-radius:11px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#010101" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
+          <h3 class="hd6" style="font-size:.92rem;margin-bottom:7px;">Clear Communication</h3>
+          <p style="font-size:.8rem;line-height:1.65;color:rgba(1,1,1,.52);">Transparent updates from quote to final walkthrough. No surprises.</p>
+        </div>
+        <div class="wc fu d5">
+          <div style="width:40px;height:40px;background:var(--y);border-radius:11px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#010101" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+          <h3 class="hd6" style="font-size:.92rem;margin-bottom:7px;">Residential & Commercial</h3>
+          <p style="font-size:.8rem;line-height:1.65;color:rgba(1,1,1,.52);">Any scale — from a bathroom refresh to a full commercial build.</p>
+        </div>
+        <div class="wc fu d6">
+          <div style="width:40px;height:40px;background:var(--y);border-radius:11px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#010101" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <h3 class="hd6" style="font-size:.92rem;margin-bottom:7px;">Local GTA Service</h3>
+          <p style="font-size:.8rem;line-height:1.65;color:rgba(1,1,1,.52);">We live and work here. We know the codes, neighbourhoods, and community.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>@media(max-width:900px){#wg{grid-template-columns:1fr!important;gap:36px!important;}}</style>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     OUR PROCESS
+═══════════════════════════════════════════════════════════════ -->
+<section style="padding:88px 0;background:#fff;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
+    <div style="text-align:center;margin-bottom:60px;" class="fu">
+      <h2 class="hd" style="font-size:clamp(2.2rem,3.8vw,3.4rem);margin-bottom:14px;">Our Process</h2>
+      <p style="font-size:1.02rem;color:rgba(1,1,1,.52);max-width:460px;margin:0 auto;line-height:1.75;">Simple, transparent, and designed to keep you confident at every step.</p>
+    </div>
+
+    <!-- Steps row -->
+    <div style="display:grid;grid-template-columns:1fr auto 1fr auto 1fr auto 1fr auto 1fr;gap:8px;align-items:start;" id="pg">
+      <!-- Step 1 -->
+      <div class="fu proc-card">
+        <div class="proc-badge"><span class="hd proc-num">1</span></div>
+        <h3 class="hd6" style="font-size:.95rem;margin-bottom:9px;">On-Site Consultation</h3>
+        <p class="proc-desc">We visit your space, listen to your vision, and assess the scope, no charge.</p>
+      </div>
+      <div style="display:flex;align-items:center;padding-top:24px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FCB816" stroke-width="2.5" style="opacity:.45;"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      <!-- Step 2 -->
+      <div class="fu d2 proc-card">
+        <div class="proc-badge"><span class="hd proc-num">2</span></div>
+        <h3 class="hd6" style="font-size:.95rem;margin-bottom:9px;">Design & Estimate</h3>
+        <p class="proc-desc">Detailed estimate and design plan with clear pricing and timelines.</p>
+      </div>
+      <div style="display:flex;align-items:center;padding-top:24px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FCB816" stroke-width="2.5" style="opacity:.45;"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      <!-- Step 3 -->
+      <div class="fu d3 proc-card">
+        <div class="proc-badge"><span class="hd proc-num">3</span></div>
+        <h3 class="hd6" style="font-size:.95rem;margin-bottom:9px;">Material Selection</h3>
+        <p class="proc-desc">Choose your finishes with guidance from our experienced team.</p>
+      </div>
+      <div style="display:flex;align-items:center;padding-top:24px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FCB816" stroke-width="2.5" style="opacity:.45;"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      <!-- Step 4 -->
+      <div class="fu d4 proc-card">
+        <div class="proc-badge"><span class="hd proc-num">4</span></div>
+        <h3 class="hd6" style="font-size:.95rem;margin-bottom:9px;">Construction</h3>
+        <p class="proc-desc">Our skilled trades get to work, on time, on budget, with daily updates.</p>
+      </div>
+      <div style="display:flex;align-items:center;padding-top:24px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FCB816" stroke-width="2.5" style="opacity:.45;"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      <!-- Step 5 -->
+      <div class="fu d5 proc-card">
+        <div class="proc-badge"><span class="hd proc-num">5</span></div>
+        <h3 class="hd6" style="font-size:.95rem;margin-bottom:9px;">Final Walkthrough</h3>
+        <p class="proc-desc">We walk every detail together. Not done until you're completely happy.</p>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:48px;" class="fu">
+      <a href="about.html" class="btn bkk-submit" style="font-size:.93rem;padding:15px 30px;">
+        Learn More About Us
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+
+  </div>
+</section>
+<style>
+  .proc-card{text-align:center;padding:28px 16px;background:var(--cr);border-radius:20px;border:1px solid rgba(252,184,22,.2);transition:background .28s cubic-bezier(.22,1,.36,1),transform .28s cubic-bezier(.22,1,.36,1),border-color .28s cubic-bezier(.22,1,.36,1),box-shadow .28s cubic-bezier(.22,1,.36,1);}
+  .proc-card:hover{background:var(--y);border-color:var(--y);transform:translateY(-5px);box-shadow:0 14px 36px rgba(252,184,22,.28);}
+  .proc-badge{width:60px;height:60px;background:var(--y);border-radius:18px;display:flex;align-items:center;justify-content:center;margin:0 auto 18px;box-shadow:0 4px 16px rgba(252,184,22,.35);transition:background .28s cubic-bezier(.22,1,.36,1),box-shadow .28s cubic-bezier(.22,1,.36,1);}
+  .proc-card:hover .proc-badge{background:var(--bk);box-shadow:0 4px 16px rgba(1,1,1,.28);}
+  .proc-num{font-size:1.4rem;color:var(--bk);transition:color .28s cubic-bezier(.22,1,.36,1);}
+  .proc-card:hover .proc-num{color:var(--y);}
+  .proc-desc{font-size:.8rem;line-height:1.65;color:rgba(1,1,1,.52);transition:color .28s cubic-bezier(.22,1,.36,1);}
+  .proc-card:hover .proc-desc{color:rgba(1,1,1,.68);}
+  @media(max-width:1024px){
+    #pg{grid-template-columns:1fr!important;}
+    #pg>div[style*="display:flex;align-items:center"]{transform:rotate(90deg);padding:0!important;justify-content:center;}
+  }
+</style>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     PROJECT VIDEOS
+═══════════════════════════════════════════════════════════════ -->
+<section id="project-videos" style="padding:88px 0;background:var(--cr);">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
+
+    <!-- Header row -->
+    <div class="fu" style="display:flex;align-items:center;justify-content:space-between;gap:32px;margin-bottom:52px;flex-wrap:wrap;">
+      <div>
+        <h2 class="hd" style="font-size:clamp(2rem,3.5vw,3.2rem);line-height:1.12;margin-bottom:16px;">Here's What Your Project<br>Could Look Like</h2>
+        <p style="font-size:1rem;line-height:1.75;color:rgba(1,1,1,.52);max-width:480px;">Browse short-form videos of our work for inspiration, from outdoor living spaces to renovations and custom builds.</p>
+      </div>
+      <a href="contact.html" class="vid-cta" aria-label="Get a free estimate">Get a Free Estimate →</a>
+    </div>
+
+    <!-- Video grid (populated by JS below) -->
+    <div id="vid-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;"></div>
+
+  </div>
+</section>
+<style>
+  .vid-cta{display:inline-flex;align-items:center;font-family:'Montserrat',sans-serif;font-weight:700;font-size:.9rem;letter-spacing:.01em;padding:14px 28px;background:var(--bk);color:var(--cr);border-radius:14px;border:none;flex-shrink:0;cursor:pointer;transition:background .22s cubic-bezier(.22,1,.36,1),color .22s,box-shadow .22s;}
+  .vid-cta:hover{background:var(--y);color:var(--bk);box-shadow:0 0 0 4px rgba(252,184,22,.22),0 8px 24px rgba(252,184,22,.28);}
+  .vid-cta:focus-visible{outline:3px solid rgba(252,184,22,.6);outline-offset:2px;}
+  .vid-card{border-radius:20px;overflow:hidden;border:1.5px solid rgba(252,184,22,.22);background:var(--bk);transition:border-color .28s;text-decoration:none;display:block;cursor:default;pointer-events:none;}
+  .vid-frame{position:relative;aspect-ratio:9/16;overflow:hidden;background:#111;}
+  .vid-el{width:100%;height:100%;object-fit:cover;display:block;pointer-events:none;}
+  .vid-ov{position:absolute;inset:0;pointer-events:none;}
+  @media(max-width:900px){#vid-grid{grid-template-columns:repeat(2,1fr)!important;}}
+  @media(max-width:500px){#vid-grid{grid-template-columns:1fr!important;}}
+</style>
+<script>
+(function(){
+  const vidData=[
+    {src:'short_videos/22571_raw.MP4',                                   title:'Outdoor Living Space',tag:'Outdoor Living',href:'#projects'},
+    {src:'short_videos/copy_304C05BF-182A-4AE2-8B1A-E1D338FAD856.MOV', title:'Kitchen Renovation',  tag:'Renovation',    href:'#projects'},
+    {src:'short_videos/8542e488684f4e1ea549cd949aa52f87.MOV',           title:'Custom Build',        tag:'Custom Build',  href:'#projects'},
+    {src:'short_videos/1264_raw.MP4',                                    title:'Basement Finishing',  tag:'Basement',      href:'#projects'},
+  ];
+  const grid=document.getElementById('vid-grid');
+  if(!grid)return;
+  vidData.forEach((v,i)=>{
+    const card=document.createElement('div');
+    card.className='vid-card fu'+(i>0?' d'+(i+1):'');
+    card.setAttribute('aria-label',v.title);
+    card.innerHTML=`<div class="vid-frame"><video class="vid-el" src="${v.src}" autoplay muted loop playsinline disablepictureinpicture></video><div class="vid-ov"></div></div>`;
+    grid.appendChild(card);
+  });
+})();
+</script>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     FEATURED PROJECTS
+═══════════════════════════════════════════════════════════════ -->
+<section id="projects" style="padding:88px 0;background:var(--cr);">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:20px;margin-bottom:44px;" class="fu">
+      <div>
+        <h2 class="hd" style="font-size:clamp(2.2rem,3.8vw,3.4rem);">Featured Projects</h2>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;">
+        <button class="fb act" onclick="fp(this,'all')">All</button>
+        <button class="fb" onclick="fp(this,'outdoor')">Outdoor Living</button>
+        <button class="fb" onclick="fp(this,'renovation')">Renovation</button>
+        <button class="fb" onclick="fp(this,'commercial')">Commercial</button>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:auto auto;gap:18px;" id="gg">
+      <!-- Large card -->
+      <div class="gc fu" data-cat="outdoor" data-project="outdoor-living" onclick="openModal('outdoor-living')" tabindex="0" role="button" aria-label="Outdoor Kitchen & Pergola project" style="grid-row:span 2;min-height:460px;">
+        <img src="brand_photos/a83ef307-7e75-4054-abf6-1b0860e751902.png" alt="Outdoor Kitchen & Pergola" style="height:100%;">
+        <div class="gov"></div>
+        <div class="gin">
+          <div style="display:inline-block;background:var(--y);border-radius:100px;padding:4px 12px;font-size:.72rem;font-weight:700;font-family:'Montserrat',sans-serif;margin-bottom:7px;">Outdoor Living</div>
+          <h3 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:1.1rem;color:#fff;margin-bottom:3px;">Outdoor Kitchen & Pergola</h3>
+          <p style="font-size:.8rem;color:rgba(255,255,255,.65);">Mississauga, ON</p>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="gc fu d1" data-cat="outdoor" data-project="backyard-renovation" onclick="openModal('backyard-renovation')" tabindex="0" role="button" aria-label="Backyard Gazebo & Patio project" style="height:218px;">
+        <img src="brand_photos/a83ef307-7e75-4054-abf6-1b0860e751901.png" alt="Backyard Gazebo">
+        <div class="gov"></div>
+        <div class="gin">
+          <div style="display:inline-block;background:var(--y);border-radius:100px;padding:4px 12px;font-size:.72rem;font-weight:700;font-family:'Montserrat',sans-serif;margin-bottom:7px;">Outdoor Living</div>
+          <h3 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:.98rem;color:#fff;margin-bottom:3px;">Backyard Gazebo & Patio</h3>
+          <p style="font-size:.8rem;color:rgba(255,255,255,.65);">Toronto, ON</p>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="gc fu d2" data-cat="renovation" data-project="kitchen-renovation" onclick="openModal('kitchen-renovation')" tabindex="0" role="button" aria-label="Full Kitchen Renovation project" style="height:218px;">
+        <img src="services_photos/kitchenbath.png" alt="Kitchen Renovation">
+        <div class="gov"></div>
+        <div class="gin">
+          <div style="display:inline-block;background:var(--y);border-radius:100px;padding:4px 12px;font-size:.72rem;font-weight:700;font-family:'Montserrat',sans-serif;margin-bottom:7px;">Renovation</div>
+          <h3 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:.98rem;color:#fff;margin-bottom:3px;">Full Kitchen Renovation</h3>
+          <p style="font-size:.8rem;color:rgba(255,255,255,.65);">Brampton, ON</p>
+        </div>
+      </div>
+      <!-- Card 4 -->
+      <div class="gc fu d3" data-cat="outdoor" data-project="interlock-patio" onclick="openModal('interlock-patio')" tabindex="0" role="button" aria-label="Custom Paving Stone Patio project" style="height:218px;">
+        <img src="brand_photos/a83ef307-7e75-4054-abf6-1b0860e751903.png" alt="Paving Stone Patio">
+        <div class="gov"></div>
+        <div class="gin">
+          <div style="display:inline-block;background:var(--y);border-radius:100px;padding:4px 12px;font-size:.72rem;font-weight:700;font-family:'Montserrat',sans-serif;margin-bottom:7px;">Outdoor Living</div>
+          <h3 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:.98rem;color:#fff;margin-bottom:3px;">Custom Paving Stone Patio</h3>
+          <p style="font-size:.8rem;color:rgba(255,255,255,.65);">Markham, ON</p>
+        </div>
+      </div>
+      <!-- Card 5 -->
+      <div class="gc fu d4" data-cat="commercial" data-project="office-fit-out" onclick="openModal('office-fit-out')" tabindex="0" role="button" aria-label="Office Fit-Out project" style="height:218px;">
+        <img src="services_photos/office.png" alt="Office Fit-Out">
+        <div class="gov"></div>
+        <div class="gin">
+          <div style="display:inline-block;background:var(--y);border-radius:100px;padding:4px 12px;font-size:.72rem;font-weight:700;font-family:'Montserrat',sans-serif;margin-bottom:7px;">Commercial</div>
+          <h3 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:.98rem;color:#fff;margin-bottom:3px;">Office Fit-Out</h3>
+          <p style="font-size:.8rem;color:rgba(255,255,255,.65);">North York, ON</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  @media(max-width:900px){#gg{grid-template-columns:1fr 1fr!important;} .gc[style*="grid-row:span 2"]{min-height:260px!important;grid-row:auto!important;}}
+  @media(max-width:540px){#gg{grid-template-columns:1fr!important;}}
+</style>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     TESTIMONIALS
+═══════════════════════════════════════════════════════════════ -->
+<section id="testimonials" style="padding:88px 0;background:var(--cr);">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
+
+    <div style="text-align:center;margin-bottom:52px;" class="fu">
+      <h2 class="hd" style="font-size:clamp(2.2rem,3.8vw,3.4rem);margin-bottom:14px;">Trusted by GTA Homeowners</h2>
+      <p style="font-size:1.02rem;color:rgba(1,1,1,.52);max-width:480px;margin:0 auto;">Real results, real stories. From homeowners and business owners across the GTA.</p>
+    </div>
+
+    <!-- Carousel: arrow · clip · arrow -->
+    <div class="fu d2" style="display:flex;align-items:center;gap:14px;">
+      <button id="tc-prev" class="scarr" aria-label="Previous testimonial" onclick="tcNav(-1)">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+
+      <div id="tc-clip" style="overflow:hidden;flex:1;padding:8px 0 20px;">
+        <div id="tc-track" style="display:flex;gap:22px;will-change:transform;"></div>
+      </div>
+
+      <button id="tc-next" class="scarr" aria-label="Next testimonial" onclick="tcNav(1)">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+    </div>
+
+    <!-- Dot indicators -->
+    <div id="tc-dots" style="display:flex;justify-content:center;align-items:center;gap:7px;margin-top:22px;" aria-label="Testimonial navigation"></div>
+
+  </div>
+</section>
+<style>
+  .tc2 { background:#fff;border-radius:20px;padding:28px 26px;border:1px solid rgba(252,184,22,.2);box-shadow:0 2px 14px rgba(1,1,1,.06);display:flex;flex-direction:column;transition:border-color .25s cubic-bezier(.22,1,.36,1); }
+  .tc2:hover { border-color:#FCB816; }
+  .tcdot { width:8px;height:8px;border-radius:100px;background:rgba(1,1,1,.18);border:none;cursor:pointer;padding:0;flex-shrink:0;transition:background .25s cubic-bezier(.22,1,.36,1),width .25s cubic-bezier(.22,1,.36,1); }
+  .tcdot.act { background:var(--y);width:24px; }
+  .tcdot:hover:not(.act) { background:rgba(1,1,1,.35); }
+  .tcdot:focus-visible { outline:2px solid var(--y);outline-offset:2px; }
+  @media(max-width:560px) { #tc-prev,#tc-next { width:38px!important;height:38px!important; } }
+</style>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     FINAL CTA
+═══════════════════════════════════════════════════════════════ -->
+<section style="padding:88px 0;background:var(--y);">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;text-align:center;">
+    <div class="fu">
+      <h2 class="hd" style="font-size:clamp(2.4rem,4.5vw,3.8rem);margin-bottom:18px;max-width:680px;margin-left:auto;margin-right:auto;">Ready to Start Your<br>Next Project?</h2>
+      <p style="font-size:1.08rem;line-height:1.78;color:rgba(1,1,1,.62);max-width:500px;margin:0 auto 38px;">Tell us about your renovation, addition, repair, or commercial build. We'll help you plan the next step.</p>
+      <a href="contact.html" class="btn bkk-submit" style="font-size:.97rem;padding:17px 32px;">
+        Book a Free On-Site Estimate
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════════════════════════ -->
+<footer style="background:var(--bk);color:#fff;padding:60px 0 28px;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
+    <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:44px;margin-bottom:48px;" id="fg">
+      <div>
+        <img src="brand_assets/favicon.png" alt="Greatland Construction" style="height:56px;width:56px;margin-bottom:18px;border-radius:14px;">
+        <p style="font-size:.85rem;line-height:1.78;color:rgba(255,255,255,.45);max-width:270px;margin-bottom:22px;">Full-service residential and commercial construction across the Greater Toronto Area. Licensed, insured, and built on trust.</p>
+        <div style="display:flex;gap:10px;">
+          <a href="https://www.instagram.com/greatlandbear/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="width:36px;height:36px;background:rgba(255,255,255,.08);border-radius:9px;display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;" onmouseenter="this.style.background='#FCB816';this.style.color='#010101'" onmouseleave="this.style.background='rgba(255,255,255,.08)';this.style.color='#fff'"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="https://www.xiaohongshu.com/user/profile/6192aa870000000010009378" target="_blank" rel="noopener noreferrer" aria-label="RedNote" style="width:36px;height:36px;background:rgba(255,255,255,.08);border-radius:9px;display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;" onmouseenter="this.style.background='#FCB816';this.style.color='#010101'" onmouseleave="this.style.background='rgba(255,255,255,.08)';this.style.color='#fff'"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></a>
+          <a href="https://www.youtube.com/@greatlandconstruction/featured" target="_blank" rel="noopener noreferrer" aria-label="YouTube" style="width:36px;height:36px;background:rgba(255,255,255,.08);border-radius:9px;display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;" onmouseenter="this.style.background='#FCB816';this.style.color='#010101'" onmouseleave="this.style.background='rgba(255,255,255,.08)';this.style.color='#fff'"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:.82rem;color:var(--y);letter-spacing:.07em;text-transform:uppercase;margin-bottom:18px;">Services</h4>
+        <div style="display:flex;flex-direction:column;gap:9px;">
+          <a href="services/full-home-renovation.html" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseenter="this.style.color='#FCB816'" onmouseleave="this.style.color='rgba(255,255,255,.45)'">Home Renovation</a>
+          <a href="services/kitchen-bath.html" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseenter="this.style.color='#FCB816'" onmouseleave="this.style.color='rgba(255,255,255,.45)'">Kitchen &amp; Bath</a>
+          <a href="services/basement-finishing.html" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseenter="this.style.color='#FCB816'" onmouseleave="this.style.color='rgba(255,255,255,.45)'">Basement Finishing</a>
+          <a href="services/outdoor-living.html" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseenter="this.style.color='#FCB816'" onmouseleave="this.style.color='rgba(255,255,255,.45)'">Outdoor Living</a>
+          <a href="services/commercial-construction.html" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseenter="this.style.color='#FCB816'" onmouseleave="this.style.color='rgba(255,255,255,.45)'">Commercial</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:.82rem;color:var(--y);letter-spacing:.07em;text-transform:uppercase;margin-bottom:18px;">Company</h4>
+        <div style="display:flex;flex-direction:column;gap:9px;">
+          <a href="about.html" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseenter="this.style.color='#FCB816'" onmouseleave="this.style.color='rgba(255,255,255,.45)'">About Us</a>
+          <a href="projects/index.html" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseenter="this.style.color='#FCB816'" onmouseleave="this.style.color='rgba(255,255,255,.45)'">Projects</a>
+          <a href="contact.html" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseenter="this.style.color='#FCB816'" onmouseleave="this.style.color='rgba(255,255,255,.45)'">Contact</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:.82rem;color:var(--y);letter-spacing:.07em;text-transform:uppercase;margin-bottom:18px;">Contact</h4>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <a href="tel:+14164565666" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;">416-456-5666</a>
+          <a href="mailto:greatlandconstruction@hotmail.com" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;">greatlandconstruction@hotmail.com</a>
+          <span style="font-size:.83rem;color:rgba(255,255,255,.45);">Greater Toronto Area, ON</span>
+        </div>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,.08);padding-top:22px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;">
+      <p style="font-size:.77rem;color:rgba(255,255,255,.28);">© 2025 Greatland Construction. All rights reserved.</p>
+      <div style="display:flex;gap:22px;">
+        <a href="#" style="font-size:.77rem;color:rgba(255,255,255,.28);text-decoration:none;">Privacy Policy</a>
+        <a href="#" style="font-size:.77rem;color:rgba(255,255,255,.28);text-decoration:none;">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<style>
+  @media(max-width:900px){#fg{grid-template-columns:1fr 1fr!important;gap:30px!important;}}
+  @media(max-width:500px){#fg{grid-template-columns:1fr!important;}}
+</style>
+
+<!-- PROJECT MODAL -->
+<div id="proj-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title"
+  style="position:fixed;inset:0;z-index:999;display:flex;align-items:center;justify-content:center;padding:20px;background:rgba(1,1,1,0);pointer-events:none;transition:background .3s;">
+  <div id="modal-box" tabindex="-1"
+    style="position:relative;background:#FFFFF6;border-radius:24px;width:100%;max-width:680px;max-height:88vh;overflow-y:auto;transform:scale(.94) translateY(18px);opacity:0;transition:transform .38s cubic-bezier(.22,1,.36,1),opacity .38s cubic-bezier(.22,1,.36,1);box-shadow:0 24px 72px rgba(1,1,1,.24);outline:none;">
+    <button onclick="closeModal()" aria-label="Close modal"
+      style="position:absolute;top:14px;right:14px;width:36px;height:36px;border-radius:50%;background:#FCB816;color:#010101;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2;transition:background .2s,color .2s;"
+      onmouseenter="this.style.background='#010101';this.style.color='#FCB816'" onmouseleave="this.style.background='#FCB816';this.style.color='#010101'">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+    <div style="width:100%;aspect-ratio:16/9;overflow:hidden;border-radius:24px 24px 0 0;background:#eee;">
+      <img id="modal-img" src="" alt="" style="width:100%;height:100%;object-fit:cover;display:block;">
+    </div>
+    <div style="padding:26px 30px 32px;">
+      <div id="modal-cat" style="display:inline-block;background:rgba(252,184,22,.15);color:#010101;font-family:'Montserrat',sans-serif;font-weight:700;font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;padding:5px 12px;border-radius:100px;margin-bottom:14px;"></div>
+      <h2 id="modal-title" style="font-family:'Montserrat',sans-serif;font-weight:900;font-size:1.5rem;letter-spacing:-.03em;line-height:1.1;margin-bottom:12px;color:#010101;"></h2>
+      <p id="modal-desc" style="font-size:.92rem;line-height:1.75;color:rgba(1,1,1,.55);"></p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     JAVASCRIPT
+═══════════════════════════════════════════════════════════════ -->
+<script>
+  // Scroll fade-in
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('iv'); obs.unobserve(e.target); } });
+  }, { threshold: 0.1, rootMargin: '0px 0px -36px 0px' });
+  document.querySelectorAll('.fu').forEach(el => obs.observe(el));
+
+  // Navbar shadow on scroll
+  window.addEventListener('scroll', () => document.getElementById('nav').classList.toggle('sc', scrollY > 20), { passive: true });
+
+  // Mobile menu
+  const hbtn = document.getElementById('hbtn');
+  const mnav = document.getElementById('mob-nav');
+  hbtn.addEventListener('click', () => {
+    const o = hbtn.classList.toggle('op');
+    mnav.classList.toggle('op', o);
+  });
+  mnav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { hbtn.classList.remove('op'); mnav.classList.remove('op'); }));
+
+  // Project filter
+  function fp(btn, cat) {
+    document.querySelectorAll('.fb').forEach(b => b.classList.remove('act'));
+    btn.classList.add('act');
+    document.querySelectorAll('.gc').forEach(c => {
+      const show = cat === 'all' || c.dataset.cat === cat;
+      c.style.opacity = show ? '1' : '0.2';
+      c.style.pointerEvents = show ? '' : 'none';
+      c.style.transform = show ? '' : 'scale(0.97)';
+      c.style.transition = 'opacity .35s, transform .35s';
+    });
+  }
+
+  // Project modal
+  const PROJECTS = {
+    'outdoor-living': {
+      img: 'brand_photos/a83ef307-7e75-4054-abf6-1b0860e751902.png',
+      cat: 'Outdoor Living', title: 'Outdoor Kitchen & Pergola',
+      desc: 'A custom outdoor kitchen and pergola built for Mississauga homeowners who love to entertain. Designed for year-round comfort and built to last.'
+    },
+    'backyard-renovation': {
+      img: 'brand_photos/a83ef307-7e75-4054-abf6-1b0860e751901.png',
+      cat: 'Outdoor Living', title: 'Backyard Gazebo & Patio',
+      desc: 'A full backyard renovation in Toronto featuring a gazebo, patio, and landscaping upgrade. Built for relaxing and hosting throughout the seasons.'
+    },
+    'kitchen-renovation': {
+      img: 'services_photos/kitchenbath.png',
+      cat: 'Renovation', title: 'Full Kitchen Renovation',
+      desc: 'A complete kitchen overhaul in Brampton — new cabinetry, countertops, and a fully redesigned layout for a brighter, more functional everyday space.'
+    },
+    'interlock-patio': {
+      img: 'brand_photos/a83ef307-7e75-4054-abf6-1b0860e751903.png',
+      cat: 'Outdoor Living', title: 'Custom Paving Stone Patio',
+      desc: 'A precision-laid interlock patio in Markham, designed to improve durability, curb appeal, and outdoor function. Stone selected to complement the home exterior.'
+    },
+    'office-fit-out': {
+      img: 'services_photos/office.png',
+      cat: 'Commercial', title: 'Office Fit-Out',
+      desc: 'A commercial office fit-out in North York, delivering a professional, welcoming, and functional workspace ready for use from day one.'
+    }
+  };
+
+  function openModal(id) {
+    const p = PROJECTS[id];
+    if (!p) return;
+    document.getElementById('modal-img').src = p.img;
+    document.getElementById('modal-img').alt = p.title;
+    document.getElementById('modal-cat').textContent = p.cat;
+    document.getElementById('modal-title').textContent = p.title;
+    document.getElementById('modal-desc').textContent = p.desc;
+    const ov = document.getElementById('proj-overlay');
+    const bx = document.getElementById('modal-box');
+    ov.style.background = 'rgba(1,1,1,.62)';
+    ov.style.pointerEvents = 'auto';
+    bx.style.transform = 'scale(1) translateY(0)';
+    bx.style.opacity = '1';
+    document.body.style.overflow = 'hidden';
+    bx.focus();
+  }
+
+  function closeModal() {
+    const ov = document.getElementById('proj-overlay');
+    const bx = document.getElementById('modal-box');
+    ov.style.background = 'rgba(1,1,1,0)';
+    ov.style.pointerEvents = 'none';
+    bx.style.transform = 'scale(.94) translateY(18px)';
+    bx.style.opacity = '0';
+    document.body.style.overflow = '';
+  }
+
+  document.getElementById('proj-overlay').addEventListener('click', function(e) {
+    if (e.target === this) closeModal();
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeModal();
+  });
+
+  document.querySelectorAll('[data-project]').forEach(card => {
+    card.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModal(this.dataset.project); }
+    });
+  });
+
+  // Smooth scroll with nav offset
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const t = document.querySelector(a.getAttribute('href'));
+      if (t) { e.preventDefault(); window.scrollTo({ top: t.getBoundingClientRect().top + scrollY - 88, behavior: 'smooth' }); }
+    });
+  });
+
+  // ── Carousel factory (finite) ──────────────────────────────────
+  // opts { clipId, trackId, prevId, nextId, gap, duration, breakpoints }
+  // breakpoints: [[minContainerPx, numVisible], ...] sorted highest first
+  // Returns { go(delta) }
+  function makeCarousel(opts) {
+    const clip  = document.getElementById(opts.clipId);
+    const track = document.getElementById(opts.trackId);
+    const btnP  = document.getElementById(opts.prevId);
+    const btnN  = document.getElementById(opts.nextId);
+    if (!clip || !track) return null;
+
+    const slides = Array.from(track.children);
+    const N      = slides.length;
+    let   cur    = 0;
+    let   busy   = false;
+
+    // ── Measure ──────────────────────────────────────────────────
+    function containerPx() {
+      const p  = clip.parentElement;
+      const cs = getComputedStyle(p);
+      return p.getBoundingClientRect().width
+           - parseFloat(cs.paddingLeft)
+           - parseFloat(cs.paddingRight);
+    }
+
+    function visCount() {
+      const w = containerPx();
+      for (const [minW, n] of opts.breakpoints) {
+        if (w >= minW) return n;
+      }
+      return 1;
+    }
+
+    function maxIdx() { return Math.max(0, N - visCount()); }
+
+    // ── Layout ───────────────────────────────────────────────────
+    function layout(animated) {
+      const cw    = containerPx();
+      const vis   = visCount();
+      const cardW = (cw - opts.gap * (vis - 1)) / vis;
+
+      slides.forEach(s => {
+        s.style.flex     = '0 0 auto';
+        s.style.minWidth = cardW + 'px';
+        s.style.maxWidth = cardW + 'px';
+      });
+
+      const offset = cur * (cardW + opts.gap);
+      track.style.transition = animated
+        ? `transform ${opts.duration || '.5s'} cubic-bezier(.22,1,.36,1)`
+        : 'none';
+      track.style.transform = `translateX(${-offset}px)`;
+
+      // Reflect position in arrow states
+      if (btnP) btnP.disabled = cur === 0;
+      if (btnN) btnN.disabled = cur >= maxIdx();
+    }
+
+    // ── Transition end ───────────────────────────────────────────
+    track.addEventListener('transitionend', e => {
+      if (e.propertyName !== 'transform') return;
+      busy = false;
+    });
+
+    // ── Navigation ───────────────────────────────────────────────
+    function go(delta) {
+      if (busy) return;
+      const next = Math.max(0, Math.min(cur + delta, maxIdx()));
+      if (next === cur) return;
+      busy = true;
+      cur  = next;
+      layout(true);
+    }
+
+    // ── Touch swipe ──────────────────────────────────────────────
+    let startX = 0;
+    clip.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+    clip.addEventListener('touchend', e => {
+      const dx = e.changedTouches[0].clientX - startX;
+      if (Math.abs(dx) > 44) go(dx < 0 ? 1 : -1);
+    });
+
+    // ── Resize ───────────────────────────────────────────────────
+    let rzId;
+    window.addEventListener('resize', () => {
+      clearTimeout(rzId);
+      rzId = setTimeout(() => { busy = false; layout(false); }, 80);
+    });
+
+    // ── Init after first paint ───────────────────────────────────
+    requestAnimationFrame(() => layout(false));
+
+    return { go };
+  }
+
+  // ── Services carousel instance ────────────────────────────────
+  (function() {
+    const svc = makeCarousel({
+      clipId:      'sc-clip',
+      trackId:     'sc-track',
+      prevId:      'sc-prev',
+      nextId:      'sc-next',
+      gap:         24,
+      duration:    '.5s',
+      breakpoints: [[800, 3], [500, 2]],
+    });
+    window.scNav = function(d) { if (svc) svc.go(d); };
+  })();
+
+  // ── Hero Carousel ──────────────────────────────────────────────
+  (function() {
+    let idx = 0, timer;
+    const slides = Array.from(document.querySelectorAll('.hsl'));
+    const dots   = Array.from(document.querySelectorAll('.hdot'));
+    const lbl    = document.getElementById('hclbl');
+    const count  = document.getElementById('hccount');
+
+    function show(n) {
+      slides[idx].classList.remove('act');
+      dots[idx].classList.remove('act');
+      idx = (n + slides.length) % slides.length;
+      slides[idx].classList.add('act');
+      dots[idx].classList.add('act');
+      if (lbl)   lbl.textContent   = slides[idx].dataset.label;
+      if (count) count.textContent = (idx + 1) + ' / ' + slides.length;
+    }
+
+    function restart() { clearInterval(timer); timer = setInterval(() => show(idx + 1), 2600); }
+
+    window.hcNav = d => { show(idx + d); restart(); };
+    window.hcGo  = n => { show(n);       restart(); };
+    window.hcPause  = () => clearInterval(timer);
+    window.hcResume = () => restart();
+
+    show(0);
+    restart();
+
+    // Touch swipe support
+    const car = document.getElementById('hcar');
+    let tx = 0;
+    if (car) {
+      car.addEventListener('touchstart', e => { tx = e.touches[0].clientX; }, { passive: true });
+      car.addEventListener('touchend',   e => { const dx = e.changedTouches[0].clientX - tx; if (Math.abs(dx) > 40) hcNav(dx < 0 ? 1 : -1); });
+    }
+  })();
+
+  // ── Testimonial Carousel ──────────────────────────────────────
+  (function() {
+    const reviews = [
+      { name:'Austin',    img:'review_profiles/austin.jpg',      text:'Greatland Construction renovated our basement and turned it into a clean, comfortable living space. The team was professional, organized, and finished everything beautifully.' },
+      { name:'Janette',   img:'review_profiles/janette m..jpg',  text:'We hired Greatland for a kitchen renovation, and the result was exactly what we wanted. The space feels brighter, more modern, and much more functional now.' },
+      { name:'Johnathan', img:'review_profiles/johnathan k.jpg', text:'Greatland helped us remodel our office, and the whole process was smooth from planning to completion. The finished space looks professional and welcoming.' },
+      { name:'Jun',       img:'review_profiles/jun.jpg',         text:'The team replaced our old flooring and stairs, and the quality of the workmanship really shows. Everything looks clean, solid, and well finished.' },
+      { name:'Kim',       img:'review_profiles/kim l.jpg',       text:'Greatland renovated our bathroom, and we are so happy with the final result. They paid attention to the small details and made the space feel fresh and modern.' },
+      { name:'Leo',       img:'review_profiles/leo.jpg',         text:'We used Greatland for our backyard interlock project, and they did an amazing job. The patio looks beautiful and has completely changed how we use our outdoor space.' },
+      { name:'Lucy',      img:'review_profiles/lucy.jpg',        text:'Greatland helped us replace our fence, and the whole job was done quickly and neatly. The new fence looks strong, clean, and gives our yard much more privacy.' },
+      { name:'Lydia',     img:'review_profiles/lydia b.jpg',     text:'We hired Greatland to redo our driveway, and the curb appeal of our home improved right away. The crew was efficient, respectful, and very easy to communicate with.' },
+      { name:'Mei',       img:'review_profiles/mei.jpg',         text:'Greatland worked on our front walkway and landscaping, and the result looks so polished. It made the entrance to our home feel much more inviting.' },
+      { name:'Sophia',    img:'review_profiles/sophia.jpg',      text:'We had Greatland repair and update parts of our roof and exterior, and they handled everything professionally. It gave us a lot of peace of mind knowing the work was done properly.' },
+      { name:'Susan',     img:'review_profiles/susan s.jpg',     text:'Greatland completed a full home renovation for us, including painting, flooring, and interior upgrades. They made an overwhelming project feel manageable and well organized.' },
+      { name:'Wei',       img:'review_profiles/wei.jpg',         text:'We called Greatland for several handyman repairs around the house, and they were reliable, honest, and efficient. It was great to have one team that could handle different small jobs properly.' },
+    ];
+
+    const track  = document.getElementById('tc-track');
+    const dotsEl = document.getElementById('tc-dots');
+    const clip   = document.getElementById('tc-clip');
+    const btnP   = document.getElementById('tc-prev');
+    const btnN   = document.getElementById('tc-next');
+    if (!track) return;
+
+    let cur  = 0;
+    let busy = false;
+    const GAP = 22;
+
+    // Build cards
+    reviews.forEach(r => {
+      const card = document.createElement('div');
+      card.className = 'tc2';
+      card.style.flex = '0 0 auto';
+      card.innerHTML =
+        '<div style="display:flex;gap:2px;margin-bottom:14px;color:#FCB816;font-size:.9rem;letter-spacing:2px;" aria-label="5 stars">★★★★★</div>' +
+        '<p style="font-size:.875rem;line-height:1.84;color:rgba(1,1,1,.60);margin-bottom:22px;flex:1;font-style:italic;">“' + r.text + '”</p>' +
+        '<div style="display:flex;align-items:center;gap:12px;border-top:1px solid rgba(252,184,22,.18);padding-top:16px;">' +
+          '<div style="position:relative;flex-shrink:0;">' +
+            '<img src="' + r.img + '" alt="' + r.name + '" width="48" height="48" ' +
+              'style="width:48px;height:48px;border-radius:50%;object-fit:cover;border:2.5px solid #FCB816;display:block;" ' +
+              'onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">' +
+            '<div style="display:none;width:48px;height:48px;border-radius:50%;background:#FCB816;align-items:center;justify-content:center;font-family:\'Montserrat\',sans-serif;font-weight:800;font-size:.88rem;color:#010101;">' + r.name.charAt(0) + '</div>' +
+          '</div>' +
+          '<div class="hd6" style="font-size:.88rem;">' + r.name + '</div>' +
+        '</div>';
+      track.appendChild(card);
+    });
+
+    // Build dots
+    reviews.forEach(function(_, i) {
+      const d = document.createElement('button');
+      d.className = 'tcdot';
+      d.setAttribute('aria-label', 'Testimonial ' + (i + 1));
+      d.addEventListener('click', function() { goTo(i); });
+      dotsEl.appendChild(d);
+    });
+
+    const slides  = Array.from(track.children);
+    const dotBtns = Array.from(dotsEl.children);
+    const N = slides.length;
+
+    function containerPx() { return clip.getBoundingClientRect().width; }
+
+    function visCount() {
+      const w = containerPx();
+      if (w >= 680) return 3;
+      if (w >= 430) return 2;
+      return 1;
+    }
+
+    function maxIdx() { return Math.max(0, N - visCount()); }
+
+    function layout(animated) {
+      const cw    = containerPx();
+      const vis   = visCount();
+      const cardW = (cw - GAP * (vis - 1)) / vis;
+
+      slides.forEach(function(s) {
+        s.style.minWidth = cardW + 'px';
+        s.style.maxWidth = cardW + 'px';
+      });
+
+      const offset = cur * (cardW + GAP);
+      track.style.transition = animated ? 'transform .52s cubic-bezier(.22,1,.36,1)' : 'none';
+      track.style.transform  = 'translateX(' + (-offset) + 'px)';
+
+      btnP.disabled = cur === 0;
+      btnN.disabled = cur >= maxIdx();
+      dotBtns.forEach(function(d, i) { d.classList.toggle('act', i === cur); });
+    }
+
+    track.addEventListener('transitionend', function(e) {
+      if (e.propertyName === 'transform') busy = false;
+    });
+
+    function go(delta) {
+      if (busy) return;
+      const next = Math.max(0, Math.min(cur + delta, maxIdx()));
+      if (next === cur) return;
+      busy = true; cur = next;
+      layout(true);
+    }
+
+    function goTo(n) {
+      if (busy) return;
+      const next = Math.max(0, Math.min(n, maxIdx()));
+      if (next === cur) return;
+      busy = true; cur = next;
+      layout(true);
+    }
+
+    // Touch swipe
+    let sx = 0;
+    clip.addEventListener('touchstart', function(e) { sx = e.touches[0].clientX; }, { passive: true });
+    clip.addEventListener('touchend', function(e) {
+      const dx = e.changedTouches[0].clientX - sx;
+      if (Math.abs(dx) > 44) go(dx < 0 ? 1 : -1);
+    });
+
+    // Resize
+    let rzId;
+    window.addEventListener('resize', function() {
+      clearTimeout(rzId);
+      rzId = setTimeout(function() { busy = false; cur = Math.min(cur, maxIdx()); layout(false); }, 80);
+    });
+
+    window.tcNav = function(d) { go(d); };
+    requestAnimationFrame(function() { layout(false); });
+  })();
+
+  // ── Wave animation — only active while scrolling ───────────────
+  (function() {
+    const wp = document.getElementById('hero-wave-path');
+    if (!wp) return;
+    const orig = 'M0,28 C240,72 480,4 720,36 C960,68 1200,16 1440,42 L1440,72 L0,72 Z';
+    let phase = 0, active = false, raf, stop;
+
+    function tick() {
+      if (!active) return;
+      phase += 0.055;
+      let d = 'M';
+      for (let x = 0; x < 1440; x += 10) {
+        const y = 36 + 18 * Math.sin(0.0042 * x + phase);
+        d += x === 0 ? '0,' + y.toFixed(1) : ' L' + x + ',' + y.toFixed(1);
+      }
+      const ye = (36 + 18 * Math.sin(0.0042 * 1440 + phase)).toFixed(1);
+      d += ' L1440,' + ye + ' L1440,72 L0,72 Z';
+      wp.setAttribute('d', d);
+      raf = requestAnimationFrame(tick);
+    }
+
+    window.addEventListener('scroll', () => {
+      if (!active) { active = true; tick(); }
+      clearTimeout(stop);
+      stop = setTimeout(() => {
+        active = false;
+        cancelAnimationFrame(raf);
+        wp.setAttribute('d', orig);
+      }, 200);
+    }, { passive: true });
+  })();
+</script>
+</body>
+</html>

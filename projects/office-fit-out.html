@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Office Fit-Out — Greatland Construction</title>
+<meta name="description" content="A commercial office fit-out designed to create a more professional, welcoming, and practical workspace. Completed by Greatland Construction in North York, ON.">
+<link rel="icon" href="../brand_assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  :root{--y:#FCB816;--yd:#E5A500;--cr:#FFFFF6;--bk:#010101;}
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Inter',sans-serif;color:var(--bk);background:#fff;overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3,h4{font-family:'Montserrat',sans-serif;font-weight:900;letter-spacing:-.03em;line-height:1.05;}
+  .fu{opacity:0;transform:translateY(30px);transition:opacity .75s cubic-bezier(.22,1,.36,1),transform .75s cubic-bezier(.22,1,.36,1);}
+  .fu.iv{opacity:1;transform:none;}
+  .d1{transition-delay:.07s;}.d2{transition-delay:.14s;}
+  #nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--cr);border-bottom:1px solid rgba(1,1,1,.07);transition:box-shadow .3s;}
+  #nav.sc{box-shadow:0 2px 20px rgba(1,1,1,.12);}
+  .nl{font-family:'Inter',sans-serif;font-weight:600;font-size:.9rem;color:var(--bk);text-decoration:none;position:relative;padding-bottom:2px;}
+  .nl::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:2px;background:var(--bk);transition:width .25s cubic-bezier(.22,1,.36,1);}
+  .nl:hover::after{width:100%;}
+  .nl.act{color:var(--y);}
+  .nl.act::after{width:100%;background:var(--y);}
+  #mob-nav{display:none;background:var(--cr);padding:0 24px 24px;border-bottom:1px solid rgba(1,1,1,.08);}
+  #mob-nav.op{display:block;}
+  .hbg span{display:block;width:24px;height:2px;background:var(--bk);border-radius:2px;transition:transform .25s cubic-bezier(.22,1,.36,1),opacity .25s;}
+  .hbg{display:flex;flex-direction:column;gap:6px;background:none;border:none;padding:8px;cursor:pointer;}
+  .hbg.op span:nth-child(1){transform:translateY(8px) rotate(45deg);}
+  .hbg.op span:nth-child(2){opacity:0;}
+  .hbg.op span:nth-child(3){transform:translateY(-8px) rotate(-45deg);}
+  .btn{display:inline-flex;align-items:center;gap:8px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:.88rem;letter-spacing:-.01em;border-radius:100px;padding:14px 26px;cursor:pointer;border:none;text-decoration:none;white-space:nowrap;}
+  .bkk{background:var(--bk);color:#fff;box-shadow:0 4px 16px rgba(1,1,1,.18);transition:transform .2s cubic-bezier(.22,1,.36,1),box-shadow .2s;}
+  .bkk:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(1,1,1,.28);}
+  .hero{position:relative;height:76vh;min-height:500px;overflow:hidden;margin-top:88px;}
+  .hero img{width:100%;height:100%;object-fit:cover;display:block;}
+  .hero-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(1,1,1,.88) 0%,rgba(1,1,1,.32) 52%,rgba(1,1,1,.08) 100%);}
+  .hero-inner{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:52px clamp(20px,6vw,88px) 60px;}
+  .hero-back{display:inline-flex;align-items:center;gap:6px;color:rgba(255,255,255,.55);font-size:.84rem;font-weight:600;font-family:'Inter',sans-serif;text-decoration:none;margin-bottom:20px;transition:color .2s;width:fit-content;}
+  .hero-back:hover{color:#fff;}
+  .cat-pill{display:inline-block;background:var(--y);color:var(--bk);font-family:'Montserrat',sans-serif;font-weight:700;font-size:.7rem;letter-spacing:.07em;text-transform:uppercase;padding:5px 14px;border-radius:100px;margin-bottom:14px;}
+  .btn-hero{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.45);transition:background .2s,color .2s,border-color .2s;margin-top:24px;}
+  .btn-hero:hover{background:#fff;color:var(--bk);border-color:#fff;}
+  .content{max-width:1100px;margin:0 auto;padding:64px 24px;}
+  .content-grid{display:grid;grid-template-columns:1fr 320px;gap:56px;}
+  .slabel{font-family:'Montserrat',sans-serif;font-weight:700;font-size:.73rem;letter-spacing:.08em;text-transform:uppercase;color:rgba(1,1,1,.32);margin-bottom:10px;}
+  .stitle{font-size:clamp(1.5rem,2.5vw,2rem);margin-bottom:16px;}
+  .body-text{font-size:.97rem;line-height:1.78;color:rgba(1,1,1,.6);}
+  .what-list{list-style:none;display:flex;flex-direction:column;gap:14px;margin-top:8px;}
+  .what-list li{display:flex;align-items:flex-start;gap:12px;font-size:.95rem;line-height:1.68;color:rgba(1,1,1,.7);}
+  .what-list li::before{content:'';width:8px;height:8px;border-radius:50%;background:var(--y);flex-shrink:0;margin-top:8px;}
+  .sidebar{background:var(--cr);border-radius:20px;padding:28px;position:sticky;top:104px;height:fit-content;}
+  .sid-row{padding:13px 0;border-bottom:1px solid rgba(1,1,1,.07);}
+  .sid-row:last-of-type{border-bottom:none;margin-bottom:20px;}
+  .sid-label{font-size:.7rem;font-weight:700;font-family:'Montserrat',sans-serif;letter-spacing:.07em;text-transform:uppercase;color:rgba(1,1,1,.35);margin-bottom:3px;}
+  .sid-val{font-size:.9rem;font-weight:600;color:var(--bk);}
+  .btn-sidebar{background:var(--bk);color:#fff;border-radius:100px;padding:13px 22px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:.84rem;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:7px;transition:background .2s,transform .2s;}
+  .btn-sidebar:hover{background:#222;transform:translateY(-2px);}
+  .gallery{max-width:1100px;margin:0 auto;padding:0 24px 64px;}
+  .gal-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+  .gal-grid img{width:100%;height:230px;object-fit:cover;border-radius:14px;display:block;}
+  .gal-wide{grid-column:span 2;}
+  .gal-soon{background:#f4f4ef;border:2px dashed rgba(1,1,1,.1);border-radius:14px;height:230px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;}
+  .final-cta{background:var(--bk);padding:80px 24px;text-align:center;}
+  .btn-cta{background:transparent;color:var(--cr);border:2px solid rgba(255,255,246,.3);transition:background .2s,color .2s,border-color .2s;margin-top:28px;}
+  .btn-cta:hover{background:var(--cr);color:var(--bk);border-color:var(--cr);}
+  ::-webkit-scrollbar{width:5px;}::-webkit-scrollbar-track{background:#f5f5f0;}::-webkit-scrollbar-thumb{background:var(--y);border-radius:3px;}
+  @media(max-width:768px){.dm{display:none!important;}#hbtn{display:flex!important;}}
+  @media(min-width:769px){#mob-nav{display:none!important;}}
+  @media(max-width:860px){.content-grid{grid-template-columns:1fr!important;}.sidebar{position:static!important;}}
+  @media(max-width:580px){.gal-grid{grid-template-columns:1fr!important;}.gal-wide{grid-column:1!important;}}
+</style>
+</head>
+<body>
+<header id="nav">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:13px 0;">
+      <a href="../index.html" style="display:flex;align-items:center;"><img src="../brand_assets/brand_logo.png" alt="Greatland Construction" style="height:62px;width:auto;"></a>
+      <nav class="dm" style="display:flex;align-items:center;gap:30px;">
+        <a href="../index.html" class="nl">Home</a><a href="../about.html" class="nl">About</a><a href="../services/index.html" class="nl">Services</a><a href="../projects/index.html" class="nl act">Projects</a><a href="../contact.html" class="nl">Contact</a>
+      </nav>
+      <a href="../contact.html" class="btn bkk dm" style="font-size:.84rem;padding:11px 22px;">Book Estimate <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+      <button id="hbtn" class="hbg" aria-label="Toggle menu" style="display:none;"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div id="mob-nav">
+    <div style="border-top:1px solid rgba(1,1,1,.1);padding-top:18px;display:flex;flex-direction:column;gap:2px;">
+      <a href="../index.html" class="nl" style="padding:11px 0;border-bottom:1px solid rgba(1,1,1,.07);">Home</a>
+      <a href="../about.html" class="nl" style="padding:11px 0;border-bottom:1px solid rgba(1,1,1,.07);">About</a>
+      <a href="../services/index.html" class="nl" style="padding:11px 0;border-bottom:1px solid rgba(1,1,1,.07);">Services</a>
+      <a href="../projects/index.html" class="nl act" style="padding:11px 0;border-bottom:1px solid rgba(1,1,1,.07);">Projects</a>
+      <a href="../contact.html" class="nl" style="padding:11px 0;">Contact</a>
+      <a href="../contact.html" class="btn bkk" style="margin-top:14px;justify-content:center;">Book a Free Estimate</a>
+    </div>
+  </div>
+</header>
+
+<div class="hero">
+  <img src="../services_photos/office.png" alt="Office Fit-Out">
+  <div class="hero-ov"></div>
+  <div class="hero-inner">
+    <a href="../projects/index.html" class="hero-back"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>All Projects</a>
+    <span class="cat-pill">Commercial Construction</span>
+    <h1 style="font-size:clamp(2rem,4.5vw,3.6rem);color:#fff;margin-bottom:12px;">Office Fit-Out</h1>
+    <p style="font-size:1rem;color:rgba(255,255,255,.65);max-width:480px;line-height:1.7;">A commercial office fit-out designed to create a more professional, welcoming, and practical workspace.</p>
+    <a href="../contact.html" class="btn btn-hero">Book a Free On-Site Estimate <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+  </div>
+</div>
+
+<div class="content">
+  <div class="content-grid">
+    <div>
+      <div class="fu" style="margin-bottom:48px;">
+        <p class="slabel">Project Overview</p>
+        <h2 class="stitle">A Professional Workspace Transformation</h2>
+        <p class="body-text">A commercial office fit-out designed to create a more professional, welcoming, and practical workspace.</p>
+      </div>
+      <div class="fu d1">
+        <p class="slabel">What We Did</p>
+        <h2 class="stitle">The Work</h2>
+        <ul class="what-list">
+          <li>Improved office layout and function</li>
+          <li>Updated finishes and workspace features</li>
+          <li>Created a more polished client-facing environment</li>
+          <li>Helped prepare the space for business use</li>
+        </ul>
+      </div>
+    </div>
+    <div class="sidebar fu d2">
+      <div class="sid-row"><p class="sid-label">Location</p><p class="sid-val">North York, ON · GTA</p></div>
+      <div class="sid-row"><p class="sid-label">Project Type</p><p class="sid-val">Commercial</p></div>
+      <div class="sid-row"><p class="sid-label">Service</p><p class="sid-val">Commercial Construction</p></div>
+      <a href="../contact.html" class="btn-sidebar">Book a Free Estimate <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    </div>
+  </div>
+</div>
+
+<div class="gallery">
+  <div class="fu" style="margin-bottom:22px;"><p class="slabel">Project Photos</p><h2 class="stitle">Gallery</h2></div>
+  <div class="gal-grid fu d1">
+    <img class="gal-wide" src="../commercial/9a7c3ab8-86d3-4e1e-aa00-6185a7c61847.png" alt="Office fit-out">
+    <img src="../commercial/9fc0e7b4-c477-4cba-98c0-481e827f7275.png" alt="Office space">
+    <div class="gal-soon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="rgba(1,1,1,.25)" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><p style="font-size:.78rem;color:rgba(1,1,1,.3);font-weight:600;font-family:'Montserrat',sans-serif;">More Photos Coming Soon</p></div>
+    <div class="gal-soon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="rgba(1,1,1,.25)" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><p style="font-size:.78rem;color:rgba(1,1,1,.3);font-weight:600;font-family:'Montserrat',sans-serif;">More Photos Coming Soon</p></div>
+  </div>
+</div>
+
+<div class="final-cta">
+  <div style="max-width:580px;margin:0 auto;">
+    <h2 style="font-size:clamp(1.9rem,3.5vw,2.8rem);color:#fff;margin-bottom:14px;">Want a Project Like This?</h2>
+    <p style="font-size:1rem;color:rgba(255,255,255,.5);line-height:1.72;">Tell us about your space and our team will help you plan the next step.</p>
+    <a href="../contact.html" class="btn btn-cta">Book a Free On-Site Estimate <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+  </div>
+</div>
+
+<footer style="background:var(--bk);padding:60px 0 30px;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
+    <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:44px;margin-bottom:48px;" id="fg">
+      <div>
+        <img src="../brand_assets/favicon.png" alt="Greatland" style="height:56px;width:56px;margin-bottom:18px;border-radius:14px;">
+        <p style="font-size:.85rem;line-height:1.78;color:rgba(255,255,255,.45);max-width:270px;">Full-service residential and commercial construction across the Greater Toronto Area. Licensed, insured, and built on trust.</p>
+      </div>
+      <div>
+        <h4 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:.82rem;color:var(--y);letter-spacing:.07em;text-transform:uppercase;margin-bottom:18px;">Services</h4>
+        <div style="display:flex;flex-direction:column;gap:9px;">
+          <a href="../services/full-home-renovation.html" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseenter="this.style.color='#FCB816'" onmouseleave="this.style.color='rgba(255,255,255,.45)'">Home Renovation</a>
+          <a href="../services/kitchen-bath.html" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseenter="this.style.color='#FCB816'" onmouseleave="this.style.color='rgba(255,255,255,.45)'">Kitchen &amp; Bath</a>
+          <a href="../services/basement-finishing.html" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseenter="this.style.color='#FCB816'" onmouseleave="this.style.color='rgba(255,255,255,.45)'">Basement Finishing</a>
+          <a href="../services/outdoor-living.html" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseenter="this.style.color='#FCB816'" onmouseleave="this.style.color='rgba(255,255,255,.45)'">Outdoor Living</a>
+          <a href="../services/commercial-construction.html" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseenter="this.style.color='#FCB816'" onmouseleave="this.style.color='rgba(255,255,255,.45)'">Commercial</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:.82rem;color:var(--y);letter-spacing:.07em;text-transform:uppercase;margin-bottom:18px;">Company</h4>
+        <div style="display:flex;flex-direction:column;gap:9px;">
+          <a href="../about.html" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseenter="this.style.color='#FCB816'" onmouseleave="this.style.color='rgba(255,255,255,.45)'">About Us</a>
+          <a href="../projects/index.html" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseenter="this.style.color='#FCB816'" onmouseleave="this.style.color='rgba(255,255,255,.45)'">Projects</a>
+          <a href="../contact.html" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseenter="this.style.color='#FCB816'" onmouseleave="this.style.color='rgba(255,255,255,.45)'">Contact</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:.82rem;color:var(--y);letter-spacing:.07em;text-transform:uppercase;margin-bottom:18px;">Contact</h4>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <a href="tel:+14164565666" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;">416-456-5666</a>
+          <a href="mailto:greatlandconstruction@hotmail.com" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;">greatlandconstruction@hotmail.com</a>
+          <span style="font-size:.83rem;color:rgba(255,255,255,.45);">Greater Toronto Area, ON</span>
+        </div>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,.08);padding-top:22px;">
+      <p style="font-size:.77rem;color:rgba(255,255,255,.28);">© 2025 Greatland Construction. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+<style>@media(max-width:900px){#fg{grid-template-columns:1fr 1fr!important;gap:30px!important;}}@media(max-width:500px){#fg{grid-template-columns:1fr!important;}}</style>
+<script>
+  const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('iv');obs.unobserve(x.target);}});},{threshold:.08,rootMargin:'0px 0px -30px 0px'});
+  document.querySelectorAll('.fu').forEach(el=>obs.observe(el));
+  window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('sc',scrollY>20),{passive:true});
+  const hbtn=document.getElementById('hbtn'),mnav=document.getElementById('mob-nav');
+  hbtn.addEventListener('click',()=>{const o=hbtn.classList.toggle('op');mnav.classList.toggle('op',o);});
+  mnav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{hbtn.classList.remove('op');mnav.classList.remove('op');}));
+</script>
+</body>
+</html>

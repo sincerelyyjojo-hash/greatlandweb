@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Our Projects — Greatland Construction</title>
+<meta name="description" content="Explore recent renovation, construction, and outdoor living projects completed by Greatland Construction across the GTA. View our portfolio of residential and commercial work.">
+<meta property="og:title" content="Our Projects — Greatland Construction">
+<meta property="og:description" content="Renovation, construction, and outdoor living projects across the Greater Toronto Area.">
+<meta property="og:type" content="website">
+<link rel="icon" href="../brand_assets/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  :root{--y:#FCB816;--yd:#E5A500;--cr:#FFFFF6;--bk:#010101;}
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Inter',sans-serif;color:var(--bk);background:var(--cr);overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3,h4,.hd{font-family:'Montserrat',sans-serif;font-weight:900;letter-spacing:-.03em;line-height:1.05;}
+
+  /* FADE */
+  .fu{opacity:0;transform:translateY(30px);transition:opacity .75s cubic-bezier(.22,1,.36,1),transform .75s cubic-bezier(.22,1,.36,1);}
+  .fu.iv{opacity:1;transform:none;}
+  .d1{transition-delay:.07s;}.d2{transition-delay:.14s;}.d3{transition-delay:.21s;}
+  .d4{transition-delay:.28s;}.d5{transition-delay:.35s;}.d6{transition-delay:.42s;}
+
+  /* NAV */
+  #nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--cr);border-bottom:1px solid rgba(1,1,1,.07);transition:box-shadow .3s;}
+  #nav.sc{box-shadow:0 2px 20px rgba(1,1,1,.12);}
+  .nl{font-family:'Inter',sans-serif;font-weight:600;font-size:.9rem;color:var(--bk);text-decoration:none;position:relative;padding-bottom:2px;}
+  .nl::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:2px;background:var(--bk);transition:width .25s cubic-bezier(.22,1,.36,1);}
+  .nl:hover::after{width:100%;}
+  .nl.act{color:var(--y);}
+  .nl.act::after{width:100%;background:var(--y);}
+  #mob-nav{display:none;background:var(--cr);padding:0 24px 24px;border-bottom:1px solid rgba(1,1,1,.08);}
+  #mob-nav.op{display:block;}
+  .hbg span{display:block;width:24px;height:2px;background:var(--bk);border-radius:2px;transition:transform .25s cubic-bezier(.22,1,.36,1),opacity .25s;}
+  .hbg{display:flex;flex-direction:column;gap:6px;background:none;border:none;padding:8px;cursor:pointer;}
+  .hbg.op span:nth-child(1){transform:translateY(8px) rotate(45deg);}
+  .hbg.op span:nth-child(2){opacity:0;}
+  .hbg.op span:nth-child(3){transform:translateY(-8px) rotate(-45deg);}
+
+  /* BUTTONS */
+  .btn{display:inline-flex;align-items:center;gap:8px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:.88rem;letter-spacing:-.01em;border-radius:100px;padding:14px 26px;cursor:pointer;border:none;text-decoration:none;white-space:nowrap;}
+  .bkk{background:var(--bk);color:#fff;box-shadow:0 4px 16px rgba(1,1,1,.18);transition:transform .2s cubic-bezier(.22,1,.36,1),box-shadow .2s,background .2s,color .2s;}
+  .bkk:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(1,1,1,.28);}
+  .bkk:focus-visible{outline:3px solid rgba(1,1,1,.35);outline-offset:2px;}
+  .btn-outline{background:transparent;color:var(--bk);border:2px solid rgba(1,1,1,.3);transition:background .2s,color .2s,border-color .2s;}
+  .btn-outline:hover{background:var(--bk);color:var(--cr);border-color:var(--bk);}
+  .btn-outline:focus-visible{outline:3px solid rgba(1,1,1,.3);outline-offset:2px;}
+  .bko-flat{background:transparent;color:var(--bk);border:2px solid rgba(1,1,1,.78);transition:background .25s cubic-bezier(.22,1,.36,1),color .25s,border-color .25s,box-shadow .25s;}
+  .bko-flat:hover{background:var(--bk);color:var(--cr);border-color:var(--bk);box-shadow:0 6px 20px rgba(1,1,1,.18);}
+  .bko-flat:focus-visible{outline:3px solid rgba(1,1,1,.35);outline-offset:2px;}
+  .he{animation:hein .9s cubic-bezier(.22,1,.36,1) both;}
+  .he2{animation:hein .9s cubic-bezier(.22,1,.36,1) .15s both;}
+  .he3{animation:hein .9s cubic-bezier(.22,1,.36,1) .30s both;}
+  @keyframes hein{from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:none;}}
+
+  /* FILTER */
+  .fb{font-family:'Inter',sans-serif;font-weight:600;font-size:.84rem;padding:8px 20px;border-radius:100px;border:1.5px solid rgba(1,1,1,.14);background:transparent;color:var(--bk);cursor:pointer;transition:background .2s,border-color .2s,color .2s;}
+  .fb:hover,.fb.act{background:var(--y);border-color:var(--y);}
+
+  /* PROJECT CARDS */
+  .pcard{background:#fff;border-radius:20px;overflow:hidden;border:2px solid transparent;transition:border-color .25s,box-shadow .25s;display:flex;flex-direction:column;cursor:pointer;}
+  .pcard:hover{border-color:var(--y);box-shadow:0 4px 28px rgba(252,184,22,.16);}
+  .pcard-img{overflow:hidden;height:240px;position:relative;}
+  .pcard-img img{width:100%;height:100%;object-fit:cover;transition:transform .55s cubic-bezier(.22,1,.36,1);}
+  .pcard:hover .pcard-img img{transform:scale(1.05);}
+  .pcard-body{padding:22px 24px 24px;flex:1;display:flex;flex-direction:column;}
+  .cat-pill{display:inline-block;background:rgba(252,184,22,.15);color:var(--bk);font-family:'Montserrat',sans-serif;font-weight:700;font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;padding:5px 12px;border-radius:100px;margin-bottom:12px;width:fit-content;}
+  .pcard-title{font-family:'Montserrat',sans-serif;font-weight:800;font-size:1.08rem;letter-spacing:-.02em;margin-bottom:9px;}
+  .pcard-desc{font-size:.87rem;line-height:1.65;color:rgba(1,1,1,.52);flex:1;}
+
+  /* COMING SOON CARD */
+  .coming-soon{background:#f5f5f0;border:2px dashed rgba(1,1,1,.12);border-radius:20px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:40px 30px;min-height:360px;}
+
+  /* SECTION LABEL */
+  .sl{display:inline-block;background:rgba(252,184,22,.15);color:var(--bk);font-family:'Montserrat',sans-serif;font-weight:700;font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;padding:6px 14px;border-radius:100px;margin-bottom:16px;}
+
+  /* SCROLLBAR */
+  ::-webkit-scrollbar{width:5px;}
+  ::-webkit-scrollbar-track{background:#f5f5f0;}
+  ::-webkit-scrollbar-thumb{background:var(--y);border-radius:3px;}
+
+  @media(max-width:768px){.dm{display:none!important;}#hbtn{display:flex!important;}}
+  @media(min-width:769px){#mob-nav{display:none!important;}}
+  @media(max-width:960px){#pg{grid-template-columns:1fr 1fr!important;}}
+  @media(max-width:580px){#pg{grid-template-columns:1fr!important;}}
+  @media(max-width:768px){#filter-section{padding-top:40px!important;}}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header id="nav">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:13px 0;">
+      <a href="../index.html" style="display:flex;align-items:center;">
+        <img src="../brand_assets/brand_logo.png" alt="Greatland Construction" style="height:62px;width:auto;">
+      </a>
+      <nav class="dm" style="display:flex;align-items:center;gap:30px;">
+        <a href="../index.html" class="nl">Home</a>
+        <a href="../about.html" class="nl">About</a>
+        <a href="../services/index.html" class="nl">Services</a>
+        <a href="../projects/index.html" class="nl act">Projects</a>
+        <a href="../contact.html" class="nl">Contact</a>
+      </nav>
+      <a href="../contact.html" class="btn bkk dm" style="font-size:.84rem;padding:11px 22px;">
+        Book Estimate
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <button id="hbtn" class="hbg" aria-label="Toggle menu" style="display:none;">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div id="mob-nav">
+    <div style="border-top:1px solid rgba(1,1,1,.1);padding-top:18px;display:flex;flex-direction:column;gap:2px;">
+      <a href="../index.html" class="nl" style="padding:11px 0;border-bottom:1px solid rgba(1,1,1,.07);">Home</a>
+      <a href="../about.html" class="nl" style="padding:11px 0;border-bottom:1px solid rgba(1,1,1,.07);">About</a>
+      <a href="../services/index.html" class="nl" style="padding:11px 0;border-bottom:1px solid rgba(1,1,1,.07);">Services</a>
+      <a href="../projects/index.html" class="nl act" style="padding:11px 0;border-bottom:1px solid rgba(1,1,1,.07);">Projects</a>
+      <a href="../contact.html" class="nl" style="padding:11px 0;">Contact</a>
+      <a href="../contact.html" class="btn bkk" style="margin-top:14px;justify-content:center;">Book a Free Estimate</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section style="padding-top:88px;background:var(--y);padding-bottom:80px;">
+  <div style="max-width:1280px;margin:0 auto;padding:60px 24px 0;">
+    <div style="max-width:700px;">
+      <h1 class="hd he2" style="font-size:clamp(2.8rem,5vw,4.6rem);font-weight:900;margin-bottom:22px;">Our Projects</h1>
+      <p class="he3" style="font-size:1.08rem;line-height:1.78;color:rgba(1,1,1,.68);max-width:580px;margin-bottom:36px;">Explore recent renovation, construction, and outdoor living projects completed by Greatland Construction across the GTA.</p>
+      <a href="../contact.html" class="btn bko-flat he3" style="font-size:.95rem;padding:16px 30px;">
+        Book a Free On-Site Estimate
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FILTER + GRID -->
+<section id="filter-section" style="padding:64px 0 88px;background:var(--cr);">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
+
+    <!-- Filter buttons -->
+    <div class="fu" style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:36px;">
+      <button class="fb act" onclick="fp(this,'all')">All</button>
+      <button class="fb" onclick="fp(this,'outdoor')">Outdoor Living</button>
+      <button class="fb" onclick="fp(this,'renovation')">Renovation</button>
+      <button class="fb" onclick="fp(this,'commercial')">Commercial</button>
+    </div>
+
+    <!-- Card grid -->
+    <div id="pg" style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;">
+
+      <!-- 1. Outdoor Living Space -->
+      <div class="pcard fu" data-cat="outdoor" data-project="outdoor-living" onclick="openModal('outdoor-living')" tabindex="0" role="button" aria-label="Outdoor Living Space project">
+        <div class="pcard-img">
+          <img src="../outdoor_living/a83ef307-7e75-4054-abf6-1b0860e751902.png" alt="Outdoor Living Space">
+        </div>
+        <div class="pcard-body">
+          <span class="cat-pill">Outdoor Living</span>
+          <h3 class="pcard-title">Outdoor Living Space</h3>
+          <p class="pcard-desc">A backyard outdoor living upgrade designed for relaxing, hosting, and everyday use.</p>
+        </div>
+      </div>
+
+      <!-- 2. Backyard Renovation -->
+      <div class="pcard fu d1" data-cat="outdoor" data-project="backyard-renovation" onclick="openModal('backyard-renovation')" tabindex="0" role="button" aria-label="Backyard Renovation project">
+        <div class="pcard-img">
+          <img src="../outdoor_living/a83ef307-7e75-4054-abf6-1b0860e751901.png" alt="Backyard Renovation">
+        </div>
+        <div class="pcard-body">
+          <span class="cat-pill">Outdoor Living</span>
+          <h3 class="pcard-title">Backyard Renovation</h3>
+          <p class="pcard-desc">A backyard renovation focused on improving the look, function, and comfort of the outdoor space.</p>
+        </div>
+      </div>
+
+      <!-- 3. Interlock Patio -->
+      <div class="pcard fu d2" data-cat="outdoor" data-project="interlock-patio" onclick="openModal('interlock-patio')" tabindex="0" role="button" aria-label="Interlock Patio project">
+        <div class="pcard-img">
+          <img src="../outdoor_living/a83ef307-7e75-4054-abf6-1b0860e751903.png" alt="Interlock Patio">
+        </div>
+        <div class="pcard-body">
+          <span class="cat-pill">Outdoor Living</span>
+          <h3 class="pcard-title">Interlock Patio</h3>
+          <p class="pcard-desc">An interlock patio designed to improve durability, outdoor function, and curb appeal.</p>
+        </div>
+      </div>
+
+      <!-- 4. Kitchen Renovation -->
+      <div class="pcard fu d3" data-cat="renovation" data-project="kitchen-renovation" onclick="openModal('kitchen-renovation')" tabindex="0" role="button" aria-label="Kitchen Renovation project">
+        <div class="pcard-img">
+          <img src="../kitchen_bath/pexels-curtis-adams-1694007-36777883.jpg" alt="Kitchen Renovation">
+        </div>
+        <div class="pcard-body">
+          <span class="cat-pill">Renovation</span>
+          <h3 class="pcard-title">Kitchen Renovation</h3>
+          <p class="pcard-desc">A kitchen renovation focused on creating a brighter, more modern, and more functional everyday space.</p>
+        </div>
+      </div>
+
+      <!-- 5. Office Fit-Out -->
+      <div class="pcard fu d4" data-cat="commercial" data-project="office-fit-out" onclick="openModal('office-fit-out')" tabindex="0" role="button" aria-label="Office Fit-Out project">
+        <div class="pcard-img">
+          <img src="../commercial/9a7c3ab8-86d3-4e1e-aa00-6185a7c61847.png" alt="Office Fit-Out">
+        </div>
+        <div class="pcard-body">
+          <span class="cat-pill">Commercial</span>
+          <h3 class="pcard-title">Office Fit-Out</h3>
+          <p class="pcard-desc">A commercial office fit-out designed to create a professional, welcoming, and practical workspace.</p>
+        </div>
+      </div>
+
+      <!-- 6. More Coming Soon -->
+      <div class="coming-soon fu d5" aria-hidden="true">
+        <div style="width:52px;height:52px;border-radius:16px;background:rgba(1,1,1,.06);display:flex;align-items:center;justify-content:center;margin-bottom:16px;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="rgba(1,1,1,.3)" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h3 style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:1.05rem;color:rgba(1,1,1,.4);margin-bottom:8px;">More Coming Soon</h3>
+        <p style="font-size:.84rem;line-height:1.6;color:rgba(1,1,1,.3);max-width:200px;">We're adding more completed projects soon. Check back for new transformations.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="background:var(--y);padding:88px 24px;">
+  <div style="max-width:700px;margin:0 auto;text-align:center;">
+    <h2 style="font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(2rem,4vw,3.2rem);letter-spacing:-.03em;line-height:1.08;color:var(--bk);margin-bottom:18px;">Not Sure Where to Start?</h2>
+    <p style="font-family:'Inter',sans-serif;font-size:1.05rem;line-height:1.75;color:rgba(1,1,1,.65);max-width:480px;margin:0 auto 36px;">Tell us about your project and we'll help you understand the next step.</p>
+    <a href="../contact.html" class="btn bko-flat" style="font-size:.95rem;padding:16px 30px;">
+      Book a Free On-Site Estimate
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background:var(--bk);padding:60px 0 30px;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
+    <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:44px;margin-bottom:48px;" id="fg">
+      <div>
+        <img src="../brand_assets/favicon.png" alt="Greatland Construction" style="height:56px;width:56px;margin-bottom:18px;border-radius:14px;">
+        <p style="font-size:.85rem;line-height:1.78;color:rgba(255,255,255,.45);max-width:270px;margin-bottom:22px;">Full-service residential and commercial construction across the Greater Toronto Area. Licensed, insured, and built on trust.</p>
+        <div style="display:flex;gap:10px;">
+          <a href="https://www.instagram.com/greatlandbear/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="width:36px;height:36px;background:rgba(255,255,255,.08);border-radius:9px;display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;" onmouseenter="this.style.background='#FCB816';this.style.color='#010101'" onmouseleave="this.style.background='rgba(255,255,255,.08)';this.style.color='#fff'"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="https://www.youtube.com/@greatlandconstruction/featured" target="_blank" rel="noopener noreferrer" aria-label="YouTube" style="width:36px;height:36px;background:rgba(255,255,255,.08);border-radius:9px;display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;" onmouseenter="this.style.background='#FCB816';this.style.color='#010101'" onmouseleave="this.style.background='rgba(255,255,255,.08)';this.style.color='#fff'"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:.82rem;color:var(--y);letter-spacing:.07em;text-transform:uppercase;margin-bottom:18px;">Services</h4>
+        <div style="display:flex;flex-direction:column;gap:9px;">
+          <a href="../services/full-home-renovation.html" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseenter="this.style.color='#FCB816'" onmouseleave="this.style.color='rgba(255,255,255,.45)'">Home Renovation</a>
+          <a href="../services/kitchen-bath.html" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseenter="this.style.color='#FCB816'" onmouseleave="this.style.color='rgba(255,255,255,.45)'">Kitchen &amp; Bath</a>
+          <a href="../services/basement-finishing.html" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseenter="this.style.color='#FCB816'" onmouseleave="this.style.color='rgba(255,255,255,.45)'">Basement Finishing</a>
+          <a href="../services/outdoor-living.html" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseenter="this.style.color='#FCB816'" onmouseleave="this.style.color='rgba(255,255,255,.45)'">Outdoor Living</a>
+          <a href="../services/commercial-construction.html" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseenter="this.style.color='#FCB816'" onmouseleave="this.style.color='rgba(255,255,255,.45)'">Commercial</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:.82rem;color:var(--y);letter-spacing:.07em;text-transform:uppercase;margin-bottom:18px;">Company</h4>
+        <div style="display:flex;flex-direction:column;gap:9px;">
+          <a href="../about.html" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseenter="this.style.color='#FCB816'" onmouseleave="this.style.color='rgba(255,255,255,.45)'">About Us</a>
+          <a href="../projects/index.html" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseenter="this.style.color='#FCB816'" onmouseleave="this.style.color='rgba(255,255,255,.45)'">Projects</a>
+          <a href="../contact.html" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseenter="this.style.color='#FCB816'" onmouseleave="this.style.color='rgba(255,255,255,.45)'">Contact</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:.82rem;color:var(--y);letter-spacing:.07em;text-transform:uppercase;margin-bottom:18px;">Contact</h4>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <a href="tel:+14164565666" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;">416-456-5666</a>
+          <a href="mailto:greatlandconstruction@hotmail.com" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;">greatlandconstruction@hotmail.com</a>
+          <span style="font-size:.83rem;color:rgba(255,255,255,.45);">Greater Toronto Area, ON</span>
+        </div>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,.08);padding-top:22px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;">
+      <p style="font-size:.77rem;color:rgba(255,255,255,.28);">© 2025 Greatland Construction. All rights reserved.</p>
+      <div style="display:flex;gap:22px;">
+        <a href="#" style="font-size:.77rem;color:rgba(255,255,255,.28);text-decoration:none;">Privacy Policy</a>
+        <a href="#" style="font-size:.77rem;color:rgba(255,255,255,.28);text-decoration:none;">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<style>
+  @media(max-width:900px){#fg{grid-template-columns:1fr 1fr!important;gap:30px!important;}}
+  @media(max-width:500px){#fg{grid-template-columns:1fr!important;}}
+</style>
+
+<script>
+  // Fade-in on scroll
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('iv'); obs.unobserve(e.target); } });
+  }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+  document.querySelectorAll('.fu').forEach(el => obs.observe(el));
+
+  // Navbar shadow
+  window.addEventListener('scroll', () => document.getElementById('nav').classList.toggle('sc', scrollY > 20), { passive: true });
+
+  // Mobile menu
+  const hbtn = document.getElementById('hbtn');
+  const mnav = document.getElementById('mob-nav');
+  hbtn.addEventListener('click', () => {
+    const o = hbtn.classList.toggle('op');
+    mnav.classList.toggle('op', o);
+  });
+  mnav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { hbtn.classList.remove('op'); mnav.classList.remove('op'); }));
+
+  // Filter
+  function fp(btn, cat) {
+    document.querySelectorAll('.fb').forEach(b => b.classList.remove('act'));
+    btn.classList.add('act');
+    document.querySelectorAll('#pg .pcard').forEach(card => {
+      card.style.display = (cat === 'all' || card.dataset.cat === cat) ? '' : 'none';
+    });
+    const cs = document.querySelector('#pg .coming-soon');
+    if (cs) cs.style.display = cat === 'all' ? '' : 'none';
+  }
+
+  // Project modal
+  const PROJECTS = {
+    'outdoor-living': {
+      img: '../outdoor_living/a83ef307-7e75-4054-abf6-1b0860e751902.png',
+      cat: 'Outdoor Living', title: 'Outdoor Living Space',
+      desc: 'A backyard outdoor living upgrade designed for relaxing, hosting, and everyday use. Custom pergola, outdoor kitchen, and landscaping built to last.'
+    },
+    'backyard-renovation': {
+      img: '../outdoor_living/a83ef307-7e75-4054-abf6-1b0860e751901.png',
+      cat: 'Outdoor Living', title: 'Backyard Renovation',
+      desc: 'A backyard renovation focused on improving the look, function, and comfort of the outdoor space. From paving to greenery, every detail refined.'
+    },
+    'interlock-patio': {
+      img: '../outdoor_living/a83ef307-7e75-4054-abf6-1b0860e751903.png',
+      cat: 'Outdoor Living', title: 'Interlock Patio',
+      desc: 'An interlock patio designed to improve durability, outdoor function, and curb appeal. Precision-laid stone with a clean modern finish.'
+    },
+    'kitchen-renovation': {
+      img: '../kitchen_bath/pexels-curtis-adams-1694007-36777883.jpg',
+      cat: 'Renovation', title: 'Kitchen Renovation',
+      desc: 'A kitchen renovation focused on creating a brighter, more modern, and more functional everyday space. New cabinetry, counters, and layout fully reimagined.'
+    },
+    'office-fit-out': {
+      img: '../commercial/9a7c3ab8-86d3-4e1e-aa00-6185a7c61847.png',
+      cat: 'Commercial', title: 'Office Fit-Out',
+      desc: 'A commercial office fit-out designed to create a professional, welcoming, and practical workspace. Built for productivity from day one.'
+    }
+  };
+
+  function openModal(id) {
+    const p = PROJECTS[id];
+    if (!p) return;
+    document.getElementById('modal-img').src = p.img;
+    document.getElementById('modal-img').alt = p.title;
+    document.getElementById('modal-cat').textContent = p.cat;
+    document.getElementById('modal-title').textContent = p.title;
+    document.getElementById('modal-desc').textContent = p.desc;
+    const ov = document.getElementById('proj-overlay');
+    const bx = document.getElementById('modal-box');
+    ov.style.background = 'rgba(1,1,1,.62)';
+    ov.style.pointerEvents = 'auto';
+    bx.style.transform = 'scale(1) translateY(0)';
+    bx.style.opacity = '1';
+    document.body.style.overflow = 'hidden';
+    bx.focus();
+  }
+
+  function closeModal() {
+    const ov = document.getElementById('proj-overlay');
+    const bx = document.getElementById('modal-box');
+    ov.style.background = 'rgba(1,1,1,0)';
+    ov.style.pointerEvents = 'none';
+    bx.style.transform = 'scale(.94) translateY(18px)';
+    bx.style.opacity = '0';
+    document.body.style.overflow = '';
+  }
+
+  document.getElementById('proj-overlay').addEventListener('click', function(e) {
+    if (e.target === this) closeModal();
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeModal();
+  });
+
+  document.querySelectorAll('[data-project]').forEach(card => {
+    card.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModal(this.dataset.project); }
+    });
+  });
+</script>
+<!-- PROJECT MODAL -->
+<div id="proj-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title"
+  style="position:fixed;inset:0;z-index:999;display:flex;align-items:center;justify-content:center;padding:20px;background:rgba(1,1,1,0);pointer-events:none;transition:background .3s;">
+  <div id="modal-box" tabindex="-1"
+    style="position:relative;background:#FFFFF6;border-radius:24px;width:100%;max-width:680px;max-height:88vh;overflow-y:auto;transform:scale(.94) translateY(18px);opacity:0;transition:transform .38s cubic-bezier(.22,1,.36,1),opacity .38s cubic-bezier(.22,1,.36,1);box-shadow:0 24px 72px rgba(1,1,1,.24);outline:none;">
+    <button onclick="closeModal()" aria-label="Close modal"
+      style="position:absolute;top:14px;right:14px;width:36px;height:36px;border-radius:50%;background:#FCB816;color:#010101;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2;transition:background .2s,color .2s;"
+      onmouseenter="this.style.background='#010101';this.style.color='#FCB816'" onmouseleave="this.style.background='#FCB816';this.style.color='#010101'">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+    <div style="width:100%;aspect-ratio:16/9;overflow:hidden;border-radius:24px 24px 0 0;background:#eee;">
+      <img id="modal-img" src="" alt="" style="width:100%;height:100%;object-fit:cover;display:block;">
+    </div>
+    <div style="padding:26px 30px 32px;">
+      <div id="modal-cat" style="display:inline-block;background:rgba(252,184,22,.15);color:#010101;font-family:'Montserrat',sans-serif;font-weight:700;font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;padding:5px 12px;border-radius:100px;margin-bottom:14px;"></div>
+      <h2 id="modal-title" style="font-family:'Montserrat',sans-serif;font-weight:900;font-size:1.5rem;letter-spacing:-.03em;line-height:1.1;margin-bottom:12px;color:#010101;"></h2>
+      <p id="modal-desc" style="font-size:.92rem;line-height:1.75;color:rgba(1,1,1,.55);"></p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

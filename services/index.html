@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Services | Greatland Construction GTA</title>
+  <meta name="description" content="Explore Greatland Construction's full range of services — home renovations, basement finishing, kitchen & bath, outdoor living, commercial construction, and more across the GTA." />
+  <meta name="keywords" content="construction services GTA, home renovation Toronto, basement finishing, kitchen renovation, commercial construction Brampton Mississauga" />
+  <meta property="og:title" content="Our Services | Greatland Construction GTA" />
+  <meta property="og:description" content="From home renovations to commercial builds — Greatland Construction provides one-stop project support across the GTA." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/png" href="../brand_assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root { --y:#FCB816; --yd:#E5A500; --cr:#FFFFF6; --bk:#010101; }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Inter',sans-serif;color:var(--bk);background:#fff;overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+    h1,h2,h3,h4,.hd{font-family:'Montserrat',sans-serif;font-weight:900;letter-spacing:-0.03em;line-height:1.05;}
+    .hd6{font-family:'Montserrat',sans-serif;font-weight:700;letter-spacing:-0.01em;}
+
+    .fu{opacity:0;transform:translateY(30px);transition:opacity .75s cubic-bezier(.22,1,.36,1),transform .75s cubic-bezier(.22,1,.36,1);}
+    .fu.iv{opacity:1;transform:none;}
+    .d1{transition-delay:.07s;}.d2{transition-delay:.14s;}.d3{transition-delay:.21s;}
+    .d4{transition-delay:.28s;}.d5{transition-delay:.35s;}.d6{transition-delay:.42s;}
+    .d7{transition-delay:.49s;}.d8{transition-delay:.56s;}
+    .he{animation:hein .9s cubic-bezier(.22,1,.36,1) both;}
+    .he2{animation:hein .9s cubic-bezier(.22,1,.36,1) .15s both;}
+    .he3{animation:hein .9s cubic-bezier(.22,1,.36,1) .30s both;}
+    @keyframes hein{from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:none;}}
+
+    .btn{display:inline-flex;align-items:center;gap:8px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:.88rem;letter-spacing:-.01em;border-radius:100px;padding:14px 26px;cursor:pointer;border:none;text-decoration:none;white-space:nowrap;}
+    .bkk-submit{background:var(--bk);color:var(--cr);box-shadow:0 4px 16px rgba(1,1,1,.18);transition:box-shadow .25s cubic-bezier(.22,1,.36,1),background .25s,color .25s;}
+    .bkk-submit:hover{background:var(--y);color:var(--bk);box-shadow:0 6px 28px rgba(252,184,22,.45);}
+    .bkk-submit:active{opacity:.9;}
+    .bkk-submit:focus-visible{outline:3px solid rgba(252,184,22,.6);outline-offset:2px;}
+    .bko-flat{background:transparent;color:var(--bk);border:2px solid rgba(1,1,1,.78);transition:background .25s cubic-bezier(.22,1,.36,1),color .25s,border-color .25s,box-shadow .25s;}
+    .bko-flat:hover{background:var(--bk);color:var(--cr);border-color:var(--bk);box-shadow:0 6px 20px rgba(1,1,1,.18);}
+    .bko-flat:active{opacity:.9;}
+    .bko-flat:focus-visible{outline:3px solid rgba(1,1,1,.35);outline-offset:2px;}
+    .bkk{background:var(--bk);color:#fff;box-shadow:0 4px 16px rgba(1,1,1,.18);transition:transform .2s cubic-bezier(.22,1,.36,1),box-shadow .2s,background .2s,color .2s;}
+    .bkk:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(1,1,1,.28);}
+    .bkk:active{transform:none;}
+    .bkk.dm-hover:hover{background:var(--y);color:var(--bk);box-shadow:0 8px 24px rgba(252,184,22,.4);}
+    .bko-w{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.4);transition:transform .2s cubic-bezier(.22,1,.36,1),background .2s,color .2s,border-color .2s;}
+    .bko-w:hover{background:#fff;color:var(--bk);transform:translateY(-2px);}
+
+    /* NAV */
+    #nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--cr);border-bottom:1px solid rgba(1,1,1,.07);transition:box-shadow .3s;}
+    #nav.sc{box-shadow:0 2px 20px rgba(1,1,1,.12);}
+    .nl{font-family:'Inter',sans-serif;font-weight:600;font-size:.9rem;color:var(--bk);text-decoration:none;position:relative;padding-bottom:2px;}
+    .nl::after{content:'';position:absolute;bottom:-2px;left:0;width:0;height:2px;background:var(--bk);transition:width .25s cubic-bezier(.22,1,.36,1);}
+    .nl:hover::after,.nl.act::after{width:100%;}
+    #mob-nav{display:none;background:var(--cr);padding:0 24px 24px;border-bottom:1px solid rgba(1,1,1,.08);}
+    #mob-nav.op{display:block;}
+    .hbg span{display:block;width:24px;height:2px;background:var(--bk);border-radius:2px;transition:transform .25s cubic-bezier(.22,1,.36,1),opacity .25s;}
+    .hbg{display:flex;flex-direction:column;gap:6px;background:none;border:none;padding:8px;cursor:pointer;}
+    .hbg.op span:nth-child(1){transform:translateY(8px) rotate(45deg);}
+    .hbg.op span:nth-child(2){opacity:0;}
+    .hbg.op span:nth-child(3){transform:translateY(-8px) rotate(-45deg);}
+
+    /* SERVICE CARD */
+    .svc-card{background:var(--cr);border-radius:20px;overflow:hidden;border:1.5px solid rgba(252,184,22,.3);text-decoration:none;color:inherit;display:block;transition:transform .28s cubic-bezier(.22,1,.36,1),border-color .28s,box-shadow .28s;}
+    .svc-card:hover{transform:translateY(-7px);border-color:var(--y);box-shadow:0 16px 40px rgba(1,1,1,.1),0 4px 16px rgba(252,184,22,.15);}
+    .svc-card:focus-visible{outline:3px solid var(--y);outline-offset:2px;}
+    .svc-img{height:220px;overflow:hidden;position:relative;}
+    .svc-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s cubic-bezier(.22,1,.36,1);}
+    .svc-card:hover .svc-img img{transform:scale(1.07);}
+    .svc-ov{position:absolute;inset:0;background:linear-gradient(to top,rgba(1,1,1,.28),transparent 60%);}
+    .svc-body{padding:22px 24px 24px;}
+    .svc-cta{display:inline-flex;align-items:center;gap:5px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:.8rem;letter-spacing:.01em;color:var(--bk);opacity:.55;transition:opacity .2s,gap .2s;}
+    .svc-card:hover .svc-cta{opacity:1;gap:9px;}
+
+    /* TRUST CARD */
+    .tc{background:#fff;border-radius:20px;border:1px solid rgba(1,1,1,.06);box-shadow:0 2px 8px rgba(1,1,1,.06);padding:28px;transition:transform .3s cubic-bezier(.22,1,.36,1),box-shadow .3s;}
+    .tc:hover{transform:translateY(-4px);box-shadow:0 8px 30px rgba(1,1,1,.1);}
+    .ticon{width:46px;height:46px;background:var(--y);border-radius:13px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;flex-shrink:0;transition:transform .26s cubic-bezier(.22,1,.36,1);}
+    .tc:hover .ticon{transform:scale(1.1) rotate(-4deg);}
+
+    .sl{display:inline-block;background:rgba(252,184,22,.15);color:var(--bk);font-family:'Montserrat',sans-serif;font-weight:700;font-size:.76rem;letter-spacing:.08em;text-transform:uppercase;padding:6px 14px;border-radius:100px;margin-bottom:16px;}
+    ::-webkit-scrollbar{width:5px;}
+    ::-webkit-scrollbar-track{background:#f5f5f0;}
+    ::-webkit-scrollbar-thumb{background:var(--y);border-radius:3px;}
+    @media(max-width:768px){.dm{display:none!important;}#hbtn{display:flex!important;}}
+    @media(min-width:769px){#mob-nav{display:none!important;}}
+    @media(max-width:900px){#svc-grid{grid-template-columns:repeat(2,1fr)!important;}}
+    @media(max-width:560px){#svc-grid{grid-template-columns:1fr!important;}}
+    @media(max-width:700px){#trust-grid{grid-template-columns:1fr!important;}}
+    @media(max-width:900px){#fg{grid-template-columns:1fr 1fr!important;gap:30px!important;}}
+    @media(max-width:500px){#fg{grid-template-columns:1fr!important;}}
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<header id="nav">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:13px 0;">
+      <a href="../index.html" style="display:flex;align-items:center;">
+        <img src="../brand_assets/brand_logo.png" alt="Greatland Construction" style="height:62px;width:auto;">
+      </a>
+      <nav class="dm" style="display:flex;align-items:center;gap:30px;">
+        <a href="../index.html" class="nl">Home</a>
+        <a href="../about.html" class="nl">About</a>
+        <a href="../services/index.html" class="nl act">Services</a>
+        <a href="../projects/index.html" class="nl">Projects</a>
+        <a href="../contact.html" class="nl">Contact</a>
+      </nav>
+      <a href="../contact.html" class="btn bkk dm" style="font-size:.84rem;padding:11px 22px;">
+        Book Estimate
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <button id="hbtn" class="hbg" aria-label="Toggle menu" style="display:none;">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div id="mob-nav">
+    <div style="border-top:1px solid rgba(1,1,1,.1);padding-top:18px;display:flex;flex-direction:column;gap:2px;">
+      <a href="../index.html" class="nl" style="padding:11px 0;border-bottom:1px solid rgba(1,1,1,.07);">Home</a>
+      <a href="../about.html" class="nl" style="padding:11px 0;border-bottom:1px solid rgba(1,1,1,.07);">About</a>
+      <a href="../services/index.html" class="nl act" style="padding:11px 0;border-bottom:1px solid rgba(1,1,1,.07);">Services</a>
+      <a href="../projects/index.html" class="nl" style="padding:11px 0;border-bottom:1px solid rgba(1,1,1,.07);">Projects</a>
+      <a href="../contact.html" class="nl" style="padding:11px 0;">Contact</a>
+      <a href="../contact.html" class="btn bkk" style="margin-top:14px;justify-content:center;">Book a Free Estimate</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section style="padding-top:88px;background:var(--y);padding-bottom:80px;">
+  <div style="max-width:1280px;margin:0 auto;padding:60px 24px 0;">
+    <div style="max-width:700px;">
+      <h1 class="hd he2" style="font-size:clamp(2.8rem,5vw,4.6rem);margin-bottom:22px;">Our Services</h1>
+      <p class="he3" style="font-size:1.08rem;line-height:1.78;color:rgba(1,1,1,.68);max-width:580px;margin-bottom:36px;">From home renovations and basement finishing to commercial construction and outdoor living spaces, Greatland Construction provides one-stop project support across the GTA.</p>
+      <a href="../contact.html" class="btn bko-flat he3" style="font-size:.95rem;padding:16px 30px;">
+        Book a Free On-Site Estimate
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES GRID -->
+<section style="padding:88px 0 100px;background:#fff;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
+    <div class="fu" style="margin-bottom:52px;">
+      <h2 class="hd" style="font-size:clamp(2rem,3.5vw,3rem);margin-bottom:14px;">Everything Under One Roof</h2>
+      <p style="font-size:1rem;line-height:1.78;color:rgba(1,1,1,.52);max-width:500px;">Click any service to learn more about what we do, what's included, and how to get started.</p>
+    </div>
+
+    <div id="svc-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;">
+
+      <!-- 1 Full Home Renovation -->
+      <a href="../services/full-home-renovation.html" class="svc-card fu">
+        <div class="svc-img">
+          <img src="../services_photos/fullreno.png" alt="Full Home Renovation" loading="lazy">
+          <div class="svc-ov"></div>
+        </div>
+        <div class="svc-body">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+            <div style="width:38px;height:38px;background:var(--y);border-radius:11px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#010101" stroke-width="2" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/></svg>
+            </div>
+            <h3 class="hd6" style="font-size:.93rem;">Full Home Renovation</h3>
+          </div>
+          <p style="font-size:.82rem;line-height:1.68;color:rgba(1,1,1,.52);margin-bottom:14px;">Complete home transformations, every room, inside and out. We manage the whole project.</p>
+          <span class="svc-cta">Learn More <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </a>
+
+      <!-- 2 Kitchen & Bath -->
+      <a href="../services/kitchen-bath.html" class="svc-card fu d1">
+        <div class="svc-img">
+          <img src="../services_photos/kitchenbath.png" alt="Kitchen & Bath" loading="lazy">
+          <div class="svc-ov"></div>
+        </div>
+        <div class="svc-body">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+            <div style="width:38px;height:38px;background:var(--y);border-radius:11px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#010101" stroke-width="2" stroke-linecap="round"><rect x="2" y="7" width="20" height="15" rx="2"/><path d="M16 22V3.5a1.5 1.5 0 00-3 0V7"/></svg>
+            </div>
+            <h3 class="hd6" style="font-size:.93rem;">Kitchen & Bath</h3>
+          </div>
+          <p style="font-size:.82rem;line-height:1.68;color:rgba(1,1,1,.52);margin-bottom:14px;">Custom kitchens and bathroom upgrades with cabinetry, tile, fixtures, and finishes.</p>
+          <span class="svc-cta">Learn More <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </a>
+
+      <!-- 3 Basement Finishing -->
+      <a href="../services/basement-finishing.html" class="svc-card fu d2">
+        <div class="svc-img">
+          <img src="../services_photos/basement.png" alt="Basement Finishing" loading="lazy">
+          <div class="svc-ov"></div>
+        </div>
+        <div class="svc-body">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+            <div style="width:38px;height:38px;background:var(--y);border-radius:11px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#010101" stroke-width="2" stroke-linecap="round"><path d="M2 20h20M4 20V10l8-6 8 6v10"/><path d="M10 20v-6h4v6"/></svg>
+            </div>
+            <h3 class="hd6" style="font-size:.93rem;">Basement Finishing</h3>
+          </div>
+          <p style="font-size:.82rem;line-height:1.68;color:rgba(1,1,1,.52);margin-bottom:14px;">Legal suites, family rooms, home gyms, theatres — unlock your lower level.</p>
+          <span class="svc-cta">Learn More <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </a>
+
+      <!-- 4 Outdoor Living -->
+      <a href="../services/outdoor-living.html" class="svc-card fu d3">
+        <div class="svc-img">
+          <img src="../services_photos/yard.png" alt="Outdoor Living" loading="lazy">
+          <div class="svc-ov"></div>
+        </div>
+        <div class="svc-body">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+            <div style="width:38px;height:38px;background:var(--y);border-radius:11px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#010101" stroke-width="2" stroke-linecap="round"><path d="M12 22V12M12 12C12 12 8 10 5 6c4 1 7 3 7 6zM12 12c0 0 4-2 7-6-4 1-7 3-7 6z"/><path d="M5 22h14"/></svg>
+            </div>
+            <h3 class="hd6" style="font-size:.93rem;">Outdoor Living</h3>
+          </div>
+          <p style="font-size:.82rem;line-height:1.68;color:rgba(1,1,1,.52);margin-bottom:14px;">Patios, decks, pergolas, interlock, landscaping, and exterior upgrades.</p>
+          <span class="svc-cta">Learn More <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </a>
+
+      <!-- 5 Commercial Construction -->
+      <a href="../services/commercial-construction.html" class="svc-card fu d4">
+        <div class="svc-img">
+          <img src="../services_photos/commercial.png" alt="Commercial Construction" loading="lazy">
+          <div class="svc-ov"></div>
+        </div>
+        <div class="svc-body">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+            <div style="width:38px;height:38px;background:var(--y);border-radius:11px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#010101" stroke-width="2" stroke-linecap="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+            </div>
+            <h3 class="hd6" style="font-size:.93rem;">Commercial Construction</h3>
+          </div>
+          <p style="font-size:.82rem;line-height:1.68;color:rgba(1,1,1,.52);margin-bottom:14px;">Commercial builds, renovations, and fit-outs completed to code and on schedule.</p>
+          <span class="svc-cta">Learn More <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </a>
+
+      <!-- 6 Retail & Office -->
+      <a href="../services/retail-office.html" class="svc-card fu d5">
+        <div class="svc-img">
+          <img src="../services_photos/office.png" alt="Retail & Office" loading="lazy">
+          <div class="svc-ov"></div>
+        </div>
+        <div class="svc-body">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+            <div style="width:38px;height:38px;background:var(--y);border-radius:11px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#010101" stroke-width="2" stroke-linecap="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+            </div>
+            <h3 class="hd6" style="font-size:.93rem;">Retail & Office</h3>
+          </div>
+          <p style="font-size:.82rem;line-height:1.68;color:rgba(1,1,1,.52);margin-bottom:14px;">Retail fit-outs and office renovations designed for productivity and client experience.</p>
+          <span class="svc-cta">Learn More <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </a>
+
+      <!-- 7 Institutional & Specialty -->
+      <a href="../services/institutional-specialty.html" class="svc-card fu d6">
+        <div class="svc-img">
+          <img src="../services_photos/institutional.png" alt="Institutional & Specialty" loading="lazy">
+          <div class="svc-ov"></div>
+        </div>
+        <div class="svc-body">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+            <div style="width:38px;height:38px;background:var(--y);border-radius:11px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#010101" stroke-width="2" stroke-linecap="round"><path d="M3 21h18M5 21V7l7-4 7 4v14"/><path d="M9 21V11h6v10"/></svg>
+            </div>
+            <h3 class="hd6" style="font-size:.93rem;">Institutional & Specialty</h3>
+          </div>
+          <p style="font-size:.82rem;line-height:1.68;color:rgba(1,1,1,.52);margin-bottom:14px;">Schools, healthcare, sports, and specialty-use spaces with specific requirements.</p>
+          <span class="svc-cta">Learn More <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </a>
+
+      <!-- 8 Custom Build & Additions -->
+      <a href="../services/custom-build-additions.html" class="svc-card fu d7">
+        <div class="svc-img">
+          <img src="../services_photos/custom.png" alt="Custom Build & Additions" loading="lazy">
+          <div class="svc-ov"></div>
+        </div>
+        <div class="svc-body">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:10px;">
+            <div style="width:38px;height:38px;background:var(--y);border-radius:11px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#010101" stroke-width="2" stroke-linecap="round"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/><line x1="12" y1="22" x2="12" y2="15.5"/><polyline points="22 8.5 12 15.5 2 8.5"/></svg>
+            </div>
+            <h3 class="hd6" style="font-size:.93rem;">Custom Build & Additions</h3>
+          </div>
+          <p style="font-size:.82rem;line-height:1.68;color:rgba(1,1,1,.52);margin-bottom:14px;">Home additions, custom builds, and major remodels designed for your long-term needs.</p>
+          <span class="svc-cta">Learn More <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- WHY GREATLAND -->
+<section style="padding:88px 0;background:var(--cr);">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
+    <div class="fu" style="text-align:center;max-width:580px;margin:0 auto 56px;">
+      <h2 class="hd" style="font-size:clamp(2rem,3.5vw,3rem);margin-bottom:16px;">Why Work With Greatland?</h2>
+      <p style="font-size:1rem;line-height:1.78;color:rgba(1,1,1,.55);">We bring the trades, the coordination, and the communication, so you can focus on the result.</p>
+    </div>
+
+    <div id="trust-grid" style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;">
+
+      <div class="tc fu">
+        <div class="ticon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#010101" stroke-width="2" stroke-linecap="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <h3 class="hd6" style="font-size:.95rem;margin-bottom:9px;">One-Stop Project Coordination</h3>
+        <p style="font-size:.85rem;line-height:1.7;color:rgba(1,1,1,.52);">Construction, plumbing, electrical, and gas — managed under one roof so you don't have to coordinate between multiple contractors.</p>
+      </div>
+
+      <div class="tc fu d1">
+        <div class="ticon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#010101" stroke-width="2" stroke-linecap="round"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        </div>
+        <h3 class="hd6" style="font-size:.95rem;margin-bottom:9px;">Licensed Trades</h3>
+        <p style="font-size:.85rem;line-height:1.7;color:rgba(1,1,1,.52);">Every trade on your project is properly licensed and insured. WSIB coverage and a 5-year workmanship warranty included.</p>
+      </div>
+
+      <div class="tc fu d2">
+        <div class="ticon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#010101" stroke-width="2" stroke-linecap="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+        </div>
+        <h3 class="hd6" style="font-size:.95rem;margin-bottom:9px;">Residential & Commercial Experience</h3>
+        <p style="font-size:.85rem;line-height:1.7;color:rgba(1,1,1,.52);">Whether it's a home renovation or a commercial build-out, our team has handled projects at every scale across the GTA.</p>
+      </div>
+
+      <div class="tc fu d3">
+        <div class="ticon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#010101" stroke-width="2" stroke-linecap="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+        </div>
+        <h3 class="hd6" style="font-size:.95rem;margin-bottom:9px;">Clear Communication</h3>
+        <p style="font-size:.85rem;line-height:1.7;color:rgba(1,1,1,.52);">From the first quote to the final walkthrough, you'll always know what's happening, what's next, and what it costs.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section style="padding:88px 0;background:var(--y);">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;text-align:center;">
+    <div class="fu">
+      <h2 class="hd" style="font-size:clamp(2.2rem,4vw,3.6rem);margin-bottom:18px;max-width:620px;margin-left:auto;margin-right:auto;">Not Sure Where to Start?</h2>
+      <p style="font-size:1.05rem;line-height:1.78;color:rgba(1,1,1,.62);max-width:480px;margin:0 auto 38px;">Tell us about your project and we'll help you understand the next step.</p>
+      <a href="../contact.html" class="btn bko-flat" style="font-size:.97rem;padding:17px 32px;">
+        Book a Free On-Site Estimate
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background:var(--bk);color:#fff;padding:60px 0 28px;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
+    <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:44px;margin-bottom:48px;" id="fg">
+      <div>
+        <img src="../brand_assets/favicon.png" alt="Greatland Construction" style="height:56px;width:56px;margin-bottom:18px;border-radius:14px;">
+        <p style="font-size:.85rem;line-height:1.78;color:rgba(255,255,255,.45);max-width:270px;margin-bottom:22px;">Full-service residential and commercial construction across the Greater Toronto Area. Licensed, insured, and built on trust.</p>
+        <div style="display:flex;gap:10px;">
+          <a href="https://www.instagram.com/greatlandbear/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="width:36px;height:36px;background:rgba(255,255,255,.08);border-radius:9px;display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;" onmouseenter="this.style.background='#FCB816';this.style.color='#010101'" onmouseleave="this.style.background='rgba(255,255,255,.08)';this.style.color='#fff'"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="https://www.xiaohongshu.com/user/profile/6192aa870000000010009378" target="_blank" rel="noopener noreferrer" aria-label="RedNote" style="width:36px;height:36px;background:rgba(255,255,255,.08);border-radius:9px;display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;" onmouseenter="this.style.background='#FCB816';this.style.color='#010101'" onmouseleave="this.style.background='rgba(255,255,255,.08)';this.style.color='#fff'"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></a>
+          <a href="https://www.youtube.com/@greatlandconstruction/featured" target="_blank" rel="noopener noreferrer" aria-label="YouTube" style="width:36px;height:36px;background:rgba(255,255,255,.08);border-radius:9px;display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;" onmouseenter="this.style.background='#FCB816';this.style.color='#010101'" onmouseleave="this.style.background='rgba(255,255,255,.08)';this.style.color='#fff'"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:.82rem;color:var(--y);letter-spacing:.07em;text-transform:uppercase;margin-bottom:18px;">Services</h4>
+        <div style="display:flex;flex-direction:column;gap:9px;">
+          <a href="../services/full-home-renovation.html" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseenter="this.style.color='#FCB816'" onmouseleave="this.style.color='rgba(255,255,255,.45)'">Home Renovation</a>
+          <a href="../services/kitchen-bath.html" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseenter="this.style.color='#FCB816'" onmouseleave="this.style.color='rgba(255,255,255,.45)'">Kitchen & Bath</a>
+          <a href="../services/basement-finishing.html" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseenter="this.style.color='#FCB816'" onmouseleave="this.style.color='rgba(255,255,255,.45)'">Basement Finishing</a>
+          <a href="../services/outdoor-living.html" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseenter="this.style.color='#FCB816'" onmouseleave="this.style.color='rgba(255,255,255,.45)'">Outdoor Living</a>
+          <a href="../services/commercial-construction.html" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseenter="this.style.color='#FCB816'" onmouseleave="this.style.color='rgba(255,255,255,.45)'">Commercial</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:.82rem;color:var(--y);letter-spacing:.07em;text-transform:uppercase;margin-bottom:18px;">Company</h4>
+        <div style="display:flex;flex-direction:column;gap:9px;">
+          <a href="../about.html" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseenter="this.style.color='#FCB816'" onmouseleave="this.style.color='rgba(255,255,255,.45)'">About Us</a>
+          <a href="../projects/index.html" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseenter="this.style.color='#FCB816'" onmouseleave="this.style.color='rgba(255,255,255,.45)'">Projects</a>
+          <a href="../contact.html" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseenter="this.style.color='#FCB816'" onmouseleave="this.style.color='rgba(255,255,255,.45)'">Contact</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:.82rem;color:var(--y);letter-spacing:.07em;text-transform:uppercase;margin-bottom:18px;">Contact</h4>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <a href="tel:+14164565666" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;">416-456-5666</a>
+          <a href="mailto:greatlandconstruction@hotmail.com" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;">greatlandconstruction@hotmail.com</a>
+          <span style="font-size:.83rem;color:rgba(255,255,255,.45);">Greater Toronto Area, ON</span>
+        </div>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,.08);padding-top:22px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;">
+      <p style="font-size:.77rem;color:rgba(255,255,255,.28);">© 2025 Greatland Construction. All rights reserved.</p>
+      <div style="display:flex;gap:22px;">
+        <a href="#" style="font-size:.77rem;color:rgba(255,255,255,.28);text-decoration:none;">Privacy Policy</a>
+        <a href="#" style="font-size:.77rem;color:rgba(255,255,255,.28);text-decoration:none;">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  /* Nav scroll shadow */
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => nav.classList.toggle('sc', window.scrollY > 10), { passive: true });
+  /* Hamburger */
+  document.getElementById('hbtn').addEventListener('click', function() {
+    this.classList.toggle('op');
+    document.getElementById('mob-nav').classList.toggle('op');
+  });
+  /* Intersection observer */
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('iv'); obs.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fu').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>

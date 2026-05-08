@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Greatland Construction | Book a Free On-Site Estimate</title>
+  <meta name="description" content="Contact Greatland Construction to discuss your renovation, addition, repair, or commercial construction project in the GTA." />
+  <meta name="keywords" content="contact Greatland Construction, free estimate GTA, renovation quote Toronto, construction estimate Brampton Mississauga" />
+  <meta property="og:title" content="Contact Greatland Construction | Book a Free On-Site Estimate" />
+  <meta property="og:description" content="Contact Greatland Construction to discuss your renovation, addition, repair, or commercial construction project in the GTA." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/png" href="brand_assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root { --y: #FCB816; --yd: #E5A500; --cr: #FFFFF6; --bk: #010101; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: var(--bk); background: #fff; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+    h1,h2,h3,h4,.hd { font-family: 'Montserrat', sans-serif; font-weight: 900; letter-spacing: -0.03em; line-height: 1.05; }
+    .hd6 { font-family: 'Montserrat', sans-serif; font-weight: 700; letter-spacing: -0.01em; }
+
+    /* FADE ANIMATIONS */
+    .fu { opacity: 0; transform: translateY(30px); transition: opacity .75s cubic-bezier(.22,1,.36,1), transform .75s cubic-bezier(.22,1,.36,1); }
+    .fu.iv { opacity: 1; transform: none; }
+    .d1 { transition-delay: .07s; } .d2 { transition-delay: .14s; } .d3 { transition-delay: .21s; }
+    .d4 { transition-delay: .28s; } .d5 { transition-delay: .35s; } .d6 { transition-delay: .42s; }
+    .d7 { transition-delay: .49s; } .d8 { transition-delay: .56s; }
+
+    /* HERO ENTER */
+    .he  { animation: hein .9s cubic-bezier(.22,1,.36,1) both; }
+    .he2 { animation: hein .9s cubic-bezier(.22,1,.36,1) .15s both; }
+    .he3 { animation: hein .9s cubic-bezier(.22,1,.36,1) .30s both; }
+    @keyframes hein { from { opacity:0; transform:translateY(22px); } to { opacity:1; transform:none; } }
+
+    /* BUTTONS */
+    .btn { display:inline-flex; align-items:center; gap:8px; font-family:'Montserrat',sans-serif; font-weight:700; font-size:.88rem; letter-spacing:-.01em; border-radius:100px; padding:14px 26px; cursor:pointer; border:none; text-decoration:none; white-space:nowrap; }
+    .bky { background:var(--y); color:var(--bk); box-shadow:0 4px 18px rgba(252,184,22,.32); transition:transform .2s cubic-bezier(.22,1,.36,1), box-shadow .2s cubic-bezier(.22,1,.36,1), background .2s; }
+    .bky:hover { transform:translateY(-2px); background:var(--yd); box-shadow:0 8px 28px rgba(252,184,22,.45); }
+    .bky:active { transform:none; }
+    .bky:focus-visible { outline:3px solid rgba(252,184,22,.6); outline-offset:2px; }
+    .bkk { background:var(--bk); color:#fff; box-shadow:0 4px 16px rgba(1,1,1,.18); transition:transform .2s cubic-bezier(.22,1,.36,1), box-shadow .2s, background .2s, color .2s; }
+    .bkk:hover { transform:translateY(-2px); box-shadow:0 8px 24px rgba(1,1,1,.28); }
+    .bkk:active { transform:none; }
+    .bkk:focus-visible { outline:3px solid rgba(1,1,1,.35); outline-offset:2px; }
+    .bkk.dm:hover { background:var(--y); color:var(--bk); box-shadow:0 8px 24px rgba(252,184,22,.4); }
+    .bko { background:transparent; color:var(--bk); border:2px solid rgba(1,1,1,.3); transition:transform .2s cubic-bezier(.22,1,.36,1), background .2s, color .2s, border-color .2s; }
+    .bko:hover { background:var(--bk); color:#fff; border-color:var(--bk); transform:translateY(-2px); }
+    .bko:focus-visible { outline:3px solid rgba(1,1,1,.3); outline-offset:2px; }
+
+    /* SUBMIT BUTTON — yellow hover, no lift */
+    .bkk-submit { background:var(--bk); color:var(--cr); box-shadow:0 4px 16px rgba(1,1,1,.18); transition:box-shadow .25s cubic-bezier(.22,1,.36,1), background .25s, color .25s; }
+    .bkk-submit:hover { background:var(--y); color:var(--bk); box-shadow:0 6px 28px rgba(252,184,22,.45); }
+    .bkk-submit:active { opacity:.9; }
+    .bkk-submit:focus-visible { outline:3px solid rgba(252,184,22,.6); outline-offset:2px; }
+
+    /* NAV */
+    #nav { position:fixed; top:0; left:0; right:0; z-index:100; background:var(--cr); border-bottom:1px solid rgba(1,1,1,.07); transition:box-shadow .3s; }
+    #nav.sc { box-shadow:0 2px 20px rgba(1,1,1,.12); }
+    .nl { font-family:'Inter',sans-serif; font-weight:600; font-size:.9rem; color:var(--bk); text-decoration:none; position:relative; padding-bottom:2px; }
+    .nl::after { content:''; position:absolute; bottom:-2px; left:0; width:0; height:2px; background:var(--bk); transition:width .25s cubic-bezier(.22,1,.36,1); }
+    .nl:hover::after, .nl.act::after { width:100%; }
+    #mob-nav { display:none; background:var(--cr); padding:0 24px 24px; border-bottom:1px solid rgba(1,1,1,.08); }
+    #mob-nav.op { display:block; }
+    .hbg span { display:block; width:24px; height:2px; background:var(--bk); border-radius:2px; transition:transform .25s cubic-bezier(.22,1,.36,1), opacity .25s; }
+    .hbg { display:flex; flex-direction:column; gap:6px; background:none; border:none; padding:8px; cursor:pointer; }
+    .hbg.op span:nth-child(1) { transform:translateY(8px) rotate(45deg); }
+    .hbg.op span:nth-child(2) { opacity:0; }
+    .hbg.op span:nth-child(3) { transform:translateY(-8px) rotate(-45deg); }
+
+    /* FORM INPUTS */
+    .fi { width:100%; padding:14px 17px; border:1.5px solid rgba(1,1,1,.12); border-radius:12px; font-family:'Inter',sans-serif; font-size:.93rem; color:var(--bk); background:#fff; transition:border-color .2s, box-shadow .2s; outline:none; }
+    .fi::placeholder { color:rgba(1,1,1,.32); }
+    .fi:focus { border-color:var(--y); box-shadow:0 0 0 3px rgba(252,184,22,.17); }
+    .fl { display:block; font-family:'Inter',sans-serif; font-weight:600; font-size:.84rem; color:var(--bk); margin-bottom:7px; }
+
+    /* SECTION LABEL */
+    .sl { display:inline-block; background:rgba(252,184,22,.15); color:var(--bk); font-family:'Montserrat',sans-serif; font-weight:700; font-size:.76rem; letter-spacing:.08em; text-transform:uppercase; padding:6px 14px; border-radius:100px; margin-bottom:16px; }
+
+    /* INFO ICON BADGE */
+    .ibdg { width:46px; height:46px; background:var(--y); border-radius:13px; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+
+    /* STEP CARDS */
+    .sc { background:#fff; border-radius:20px; border:1px solid rgba(1,1,1,.06); box-shadow:0 2px 8px rgba(1,1,1,.05); padding:28px 24px; transition:transform .3s cubic-bezier(.22,1,.36,1), box-shadow .3s; }
+    .sc:hover { transform:translateY(-4px); box-shadow:0 10px 32px rgba(1,1,1,.09); }
+
+    /* SCROLLBAR */
+    ::-webkit-scrollbar { width:5px; }
+    ::-webkit-scrollbar-track { background:#f5f5f0; }
+    ::-webkit-scrollbar-thumb { background:var(--y); border-radius:3px; }
+
+    /* RESPONSIVE */
+    @media (max-width:768px) { .dm { display:none !important; } #hbtn { display:flex !important; } }
+    @media (min-width:769px) { #mob-nav { display:none !important; } }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     NAVIGATION
+═══════════════════════════════════════════════════════════════ -->
+<header id="nav">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:13px 0;">
+      <a href="/" style="display:flex;align-items:center;">
+        <img src="brand_assets/brand_logo.png" alt="Greatland Construction" style="height:62px;width:auto;">
+      </a>
+      <nav class="dm" style="display:flex;align-items:center;gap:30px;">
+        <a href="/" class="nl">Home</a>
+        <a href="about.html" class="nl">About</a>
+        <a href="services/index.html" class="nl">Services</a>
+        <a href="projects/index.html" class="nl">Projects</a>
+        <a href="contact.html" class="nl act">Contact</a>
+      </nav>
+      <a href="#contact-form" class="btn bkk dm" style="font-size:.84rem;padding:11px 22px;">
+        Book Estimate
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <button id="hbtn" class="hbg" aria-label="Toggle menu" style="display:none;">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div id="mob-nav">
+    <div style="border-top:1px solid rgba(1,1,1,.1);padding-top:18px;display:flex;flex-direction:column;gap:2px;">
+      <a href="/" class="nl" style="padding:11px 0;border-bottom:1px solid rgba(1,1,1,.07);">Home</a>
+      <a href="about.html" class="nl" style="padding:11px 0;border-bottom:1px solid rgba(1,1,1,.07);">About</a>
+      <a href="services/index.html" class="nl" style="padding:11px 0;border-bottom:1px solid rgba(1,1,1,.07);">Services</a>
+      <a href="projects/index.html" class="nl" style="padding:11px 0;border-bottom:1px solid rgba(1,1,1,.07);">Projects</a>
+      <a href="contact.html" class="nl act" style="padding:11px 0;">Contact</a>
+      <a href="#contact-form" class="btn bkk" style="margin-top:14px;justify-content:center;">Book a Free Estimate</a>
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     CONTACT HERO
+═══════════════════════════════════════════════════════════════ -->
+<section style="padding-top:88px;background:var(--y);position:relative;overflow:hidden;">
+  <!-- Subtle texture layer -->
+  <div style="position:absolute;inset:0;opacity:.04;pointer-events:none;" aria-hidden="true">
+    <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter><rect width="100%" height="100%" filter="url(#noise)"/></svg>
+  </div>
+  <div style="max-width:1280px;margin:0 auto;padding:84px 24px 72px;position:relative;z-index:2;">
+    <div style="max-width:680px;">
+      <h1 class="hd he2" style="font-size:clamp(2.6rem,5vw,4.4rem);margin-bottom:22px;max-width:600px;">Let's Talk About<br>Your Project</h1>
+      <p class="he3" style="font-size:1.08rem;line-height:1.78;color:rgba(1,1,1,.68);max-width:520px;margin-bottom:36px;">Tell us what you're planning, and our team will help you understand the next step. No pressure, no obligation — just a conversation about your vision.</p>
+      <div class="he3" style="display:flex;flex-wrap:wrap;gap:12px;">
+        <a href="#contact-form" class="btn bkk" style="font-size:.97rem;padding:16px 28px;">
+          Book a Free On-Site Estimate
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="tel:+14164565666" class="btn bko" style="font-size:.97rem;padding:16px 28px;border-color:rgba(1,1,1,.3);">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.2 19.79 19.79 0 01.1 1.62 2 2 0 012.11 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+          Call Us Today
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- Wave transition to white -->
+  <div style="line-height:0;margin-top:8px;">
+    <svg viewBox="0 0 1440 56" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;" preserveAspectRatio="none">
+      <path d="M0,20 C360,56 720,0 1080,32 C1260,48 1360,18 1440,28 L1440,56 L0,56 Z" fill="white"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     CONTACT FORM + INFO
+═══════════════════════════════════════════════════════════════ -->
+<section id="contact-form" style="padding:80px 0 88px;background:#fff;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
+    <div style="display:grid;grid-template-columns:1fr 1.5fr;gap:64px;align-items:start;" id="cg">
+
+      <!-- LEFT: CONTACT INFO CARD -->
+      <div class="fu">
+        <h2 class="hd" style="font-size:clamp(1.9rem,2.8vw,2.6rem);margin-bottom:18px;">We're Here to Help</h2>
+        <p style="font-size:1rem;line-height:1.82;color:rgba(1,1,1,.56);margin-bottom:36px;">Fill out the form and one of our project coordinators will reach out within one business day to schedule your free on-site estimate.</p>
+
+        <!-- Contact Info Card -->
+        <div style="background:var(--cr);border-radius:22px;padding:30px;border:1px solid rgba(252,184,22,.2);display:flex;flex-direction:column;gap:22px;">
+
+          <div style="display:flex;align-items:center;gap:15px;">
+            <div class="ibdg">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#010101" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.2 19.79 19.79 0 01.1 1.62 2 2 0 012.11 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+            </div>
+            <div>
+              <div class="hd6" style="font-size:.84rem;margin-bottom:3px;">Phone</div>
+              <a href="tel:+14164565666" style="font-size:.93rem;color:rgba(1,1,1,.6);text-decoration:none;">416-456-5666</a>
+            </div>
+          </div>
+
+          <div style="height:1px;background:rgba(1,1,1,.06);"></div>
+
+          <div style="display:flex;align-items:center;gap:15px;">
+            <div class="ibdg">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#010101" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <div class="hd6" style="font-size:.84rem;margin-bottom:3px;">Email</div>
+              <a href="mailto:greatlandconstruction@hotmail.com" style="font-size:.93rem;color:rgba(1,1,1,.6);text-decoration:none;">greatlandconstruction@hotmail.com</a>
+            </div>
+          </div>
+
+          <div style="height:1px;background:rgba(1,1,1,.06);"></div>
+
+          <div style="display:flex;align-items:center;gap:15px;">
+            <div class="ibdg">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#010101" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <div class="hd6" style="font-size:.84rem;margin-bottom:3px;">Service Area</div>
+              <span style="font-size:.93rem;color:rgba(1,1,1,.6);">Greater Toronto Area, ON</span>
+            </div>
+          </div>
+
+          <div style="height:1px;background:rgba(1,1,1,.06);"></div>
+
+          <div style="display:flex;align-items:center;gap:15px;">
+            <div class="ibdg">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#010101" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div>
+              <div class="hd6" style="font-size:.84rem;margin-bottom:3px;">Business Hours</div>
+              <span style="font-size:.93rem;color:rgba(1,1,1,.6);">Mon – Sat: 9:00 AM – 5:00 PM</span><br>
+              <span style="font-size:.86rem;color:rgba(1,1,1,.4);">Sunday: Closed</span>
+            </div>
+          </div>
+
+          <div style="height:1px;background:rgba(1,1,1,.06);"></div>
+
+          <!-- Urgent note -->
+          <div style="display:flex;align-items:flex-start;gap:12px;background:rgba(252,184,22,.1);border-radius:14px;padding:16px;">
+            <div style="width:36px;height:36px;background:var(--y);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#010101" stroke-width="2.2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            </div>
+            <div>
+              <div class="hd6" style="font-size:.84rem;margin-bottom:4px;">Urgent Request?</div>
+              <p style="font-size:.82rem;line-height:1.68;color:rgba(1,1,1,.56);">For emergency repairs or urgent timelines, call us directly at <a href="tel:+14164565666" style="color:var(--bk);font-weight:600;text-decoration:none;">416-456-5666</a> for priority scheduling.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- RIGHT: QUOTE FORM -->
+      <div class="fu d2">
+        <form id="qform" style="background:var(--cr);border-radius:24px;padding:38px;border:1px solid rgba(252,184,22,.18);" onsubmit="hs(event)">
+          <h3 class="hd" style="font-size:1.5rem;margin-bottom:6px;">Request a Free Quote</h3>
+          <p style="font-size:.85rem;color:rgba(1,1,1,.5);margin-bottom:28px;">Fields marked * are required.</p>
+
+          <!-- Row 1: Name + Phone -->
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;" class="fr">
+            <div>
+              <label class="fl" for="nm">Full Name *</label>
+              <input class="fi" type="text" id="nm" name="name" placeholder="John Smith" required>
+            </div>
+            <div>
+              <label class="fl" for="ph">Phone Number *</label>
+              <input class="fi" type="tel" id="ph" name="phone" placeholder="(416) 555-0000" required>
+            </div>
+          </div>
+
+          <!-- Row 2: Email -->
+          <div style="margin-bottom:14px;">
+            <label class="fl" for="em">Email Address *</label>
+            <input class="fi" type="email" id="em" name="email" placeholder="john@example.com" required>
+          </div>
+
+          <!-- Row 3: Project Type + Location -->
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;" class="fr">
+            <div>
+              <label class="fl" for="pt">Project Type *</label>
+              <select class="fi" id="pt" name="project_type" required style="appearance:none;background-image:url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23010101' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E\");background-repeat:no-repeat;background-position:right 14px center;">
+                <option value="" disabled selected>Select a service</option>
+                <option>Full Home Renovation</option>
+                <option>Kitchen &amp; Bath</option>
+                <option>Basement Finishing</option>
+                <option>Outdoor Living</option>
+                <option>Commercial Construction</option>
+                <option>Retail &amp; Office</option>
+                <option>Custom Build &amp; Additions</option>
+                <option>Handyman &amp; Repairs</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div>
+              <label class="fl" for="loc">Project Location *</label>
+              <input class="fi" type="text" id="loc" name="location" placeholder="City or Postal Code" required>
+            </div>
+          </div>
+
+          <!-- Row 4: Timeline + Budget -->
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;" class="fr">
+            <div>
+              <label class="fl" for="tl">Preferred Timeline</label>
+              <select class="fi" id="tl" name="timeline" style="appearance:none;background-image:url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23010101' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E\");background-repeat:no-repeat;background-position:right 14px center;">
+                <option value="" disabled selected>When to start?</option>
+                <option>As soon as possible</option>
+                <option>Within 1 month</option>
+                <option>1 – 3 months</option>
+                <option>3 – 6 months</option>
+                <option>6+ months</option>
+                <option>Flexible / Not sure yet</option>
+              </select>
+            </div>
+            <div>
+              <label class="fl" for="bgt">Budget Range</label>
+              <select class="fi" id="bgt" name="budget" style="appearance:none;background-image:url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23010101' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E\");background-repeat:no-repeat;background-position:right 14px center;">
+                <option value="" disabled selected>Approximate budget?</option>
+                <option>Under $10,000</option>
+                <option>$10,000 – $25,000</option>
+                <option>$25,000 – $50,000</option>
+                <option>$50,000 – $100,000</option>
+                <option>$100,000 – $250,000</option>
+                <option>$250,000+</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Row 5: Message -->
+          <div style="margin-bottom:14px;">
+            <label class="fl" for="msg">Message / Project Details</label>
+            <textarea class="fi" id="msg" name="message" placeholder="Tell us about your project — scope, goals, any specific requirements or questions..." style="height:130px;resize:vertical;"></textarea>
+          </div>
+
+          <!-- Row 6: Upload Photos -->
+          <div style="margin-bottom:28px;">
+            <label class="fl">Upload Photos <span style="font-weight:400;color:rgba(1,1,1,.4);">(Optional)</span></label>
+            <div id="dropzone" style="border:1.5px dashed rgba(1,1,1,.14);border-radius:12px;padding:24px;text-align:center;cursor:pointer;transition:border-color .2s,background .2s;" onmouseenter="this.style.borderColor='#FCB816';this.style.background='rgba(252,184,22,.05)'" onmouseleave="this.style.borderColor='rgba(1,1,1,.14)';this.style.background='transparent'" onclick="document.getElementById('photos').click()">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(1,1,1,.28)" stroke-width="1.5" style="margin:0 auto 10px;display:block;"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+              <div style="font-size:.84rem;color:rgba(1,1,1,.42);">Click to upload project photos</div>
+              <div style="font-size:.74rem;color:rgba(1,1,1,.3);margin-top:4px;">JPG, PNG, HEIC up to 10MB each</div>
+              <input type="file" id="photos" name="photos" multiple accept="image/*" style="display:none;" onchange="sf(this)">
+            </div>
+            <div id="fl2" style="margin-top:8px;font-size:.77rem;color:rgba(1,1,1,.45);"></div>
+          </div>
+
+          <!-- Submit -->
+          <button type="submit" id="sbtn" class="btn bkk-submit" style="width:100%;justify-content:center;font-size:.97rem;padding:17px;">
+            Submit Request
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+          <p style="text-align:center;font-size:.75rem;color:rgba(1,1,1,.38);margin-top:12px;">We typically respond within 1 business day. No spam, ever.</p>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+<style>
+  @media(max-width:960px){#cg{grid-template-columns:1fr!important;gap:44px!important;} .fr{grid-template-columns:1fr!important;}}
+</style>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     WHAT HAPPENS NEXT
+═══════════════════════════════════════════════════════════════ -->
+<section style="padding:80px 0;background:var(--cr);">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
+    <div style="text-align:center;margin-bottom:52px;" class="fu">
+      <h2 class="hd" style="font-size:clamp(2rem,3.5vw,3rem);margin-bottom:14px;">What Happens Next</h2>
+      <p style="font-size:1rem;color:rgba(1,1,1,.52);max-width:440px;margin:0 auto;">We make it simple. After you submit your request, here's exactly what to expect.</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:22px;" id="stg">
+
+      <!-- Step 1 -->
+      <div class="sc fu d1">
+        <div style="display:flex;align-items:center;gap:14px;margin-bottom:18px;">
+          <div style="width:52px;height:52px;background:var(--y);border-radius:15px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#010101" stroke-width="2.2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+          <div style="width:32px;height:32px;border-radius:50%;background:var(--bk);display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-weight:900;font-size:.8rem;color:var(--y);flex-shrink:0;">01</div>
+        </div>
+        <h3 class="hd6" style="font-size:1.08rem;margin-bottom:10px;">We Review Your Request</h3>
+        <p style="font-size:.88rem;line-height:1.72;color:rgba(1,1,1,.54);">Our project coordinators review your submission to understand your scope, location, and timeline — so we come prepared.</p>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="sc fu d2">
+        <div style="display:flex;align-items:center;gap:14px;margin-bottom:18px;">
+          <div style="width:52px;height:52px;background:var(--y);border-radius:15px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#010101" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.2 19.79 19.79 0 01.1 1.62 2 2 0 012.11 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+          </div>
+          <div style="width:32px;height:32px;border-radius:50%;background:var(--bk);display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-weight:900;font-size:.8rem;color:var(--y);flex-shrink:0;">02</div>
+        </div>
+        <h3 class="hd6" style="font-size:1.08rem;margin-bottom:10px;">We Contact You to Learn More</h3>
+        <p style="font-size:.88rem;line-height:1.72;color:rgba(1,1,1,.54);">Within one business day, a team member will reach out by phone or email to ask any follow-up questions and confirm next steps.</p>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="sc fu d3">
+        <div style="display:flex;align-items:center;gap:14px;margin-bottom:18px;">
+          <div style="width:52px;height:52px;background:var(--y);border-radius:15px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#010101" stroke-width="2.2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <div style="width:32px;height:32px;border-radius:50%;background:var(--bk);display:flex;align-items:center;justify-content:center;font-family:'Montserrat',sans-serif;font-weight:900;font-size:.8rem;color:var(--y);flex-shrink:0;">03</div>
+        </div>
+        <h3 class="hd6" style="font-size:1.08rem;margin-bottom:10px;">We Schedule an On-Site Estimate</h3>
+        <p style="font-size:.88rem;line-height:1.72;color:rgba(1,1,1,.54);">We visit your property at a time that works for you, assess the project in person, and provide a detailed, transparent estimate. Free of charge.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+<style>
+  @media(max-width:900px){#stg{grid-template-columns:1fr!important;}}
+  @media(max-width:700px) and (min-width:500px){#stg{grid-template-columns:1fr 1fr!important;}}
+</style>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     FINAL CTA
+═══════════════════════════════════════════════════════════════ -->
+<section style="padding:88px 0;background:var(--y);">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;text-align:center;">
+    <div class="fu">
+      <h2 class="hd" style="font-size:clamp(2.4rem,4.5vw,3.8rem);margin-bottom:18px;max-width:700px;margin-left:auto;margin-right:auto;">Ready to Get Started?</h2>
+      <p style="font-size:1.08rem;line-height:1.78;color:rgba(1,1,1,.62);max-width:520px;margin:0 auto 38px;">Whether it's a renovation, repair, addition, or commercial build, Greatland is ready to help.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:13px;justify-content:center;">
+        <a href="#contact-form" class="btn bkk" style="font-size:.97rem;padding:17px 32px;">
+          Book a Free On-Site Estimate
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="tel:+14164565666" class="btn bko" style="font-size:.97rem;padding:17px 32px;border-color:rgba(1,1,1,.35);">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.2 19.79 19.79 0 01.1 1.62 2 2 0 012.11 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 14.92z"/></svg>
+          Call Us Today
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════════════════════════ -->
+<footer style="background:var(--bk);color:#fff;padding:60px 0 28px;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
+    <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:44px;margin-bottom:48px;" id="fg">
+      <div>
+        <img src="brand_assets/favicon.png" alt="Greatland Construction" style="height:56px;width:56px;margin-bottom:18px;border-radius:14px;">
+        <p style="font-size:.85rem;line-height:1.78;color:rgba(255,255,255,.45);max-width:270px;margin-bottom:22px;">Full-service residential and commercial construction across the Greater Toronto Area. Licensed, insured, and built on trust.</p>
+        <div style="display:flex;gap:10px;">
+          <a href="https://www.instagram.com/greatlandbear/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="width:36px;height:36px;background:rgba(255,255,255,.08);border-radius:9px;display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;" onmouseenter="this.style.background='#FCB816';this.style.color='#010101'" onmouseleave="this.style.background='rgba(255,255,255,.08)';this.style.color='#fff'"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="https://www.xiaohongshu.com/user/profile/6192aa870000000010009378" target="_blank" rel="noopener noreferrer" aria-label="RedNote" style="width:36px;height:36px;background:rgba(255,255,255,.08);border-radius:9px;display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;" onmouseenter="this.style.background='#FCB816';this.style.color='#010101'" onmouseleave="this.style.background='rgba(255,255,255,.08)';this.style.color='#fff'"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></a>
+          <a href="https://www.youtube.com/@greatlandconstruction/featured" target="_blank" rel="noopener noreferrer" aria-label="YouTube" style="width:36px;height:36px;background:rgba(255,255,255,.08);border-radius:9px;display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;" onmouseenter="this.style.background='#FCB816';this.style.color='#010101'" onmouseleave="this.style.background='rgba(255,255,255,.08)';this.style.color='#fff'"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:.82rem;color:var(--y);letter-spacing:.07em;text-transform:uppercase;margin-bottom:18px;">Services</h4>
+        <div style="display:flex;flex-direction:column;gap:9px;">
+          <a href="services/index.html" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseenter="this.style.color='#FCB816'" onmouseleave="this.style.color='rgba(255,255,255,.45)'">Home Renovation</a>
+          <a href="services/index.html" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseenter="this.style.color='#FCB816'" onmouseleave="this.style.color='rgba(255,255,255,.45)'">Kitchen &amp; Bath</a>
+          <a href="services/index.html" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseenter="this.style.color='#FCB816'" onmouseleave="this.style.color='rgba(255,255,255,.45)'">Basement Finishing</a>
+          <a href="services/index.html" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseenter="this.style.color='#FCB816'" onmouseleave="this.style.color='rgba(255,255,255,.45)'">Outdoor Living</a>
+          <a href="services/index.html" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseenter="this.style.color='#FCB816'" onmouseleave="this.style.color='rgba(255,255,255,.45)'">Commercial</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:.82rem;color:var(--y);letter-spacing:.07em;text-transform:uppercase;margin-bottom:18px;">Company</h4>
+        <div style="display:flex;flex-direction:column;gap:9px;">
+          <a href="about.html" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseenter="this.style.color='#FCB816'" onmouseleave="this.style.color='rgba(255,255,255,.45)'">About Us</a>
+          <a href="projects/index.html" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseenter="this.style.color='#FCB816'" onmouseleave="this.style.color='rgba(255,255,255,.45)'">Projects</a>
+          <a href="contact.html" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseenter="this.style.color='#FCB816'" onmouseleave="this.style.color='rgba(255,255,255,.45)'">Contact</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:.82rem;color:var(--y);letter-spacing:.07em;text-transform:uppercase;margin-bottom:18px;">Contact</h4>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <a href="tel:+14164565666" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;">416-456-5666</a>
+          <a href="mailto:greatlandconstruction@hotmail.com" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;">greatlandconstruction@hotmail.com</a>
+          <span style="font-size:.83rem;color:rgba(255,255,255,.45);">Greater Toronto Area, ON</span>
+        </div>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,.08);padding-top:22px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;">
+      <p style="font-size:.77rem;color:rgba(255,255,255,.28);">© 2025 Greatland Construction. All rights reserved.</p>
+      <div style="display:flex;gap:22px;">
+        <a href="#" style="font-size:.77rem;color:rgba(255,255,255,.28);text-decoration:none;">Privacy Policy</a>
+        <a href="#" style="font-size:.77rem;color:rgba(255,255,255,.28);text-decoration:none;">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<style>
+  @media(max-width:900px){#fg{grid-template-columns:1fr 1fr!important;gap:30px!important;}}
+  @media(max-width:500px){#fg{grid-template-columns:1fr!important;}}
+</style>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     JAVASCRIPT
+═══════════════════════════════════════════════════════════════ -->
+<script>
+  // Scroll fade-in
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('iv'); obs.unobserve(e.target); } });
+  }, { threshold: 0.1, rootMargin: '0px 0px -36px 0px' });
+  document.querySelectorAll('.fu').forEach(el => obs.observe(el));
+
+  // Navbar shadow on scroll
+  window.addEventListener('scroll', () => document.getElementById('nav').classList.toggle('sc', scrollY > 20), { passive: true });
+
+  // Mobile menu
+  const hbtn = document.getElementById('hbtn');
+  const mnav = document.getElementById('mob-nav');
+  hbtn.addEventListener('click', () => {
+    const o = hbtn.classList.toggle('op');
+    mnav.classList.toggle('op', o);
+  });
+  mnav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { hbtn.classList.remove('op'); mnav.classList.remove('op'); }));
+
+  // Form submit
+  function hs(e) {
+    e.preventDefault();
+    const btn = document.getElementById('sbtn');
+    btn.innerHTML = '✓ Sent! We\'ll be in touch soon';
+    btn.style.background = '#22c55e';
+    btn.style.color = '#fff';
+    btn.disabled = true;
+    setTimeout(() => {
+      btn.innerHTML = 'Submit Request <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>';
+      btn.style.background = '';
+      btn.style.color = '';
+      btn.disabled = false;
+      e.target.reset();
+      document.getElementById('fl2').textContent = '';
+    }, 4000);
+  }
+
+  // File list
+  function sf(inp) {
+    const fl = document.getElementById('fl2');
+    fl.textContent = inp.files.length ? 'Selected: ' + Array.from(inp.files).map(f => f.name).join(', ') : '';
+  }
+
+  // Smooth scroll with nav offset
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const t = document.querySelector(a.getAttribute('href'));
+      if (t) { e.preventDefault(); window.scrollTo({ top: t.getBoundingClientRect().top + scrollY - 88, behavior: 'smooth' }); }
+    });
+  });
+</script>
+</body>
+</html>

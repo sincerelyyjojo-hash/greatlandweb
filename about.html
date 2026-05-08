@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Greatland Construction | GTA Renovation &amp; Construction Company</title>
+  <meta name="description" content="Learn about Greatland Construction, a full-service residential and commercial construction company serving the Greater Toronto Area." />
+  <meta property="og:title" content="About Greatland Construction | GTA Renovation &amp; Construction Company" />
+  <meta property="og:description" content="Full-service residential and commercial construction across the GTA. Licensed trades, WSIB coverage, 5-year workmanship warranty." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/png" href="brand_assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root { --y: #FCB816; --yd: #E5A500; --cr: #FFFFF6; --bk: #010101; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: var(--bk); background: #fff; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+    h1,h2,h3,h4,.hd { font-family: 'Montserrat', sans-serif; font-weight: 900; letter-spacing: -0.03em; line-height: 1.05; }
+    .hd6 { font-family: 'Montserrat', sans-serif; font-weight: 700; letter-spacing: -0.01em; }
+
+    .fu { opacity: 0; transform: translateY(30px); transition: opacity .75s cubic-bezier(.22,1,.36,1), transform .75s cubic-bezier(.22,1,.36,1); }
+    .fu.iv { opacity: 1; transform: none; }
+    .d1 { transition-delay: .07s; } .d2 { transition-delay: .14s; } .d3 { transition-delay: .21s; }
+    .d4 { transition-delay: .28s; } .d5 { transition-delay: .35s; } .d6 { transition-delay: .42s; }
+
+    .he  { animation: hein .9s cubic-bezier(.22,1,.36,1) both; }
+    .he2 { animation: hein .9s cubic-bezier(.22,1,.36,1) .15s both; }
+    .he3 { animation: hein .9s cubic-bezier(.22,1,.36,1) .30s both; }
+    .he4 { animation: hein 1s  cubic-bezier(.22,1,.36,1) .22s both; }
+    @keyframes hein { from { opacity:0; transform:translateY(22px); } to { opacity:1; transform:none; } }
+
+    .btn { display:inline-flex; align-items:center; gap:8px; font-family:'Montserrat',sans-serif; font-weight:700; font-size:.88rem; letter-spacing:-.01em; border-radius:100px; padding:14px 26px; cursor:pointer; border:none; text-decoration:none; white-space:nowrap; }
+    .bky { background:var(--y); color:var(--bk); box-shadow:0 4px 18px rgba(252,184,22,.32); transition:transform .2s cubic-bezier(.22,1,.36,1), box-shadow .2s cubic-bezier(.22,1,.36,1), background .2s; }
+    .bky:hover { transform:translateY(-2px); background:var(--yd); box-shadow:0 8px 28px rgba(252,184,22,.45); }
+    .bky:active { transform:none; }
+    .bky:focus-visible { outline:3px solid rgba(252,184,22,.6); outline-offset:2px; }
+    .bkk { background:var(--bk); color:#fff; box-shadow:0 4px 16px rgba(1,1,1,.18); transition:transform .2s cubic-bezier(.22,1,.36,1), box-shadow .2s, background .2s, color .2s; }
+    .bkk:hover { transform:translateY(-2px); background:#222; box-shadow:0 8px 24px rgba(1,1,1,.28); }
+    .bkk:active { transform:none; }
+    .bkk:focus-visible { outline:3px solid rgba(1,1,1,.35); outline-offset:2px; }
+    .bko { background:transparent; color:var(--bk); border:2px solid rgba(1,1,1,.3); transition:transform .2s cubic-bezier(.22,1,.36,1), background .2s, color .2s, border-color .2s; }
+    .bko:hover { background:var(--bk); color:#fff; border-color:var(--bk); transform:translateY(-2px); }
+    .bko:focus-visible { outline:3px solid rgba(1,1,1,.3); outline-offset:2px; }
+    .bkk-submit { background:var(--bk); color:var(--cr); box-shadow:0 4px 16px rgba(1,1,1,.18); transition:box-shadow .25s cubic-bezier(.22,1,.36,1), background .25s, color .25s; }
+    .bkk-submit:hover { background:var(--y); color:var(--bk); box-shadow:0 6px 28px rgba(252,184,22,.45); }
+    .bkk-submit:active { opacity:.9; }
+    .bkk-submit:focus-visible { outline:3px solid rgba(252,184,22,.6); outline-offset:2px; }
+    .bko-flat { background:transparent; color:var(--bk); border:2px solid rgba(1,1,1,.78); transition:background .25s cubic-bezier(.22,1,.36,1), color .25s, border-color .25s, box-shadow .25s; }
+    .bko-flat:hover { background:var(--bk); color:var(--cr); border-color:var(--bk); box-shadow:0 6px 20px rgba(1,1,1,.18); }
+    .bko-flat:active { opacity:.9; }
+    .bko-flat:focus-visible { outline:3px solid rgba(1,1,1,.35); outline-offset:2px; }
+
+    #nav { position:fixed; top:0; left:0; right:0; z-index:100; background:var(--cr); border-bottom:1px solid rgba(1,1,1,.07); transition:box-shadow .3s; }
+    #nav.sc { box-shadow:0 2px 20px rgba(1,1,1,.12); }
+    .nl { font-family:'Inter',sans-serif; font-weight:600; font-size:.9rem; color:var(--bk); text-decoration:none; position:relative; padding-bottom:2px; }
+    .nl::after { content:''; position:absolute; bottom:-2px; left:0; width:0; height:2px; background:var(--bk); transition:width .25s cubic-bezier(.22,1,.36,1); }
+    .nl:hover::after, .nl.act::after { width:100%; }
+    #mob-nav { display:none; background:var(--cr); padding:0 24px 24px; border-bottom:1px solid rgba(1,1,1,.08); }
+    #mob-nav.op { display:block; }
+    .hbg span { display:block; width:24px; height:2px; background:var(--bk); border-radius:2px; transition:transform .25s cubic-bezier(.22,1,.36,1), opacity .25s; }
+    .hbg { display:flex; flex-direction:column; gap:6px; background:none; border:none; padding:8px; cursor:pointer; }
+    .hbg.op span:nth-child(1) { transform:translateY(8px) rotate(45deg); }
+    .hbg.op span:nth-child(2) { opacity:0; }
+    .hbg.op span:nth-child(3) { transform:translateY(-8px) rotate(-45deg); }
+
+    .tbdg { width:48px; height:48px; background:var(--y); border-radius:14px; display:flex; align-items:center; justify-content:center; flex-shrink:0; transition:transform .26s cubic-bezier(.22,1,.36,1); }
+    .tcard { transition:transform .26s cubic-bezier(.22,1,.36,1), box-shadow .26s, background .26s; }
+    .tcard:hover { transform:translateY(-6px) scale(1.018); box-shadow:0 16px 40px rgba(1,1,1,.1),0 4px 14px rgba(252,184,22,.15); background:#fff !important; border-color:rgba(252,184,22,.35) !important; }
+    .tcard:hover .tbdg { transform:scale(1.1) rotate(-4deg); }
+
+    .wc { background:#fff; border-radius:20px; border:1px solid rgba(1,1,1,.06); box-shadow:0 2px 8px rgba(1,1,1,.06); padding:26px; transition:transform .3s cubic-bezier(.22,1,.36,1), box-shadow .3s; }
+    .wc:hover { transform:translateY(-4px); box-shadow:0 8px 30px rgba(1,1,1,.1); }
+
+    .sl { display:inline-block; background:rgba(252,184,22,.15); color:var(--bk); font-family:'Montserrat',sans-serif; font-weight:700; font-size:.76rem; letter-spacing:.08em; text-transform:uppercase; padding:6px 14px; border-radius:100px; margin-bottom:16px; }
+
+    ::-webkit-scrollbar { width:5px; }
+    ::-webkit-scrollbar-track { background:#f5f5f0; }
+    ::-webkit-scrollbar-thumb { background:var(--y); border-radius:3px; }
+
+    @media (max-width:768px) { .dm { display:none !important; } #hbtn { display:flex !important; } }
+    @media (min-width:769px) { #mob-nav { display:none !important; } }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<header id="nav">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
+    <div style="display:flex;align-items:center;justify-content:space-between;padding:13px 0;">
+      <a href="/" style="display:flex;align-items:center;">
+        <img src="brand_assets/brand_logo.png" alt="Greatland Construction" style="height:62px;width:auto;">
+      </a>
+      <nav class="dm" style="display:flex;align-items:center;gap:30px;">
+        <a href="/" class="nl">Home</a>
+        <a href="about.html" class="nl act">About</a>
+        <a href="services/index.html" class="nl">Services</a>
+        <a href="projects/index.html" class="nl">Projects</a>
+        <a href="contact.html" class="nl">Contact</a>
+      </nav>
+      <a href="contact.html" class="btn bkk dm" style="font-size:.84rem;padding:11px 22px;">
+        Book Estimate
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <button id="hbtn" class="hbg" aria-label="Toggle menu" style="display:none;">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div id="mob-nav">
+    <div style="border-top:1px solid rgba(1,1,1,.1);padding-top:18px;display:flex;flex-direction:column;gap:2px;">
+      <a href="/" class="nl" style="padding:11px 0;border-bottom:1px solid rgba(1,1,1,.07);">Home</a>
+      <a href="about.html" class="nl act" style="padding:11px 0;border-bottom:1px solid rgba(1,1,1,.07);">About</a>
+      <a href="services/index.html" class="nl" style="padding:11px 0;border-bottom:1px solid rgba(1,1,1,.07);">Services</a>
+      <a href="projects/index.html" class="nl" style="padding:11px 0;border-bottom:1px solid rgba(1,1,1,.07);">Projects</a>
+      <a href="contact.html" class="nl" style="padding:11px 0;">Contact</a>
+      <a href="contact.html" class="btn bkk" style="margin-top:14px;justify-content:center;">Book a Free Estimate</a>
+    </div>
+  </div>
+</header>
+
+<!-- ═══ HERO ═══ -->
+<section style="background:var(--cr);padding-top:88px;overflow:hidden;position:relative;">
+  <!-- Yellow accent panel -->
+  <div style="position:absolute;right:0;top:0;width:46%;height:100%;background:var(--y);clip-path:polygon(14% 0%,100% 0%,100% 100%,0% 100%);opacity:.13;pointer-events:none;" aria-hidden="true"></div>
+  <div style="max-width:1280px;margin:0 auto;padding:80px 24px 72px;position:relative;z-index:2;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;" id="hg">
+      <!-- Text -->
+      <div>
+        <h1 class="hd he2" style="font-size:clamp(2.4rem,4.2vw,3.8rem);margin-bottom:22px;">Built on Trust.<br>Driven by Detail.</h1>
+        <p class="he3" style="font-size:1.06rem;line-height:1.82;color:rgba(1,1,1,.6);max-width:480px;margin-bottom:36px;">Greatland Construction is a full-service construction and renovation company serving homeowners and businesses across the Greater Toronto Area.</p>
+        <div class="he4" style="display:flex;flex-wrap:wrap;gap:12px;">
+          <a href="contact.html" class="btn bky" style="font-size:.97rem;padding:16px 30px;">
+            Book a Free On-Site Estimate
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="services/index.html" class="btn bko" style="font-size:.97rem;padding:16px 30px;">View Our Services</a>
+        </div>
+      </div>
+      <!-- Hero image -->
+      <div class="he4" style="position:relative;">
+        <div style="border-radius:28px;overflow:hidden;box-shadow:0 24px 64px rgba(1,1,1,.18),0 6px 24px rgba(252,184,22,.22);">
+          <img src="about_us_photos/aaa.png" alt="Greatland Construction team at work" style="width:100%;height:460px;object-fit:cover;display:block;">
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(1,1,1,.14),transparent 55%);"></div>
+        </div>
+        <!-- Badge: warranty -->
+        <div style="position:absolute;bottom:-20px;left:-20px;background:#fff;border-radius:18px;padding:15px 18px;box-shadow:0 8px 32px rgba(1,1,1,.12),0 2px 8px rgba(252,184,22,.14);display:flex;align-items:center;gap:12px;border:1px solid rgba(252,184,22,.2);">
+          <div style="width:40px;height:40px;background:var(--y);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--bk)" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div>
+            <div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:.9rem;line-height:1.1;">5-Year Warranty</div>
+            <div style="font-size:.74rem;color:rgba(1,1,1,.48);margin-top:2px;">On All Workmanship</div>
+          </div>
+        </div>
+        <!-- Badge: GTA -->
+        <div style="position:absolute;top:-16px;right:-16px;background:var(--y);border-radius:18px;padding:13px 18px;box-shadow:0 8px 32px rgba(252,184,22,.38);display:flex;align-items:center;gap:10px;">
+          <div style="width:36px;height:36px;background:rgba(1,1,1,.1);border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--bk)" stroke-width="2.2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <div>
+            <div style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:.86rem;color:var(--bk);line-height:1.1;">Local GTA Team</div>
+            <div style="font-size:.72rem;color:rgba(1,1,1,.55);margin-top:2px;">Serving Your Neighbourhood</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  @media(max-width:820px){#hg{grid-template-columns:1fr!important;gap:0!important;}}
+  @media(max-width:820px){#hg>div:last-child{display:none!important;}}
+</style>
+
+<!-- ═══ WHO WE ARE ═══ -->
+<section style="padding:88px 0;background:#fff;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;" id="wg">
+      <!-- Image -->
+      <div class="fu" style="position:relative;">
+        <div style="border-radius:24px;overflow:hidden;box-shadow:0 16px 48px rgba(1,1,1,.12),0 4px 16px rgba(252,184,22,.16);">
+          <img src="about_us_photos/dwa.png" alt="Greatland Construction completed project" style="width:100%;height:420px;object-fit:cover;display:block;">
+        </div>
+        <div style="position:absolute;bottom:-18px;right:-18px;width:110px;height:110px;background:var(--y);border-radius:22px;opacity:.16;z-index:-1;"></div>
+        <div style="position:absolute;top:-14px;left:-14px;width:80px;height:80px;background:rgba(1,1,1,.04);border-radius:18px;z-index:-1;"></div>
+      </div>
+      <!-- Text -->
+      <div>
+        <h2 class="hd fu d1" style="font-size:clamp(1.9rem,3vw,2.8rem);margin-bottom:24px;">A GTA Construction<br>Team Built for Every Project</h2>
+        <p class="fu d2" style="font-size:1rem;line-height:1.85;color:rgba(1,1,1,.58);margin-bottom:18px;">Greatland Construction is a GTA-based construction and renovation company providing one-stop project support for residential and commercial clients. From small repairs and interior upgrades to full renovations, additions, exterior work, and commercial builds, our team helps clients move from idea to finished project with clear communication and reliable workmanship.</p>
+        <p class="fu d3" style="font-size:1rem;line-height:1.85;color:rgba(1,1,1,.58);margin-bottom:30px;">We keep you informed at every stage, from first estimate to final walkthrough, so there are no surprises along the way.</p>
+        <div class="fu d4" style="display:flex;flex-direction:column;gap:10px;">
+          <div style="display:flex;align-items:center;gap:10px;font-size:.88rem;font-weight:600;color:rgba(1,1,1,.68);">
+            <div style="width:22px;height:22px;background:var(--y);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="var(--bk)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+            Residential &amp; Commercial Experience
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:.88rem;font-weight:600;color:rgba(1,1,1,.68);">
+            <div style="width:22px;height:22px;background:var(--y);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="var(--bk)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+            Serving the Greater Toronto Area
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;font-size:.88rem;font-weight:600;color:rgba(1,1,1,.68);">
+            <div style="width:22px;height:22px;background:var(--y);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="var(--bk)" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+            Licensed, Insured &amp; WSIB Covered
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>@media(max-width:820px){#wg{grid-template-columns:1fr!important;gap:40px!important;}}</style>
+
+<!-- ═══ WHAT MAKES US DIFFERENT ═══ -->
+<section style="padding:88px 0;background:var(--cr);">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
+    <div class="fu" style="text-align:center;margin-bottom:52px;">
+      <h2 class="hd" style="font-size:clamp(2rem,3.5vw,3rem);max-width:520px;margin:0 auto;">What Makes Us Different</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px;" id="dg">
+      <div class="wc fu d1">
+        <div class="tbdg" style="margin-bottom:18px;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--bk)" stroke-width="2.2"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="2"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="12" y2="16"/></svg>
+        </div>
+        <h3 class="hd6" style="font-size:1rem;margin-bottom:10px;">One-Stop Project Management</h3>
+        <p style="font-size:.87rem;line-height:1.72;color:rgba(1,1,1,.52);">From planning to final walkthrough, we help coordinate each step so nothing falls through the cracks.</p>
+      </div>
+      <div class="wc fu d2">
+        <div class="tbdg" style="margin-bottom:18px;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--bk)" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+        </div>
+        <h3 class="hd6" style="font-size:1rem;margin-bottom:10px;">Licensed Trades</h3>
+        <p style="font-size:.87rem;line-height:1.72;color:rgba(1,1,1,.52);">Plumbing, electrical, and gas work handled by qualified professionals — properly licensed and insured.</p>
+      </div>
+      <div class="wc fu d3">
+        <div class="tbdg" style="margin-bottom:18px;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--bk)" stroke-width="2.2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+        </div>
+        <h3 class="hd6" style="font-size:1rem;margin-bottom:10px;">Residential &amp; Commercial</h3>
+        <p style="font-size:.87rem;line-height:1.72;color:rgba(1,1,1,.52);">We work on homes, offices, retail spaces, restaurants, and specialty projects across the GTA.</p>
+      </div>
+      <div class="wc fu d4">
+        <div class="tbdg" style="margin-bottom:18px;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--bk)" stroke-width="2.2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+        </div>
+        <h3 class="hd6" style="font-size:1rem;margin-bottom:10px;">Clear Communication</h3>
+        <p style="font-size:.87rem;line-height:1.72;color:rgba(1,1,1,.52);">We keep clients informed with transparent estimates, timelines, and updates at every stage.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  @media(max-width:900px){#dg{grid-template-columns:repeat(2,1fr)!important;}}
+  @media(max-width:500px){#dg{grid-template-columns:1fr!important;}}
+</style>
+
+<!-- ═══ LOCAL TEAM / STORY ═══ -->
+<section style="padding:88px 0;background:#fff;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;" id="lg">
+      <!-- Text -->
+      <div>
+        <h2 class="hd fu d1" style="font-size:clamp(1.9rem,3vw,2.8rem);margin-bottom:24px;">Local Team.<br>Reliable Work.<br>Real Results.</h2>
+        <p class="fu d2" style="font-size:1rem;line-height:1.85;color:rgba(1,1,1,.58);margin-bottom:18px;">As a local GTA construction team, we understand the needs of homeowners, business owners, and property managers in the region. Our work is built around practical solutions, honest communication, and long-term client relationships.</p>
+        <p class="fu d3" style="font-size:1rem;line-height:1.85;color:rgba(1,1,1,.58);margin-bottom:32px;">Whether you are planning a full renovation, adding on to your home, or refreshing a commercial space, we bring the same dedication to every job — big or small.</p>
+        <a href="contact.html" class="btn bky fu d4" style="font-size:.95rem;padding:15px 28px;">
+          Get a Free Estimate
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+      <!-- Photo collage -->
+      <div class="fu d2" style="display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start;">
+        <div style="margin-top:28px;">
+          <div style="border-radius:20px;overflow:hidden;box-shadow:0 8px 32px rgba(1,1,1,.12);">
+            <img src="about_us_photos/7f1fdde8-f1a9-4878-a2fa-5a084d4fc910.png" alt="Greatland Construction interlock patio" style="width:100%;height:230px;object-fit:cover;display:block;">
+          </div>
+        </div>
+        <div>
+          <div style="border-radius:20px;overflow:hidden;box-shadow:0 8px 32px rgba(1,1,1,.12);margin-bottom:14px;">
+            <img src="about_us_photos/rrr.png" alt="Greatland Construction front entrance" style="width:100%;height:185px;object-fit:cover;display:block;">
+          </div>
+          <div style="border-radius:20px;overflow:hidden;box-shadow:0 8px 32px rgba(1,1,1,.12);">
+            <img src="about_us_photos/dawdas.png" alt="Greatland Construction team" style="width:100%;height:185px;object-fit:cover;display:block;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>@media(max-width:820px){#lg{grid-template-columns:1fr!important;gap:40px!important;}}</style>
+
+<!-- ═══ SERVICES SNAPSHOT ═══ -->
+<section style="padding:88px 0;background:var(--bk);">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
+    <div class="fu" style="text-align:center;margin-bottom:52px;">
+      <h2 class="hd" style="font-size:clamp(2rem,3.5vw,3rem);color:#fff;max-width:500px;margin:0 auto;">What We Help With</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px;" id="sg">
+      <a href="services/index.html" class="svc-snap fu d1">
+        <div style="width:38px;height:38px;background:var(--y);border-radius:11px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--bk)" stroke-width="2.2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:.92rem;color:#fff;">Full Home Renovation</div>
+      </a>
+      <a href="services/index.html" class="svc-snap fu d2">
+        <div style="width:38px;height:38px;background:var(--y);border-radius:11px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--bk)" stroke-width="2.2"><path d="M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3m0 18h3a2 2 0 002-2v-3M3 16v3a2 2 0 002 2h3"/></svg>
+        </div>
+        <div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:.92rem;color:#fff;">Kitchen &amp; Bath</div>
+      </a>
+      <a href="services/index.html" class="svc-snap fu d3">
+        <div style="width:38px;height:38px;background:var(--y);border-radius:11px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--bk)" stroke-width="2.2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+        </div>
+        <div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:.92rem;color:#fff;">Basement Finishing</div>
+      </a>
+      <a href="services/index.html" class="svc-snap fu d4">
+        <div style="width:38px;height:38px;background:var(--y);border-radius:11px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--bk)" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        </div>
+        <div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:.92rem;color:#fff;">Outdoor Living</div>
+      </a>
+      <a href="services/index.html" class="svc-snap fu d1">
+        <div style="width:38px;height:38px;background:var(--y);border-radius:11px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--bk)" stroke-width="2.2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+        </div>
+        <div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:.92rem;color:#fff;">Commercial Construction</div>
+      </a>
+      <a href="services/index.html" class="svc-snap fu d2">
+        <div style="width:38px;height:38px;background:var(--y);border-radius:11px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--bk)" stroke-width="2.2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
+        <div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:.92rem;color:#fff;">Retail &amp; Office</div>
+      </a>
+      <a href="services/index.html" class="svc-snap fu d3">
+        <div style="width:38px;height:38px;background:var(--y);border-radius:11px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--bk)" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+        </div>
+        <div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:.92rem;color:#fff;">Custom Build &amp; Additions</div>
+      </a>
+      <a href="services/index.html" class="svc-snap fu d4">
+        <div style="width:38px;height:38px;background:var(--y);border-radius:11px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--bk)" stroke-width="2.2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <div style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:.92rem;color:#fff;">Handyman &amp; Repairs</div>
+      </a>
+    </div>
+    <div style="text-align:center;margin-top:44px;" class="fu">
+      <a href="services/index.html" class="btn bky" style="font-size:.95rem;padding:15px 30px;">
+        View All Services
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+<style>
+  .svc-snap { display:block; text-decoration:none; background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.08); border-radius:18px; padding:22px; transition:background .25s cubic-bezier(.22,1,.36,1), border-color .25s, transform .25s cubic-bezier(.22,1,.36,1); }
+  .svc-snap:hover { background:rgba(252,184,22,.1); border-color:rgba(252,184,22,.35); transform:translateY(-4px); }
+  .svc-snap:focus-visible { outline:3px solid var(--y); outline-offset:2px; }
+  @media(max-width:900px){#sg{grid-template-columns:repeat(2,1fr)!important;}}
+  @media(max-width:500px){#sg{grid-template-columns:1fr!important;}}
+</style>
+
+<!-- ═══ TRUST / CREDENTIALS ═══ -->
+<section style="padding:80px 0;background:var(--cr);">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
+    <div class="fu" style="text-align:center;margin-bottom:48px;">
+      <h2 class="hd" style="font-size:clamp(1.9rem,3vw,2.8rem);">Our Credentials</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:16px;" id="tg">
+      <div class="tcard fu d1" style="background:var(--cr);border:1.5px solid rgba(252,184,22,.22);border-radius:20px;padding:24px 18px;text-align:center;">
+        <div class="tbdg" style="margin:0 auto 14px;width:52px;height:52px;border-radius:16px;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--bk)" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+        </div>
+        <div class="hd6" style="font-size:.9rem;margin-bottom:5px;">Licensed Trades</div>
+        <p style="font-size:.77rem;line-height:1.6;color:rgba(1,1,1,.48);">Fully licensed plumbing, electrical &amp; gas professionals</p>
+      </div>
+      <div class="tcard fu d2" style="background:var(--cr);border:1.5px solid rgba(252,184,22,.22);border-radius:20px;padding:24px 18px;text-align:center;">
+        <div class="tbdg" style="margin:0 auto 14px;width:52px;height:52px;border-radius:16px;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--bk)" stroke-width="2.2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <div class="hd6" style="font-size:.9rem;margin-bottom:5px;">WSIB Coverage</div>
+        <p style="font-size:.77rem;line-height:1.6;color:rgba(1,1,1,.48);">Full WSIB coverage for your peace of mind</p>
+      </div>
+      <div class="tcard fu d3" style="background:var(--cr);border:1.5px solid rgba(252,184,22,.22);border-radius:20px;padding:24px 18px;text-align:center;">
+        <div class="tbdg" style="margin:0 auto 14px;width:52px;height:52px;border-radius:16px;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--bk)" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <div class="hd6" style="font-size:.9rem;margin-bottom:5px;">One-Stop Management</div>
+        <p style="font-size:.77rem;line-height:1.6;color:rgba(1,1,1,.48);">One team, one contact for your entire project</p>
+      </div>
+      <div class="tcard fu d4" style="background:var(--cr);border:1.5px solid rgba(252,184,22,.22);border-radius:20px;padding:24px 18px;text-align:center;">
+        <div class="tbdg" style="margin:0 auto 14px;width:52px;height:52px;border-radius:16px;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--bk)" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="hd6" style="font-size:.9rem;margin-bottom:5px;">5-Year Warranty</div>
+        <p style="font-size:.77rem;line-height:1.6;color:rgba(1,1,1,.48);">Workmanship warranty on all completed projects</p>
+      </div>
+      <div class="tcard fu d5" style="background:var(--cr);border:1.5px solid rgba(252,184,22,.22);border-radius:20px;padding:24px 18px;text-align:center;">
+        <div class="tbdg" style="margin:0 auto 14px;width:52px;height:52px;border-radius:16px;">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--bk)" stroke-width="2.2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div class="hd6" style="font-size:.9rem;margin-bottom:5px;">GTA Service Area</div>
+        <p style="font-size:.77rem;line-height:1.6;color:rgba(1,1,1,.48);">Serving the entire Greater Toronto Area</p>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  @media(max-width:1000px){#tg{grid-template-columns:repeat(3,1fr)!important;}}
+  @media(max-width:600px){#tg{grid-template-columns:repeat(2,1fr)!important;}}
+  @media(max-width:380px){#tg{grid-template-columns:1fr!important;}}
+</style>
+
+<!-- ═══ PROCESS PREVIEW ═══ -->
+<section style="padding:88px 0;background:#fff;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
+    <div class="fu" style="text-align:center;margin-bottom:56px;">
+      <h2 class="hd" style="font-size:clamp(2rem,3.5vw,3rem);">A Simple Process<br>From Start to Finish</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:0;position:relative;" id="pg">
+      <div style="position:absolute;top:27px;left:10%;right:10%;height:2px;background:linear-gradient(to right,var(--y),rgba(252,184,22,.28));z-index:0;pointer-events:none;" class="dm" aria-hidden="true"></div>
+      <div class="fu d1 proc-step" style="text-align:center;padding:0 14px;position:relative;z-index:1;">
+        <div class="proc-circle">
+          <span class="proc-num">1</span>
+        </div>
+        <div class="hd6" style="font-size:.9rem;margin-bottom:7px;">On-Site Consultation</div>
+        <p style="font-size:.8rem;line-height:1.65;color:rgba(1,1,1,.48);">We visit your property and discuss your goals in person.</p>
+      </div>
+      <div class="fu d2 proc-step" style="text-align:center;padding:0 14px;position:relative;z-index:1;">
+        <div class="proc-circle">
+          <span class="proc-num">2</span>
+        </div>
+        <div class="hd6" style="font-size:.9rem;margin-bottom:7px;">Design &amp; Estimate</div>
+        <p style="font-size:.8rem;line-height:1.65;color:rgba(1,1,1,.48);">Transparent estimate and design plan for your review.</p>
+      </div>
+      <div class="fu d3 proc-step" style="text-align:center;padding:0 14px;position:relative;z-index:1;">
+        <div class="proc-circle">
+          <span class="proc-num">3</span>
+        </div>
+        <div class="hd6" style="font-size:.9rem;margin-bottom:7px;">Material Selection</div>
+        <p style="font-size:.8rem;line-height:1.65;color:rgba(1,1,1,.48);">Choose materials and finishes that fit your style and budget.</p>
+      </div>
+      <div class="fu d4 proc-step" style="text-align:center;padding:0 14px;position:relative;z-index:1;">
+        <div class="proc-circle">
+          <span class="proc-num">4</span>
+        </div>
+        <div class="hd6" style="font-size:.9rem;margin-bottom:7px;">Construction</div>
+        <p style="font-size:.8rem;line-height:1.65;color:rgba(1,1,1,.48);">Our team gets to work with regular progress updates.</p>
+      </div>
+      <div class="fu d5 proc-step" style="text-align:center;padding:0 14px;position:relative;z-index:1;">
+        <div class="proc-circle">
+          <span class="proc-num">5</span>
+        </div>
+        <div class="hd6" style="font-size:.9rem;margin-bottom:7px;">Final Walkthrough</div>
+        <p style="font-size:.8rem;line-height:1.65;color:rgba(1,1,1,.48);">We walk through the finished project together before handover.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+  .proc-circle{width:56px;height:56px;background:var(--y);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;box-shadow:0 4px 16px rgba(252,184,22,.42);transition:background .25s ease,box-shadow .25s ease,transform .25s ease;}
+  .proc-num{font-family:'Montserrat',sans-serif;font-weight:900;font-size:1.15rem;color:var(--bk);transition:color .25s ease;}
+  .proc-step:hover .proc-circle{background:var(--bk);box-shadow:0 6px 22px rgba(1,1,1,.22);transform:scale(1.1);}
+  .proc-step:hover .proc-num{color:var(--y);}
+  @media(max-width:900px){#pg{grid-template-columns:repeat(3,1fr)!important;row-gap:36px!important;}}
+  @media(max-width:560px){#pg{grid-template-columns:repeat(2,1fr)!important;}}
+  @media(max-width:360px){#pg{grid-template-columns:1fr!important;}}
+</style>
+
+<!-- ═══ FINAL CTA ═══ -->
+<section style="padding:96px 0;background:var(--y);position:relative;overflow:hidden;">
+  <div style="position:absolute;top:-80px;right:-80px;width:320px;height:320px;background:rgba(1,1,1,.06);border-radius:50%;pointer-events:none;" aria-hidden="true"></div>
+  <div style="position:absolute;bottom:-60px;left:-60px;width:240px;height:240px;background:rgba(1,1,1,.04);border-radius:50%;pointer-events:none;" aria-hidden="true"></div>
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;text-align:center;position:relative;z-index:1;">
+    <div class="fu">
+      <h2 class="hd" style="font-size:clamp(2.4rem,4.2vw,3.6rem);margin-bottom:20px;max-width:680px;margin-left:auto;margin-right:auto;">Ready to Talk About<br>Your Project?</h2>
+      <p style="font-size:1.06rem;line-height:1.8;color:rgba(1,1,1,.6);max-width:520px;margin:0 auto 40px;">Whether you're planning a home renovation, commercial build, addition, or small repair, our team is ready to help.</p>
+      <a href="contact.html" class="btn bko-flat" style="font-size:.97rem;padding:17px 32px;">
+        Contact Greatland
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer style="background:var(--bk);color:#fff;padding:60px 0 28px;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
+    <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:44px;margin-bottom:48px;" id="fg">
+      <div>
+        <img src="brand_assets/favicon.png" alt="Greatland Construction" style="height:56px;width:56px;margin-bottom:18px;border-radius:14px;">
+        <p style="font-size:.85rem;line-height:1.78;color:rgba(255,255,255,.45);max-width:270px;margin-bottom:22px;">Full-service residential and commercial construction across the Greater Toronto Area. Licensed, insured, and built on trust.</p>
+        <div style="display:flex;gap:10px;">
+          <a href="https://www.instagram.com/greatlandbear/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" style="width:36px;height:36px;background:rgba(255,255,255,.08);border-radius:9px;display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;" onmouseenter="this.style.background='#FCB816';this.style.color='#010101'" onmouseleave="this.style.background='rgba(255,255,255,.08)';this.style.color='#fff'"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="https://www.xiaohongshu.com/user/profile/6192aa870000000010009378" target="_blank" rel="noopener noreferrer" aria-label="RedNote" style="width:36px;height:36px;background:rgba(255,255,255,.08);border-radius:9px;display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;" onmouseenter="this.style.background='#FCB816';this.style.color='#010101'" onmouseleave="this.style.background='rgba(255,255,255,.08)';this.style.color='#fff'"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></a>
+          <a href="https://www.youtube.com/@greatlandconstruction/featured" target="_blank" rel="noopener noreferrer" aria-label="YouTube" style="width:36px;height:36px;background:rgba(255,255,255,.08);border-radius:9px;display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;" onmouseenter="this.style.background='#FCB816';this.style.color='#010101'" onmouseleave="this.style.background='rgba(255,255,255,.08)';this.style.color='#fff'"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:.82rem;color:var(--y);letter-spacing:.07em;text-transform:uppercase;margin-bottom:18px;">Services</h4>
+        <div style="display:flex;flex-direction:column;gap:9px;">
+          <a href="services/index.html" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseenter="this.style.color='#FCB816'" onmouseleave="this.style.color='rgba(255,255,255,.45)'">Home Renovation</a>
+          <a href="services/index.html" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseenter="this.style.color='#FCB816'" onmouseleave="this.style.color='rgba(255,255,255,.45)'">Kitchen &amp; Bath</a>
+          <a href="services/index.html" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseenter="this.style.color='#FCB816'" onmouseleave="this.style.color='rgba(255,255,255,.45)'">Basement Finishing</a>
+          <a href="services/index.html" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseenter="this.style.color='#FCB816'" onmouseleave="this.style.color='rgba(255,255,255,.45)'">Outdoor Living</a>
+          <a href="services/index.html" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseenter="this.style.color='#FCB816'" onmouseleave="this.style.color='rgba(255,255,255,.45)'">Commercial</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:.82rem;color:var(--y);letter-spacing:.07em;text-transform:uppercase;margin-bottom:18px;">Company</h4>
+        <div style="display:flex;flex-direction:column;gap:9px;">
+          <a href="about.html" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseenter="this.style.color='#FCB816'" onmouseleave="this.style.color='rgba(255,255,255,.45)'">About Us</a>
+          <a href="projects/index.html" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseenter="this.style.color='#FCB816'" onmouseleave="this.style.color='rgba(255,255,255,.45)'">Projects</a>
+          <a href="contact.html" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseenter="this.style.color='#FCB816'" onmouseleave="this.style.color='rgba(255,255,255,.45)'">Contact</a>
+        </div>
+      </div>
+      <div>
+        <h4 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:.82rem;color:var(--y);letter-spacing:.07em;text-transform:uppercase;margin-bottom:18px;">Contact</h4>
+        <div style="display:flex;flex-direction:column;gap:10px;">
+          <a href="tel:+14164565666" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;">416-456-5666</a>
+          <a href="mailto:greatlandconstruction@hotmail.com" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;">greatlandconstruction@hotmail.com</a>
+          <span style="font-size:.83rem;color:rgba(255,255,255,.45);">Greater Toronto Area, ON</span>
+        </div>
+      </div>
+    </div>
+    <div style="border-top:1px solid rgba(255,255,255,.08);padding-top:22px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;">
+      <p style="font-size:.77rem;color:rgba(255,255,255,.28);">© 2025 Greatland Construction. All rights reserved.</p>
+      <div style="display:flex;gap:22px;">
+        <a href="#" style="font-size:.77rem;color:rgba(255,255,255,.28);text-decoration:none;">Privacy Policy</a>
+        <a href="#" style="font-size:.77rem;color:rgba(255,255,255,.28);text-decoration:none;">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<style>
+  @media(max-width:900px){#fg{grid-template-columns:1fr 1fr!important;gap:30px!important;}}
+  @media(max-width:500px){#fg{grid-template-columns:1fr!important;}}
+</style>
+
+<script>
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('iv'); obs.unobserve(e.target); } });
+  }, { threshold: 0.1, rootMargin: '0px 0px -36px 0px' });
+  document.querySelectorAll('.fu').forEach(el => obs.observe(el));
+
+  window.addEventListener('scroll', () => document.getElementById('nav').classList.toggle('sc', scrollY > 20), { passive: true });
+
+  const hbtn = document.getElementById('hbtn');
+  const mnav = document.getElementById('mob-nav');
+  hbtn.addEventListener('click', () => {
+    const o = hbtn.classList.toggle('op');
+    mnav.classList.toggle('op', o);
+  });
+  mnav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { hbtn.classList.remove('op'); mnav.classList.remove('op'); }));
+</script>
+</body>
+</html>
