@@ -278,11 +278,11 @@ function renderServiceDetail(slug) {
   <header id="nav" style="position:fixed;top:0;left:0;right:0;z-index:100;background:#FFFFF6;border-bottom:1px solid rgba(1,1,1,.07);transition:box-shadow .3s;">
     <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
       <div style="display:flex;align-items:center;justify-content:space-between;padding:13px 0;">
-        <a href="/" style="display:flex;align-items:center;">
+        <a href="../index.html" style="display:flex;align-items:center;">
           <img src="../brand_assets/brand_logo.png" alt="Greatland Construction" style="height:62px;width:auto;">
         </a>
         <nav id="dnav" style="display:flex;align-items:center;gap:30px;">
-          <a href="/" class="nl">Home</a>
+          <a href="../index.html" class="nl">Home</a>
           <a href="../about.html" class="nl">About</a>
           <a href="../services/index.html" class="nl act">Services</a>
           <a href="../projects/index.html" class="nl">Projects</a>
@@ -299,7 +299,7 @@ function renderServiceDetail(slug) {
     </div>
     <div id="mob-nav" style="display:none;background:#FFFFF6;padding:0 24px 24px;border-bottom:1px solid rgba(1,1,1,.08);">
       <div style="border-top:1px solid rgba(1,1,1,.1);padding-top:18px;display:flex;flex-direction:column;gap:2px;">
-        <a href="/" class="nl" style="padding:11px 0;border-bottom:1px solid rgba(1,1,1,.07);">Home</a>
+        <a href="../index.html" class="nl" style="padding:11px 0;border-bottom:1px solid rgba(1,1,1,.07);">Home</a>
         <a href="../about.html" class="nl" style="padding:11px 0;border-bottom:1px solid rgba(1,1,1,.07);">About</a>
         <a href="../services/index.html" class="nl act" style="padding:11px 0;border-bottom:1px solid rgba(1,1,1,.07);">Services</a>
         <a href="../projects/index.html" class="nl" style="padding:11px 0;border-bottom:1px solid rgba(1,1,1,.07);">Projects</a>
