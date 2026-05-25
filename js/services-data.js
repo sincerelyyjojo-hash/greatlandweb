@@ -1,4 +1,4 @@
-/* Greatland Construction — Services Data + Detail Page Renderer */
+﻿/* Greatland Construction — Services Data + Detail Page Renderer */
 
 const SERVICES = [
   {
@@ -278,17 +278,17 @@ function renderServiceDetail(slug) {
   <header id="nav" style="position:fixed;top:0;left:0;right:0;z-index:100;background:#FFFFF6;border-bottom:1px solid rgba(1,1,1,.07);transition:box-shadow .3s;">
     <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
       <div style="display:flex;align-items:center;justify-content:space-between;padding:13px 0;">
-        <a href="../index.html" style="display:flex;align-items:center;">
+        <a href="../" style="display:flex;align-items:center;">
           <img src="../brand_assets/brand_logo.png" alt="Greatland Construction" style="height:62px;width:auto;">
         </a>
         <nav id="dnav" style="display:flex;align-items:center;gap:30px;">
-          <a href="../index.html" class="nl">Home</a>
-          <a href="../about.html" class="nl">About</a>
-          <a href="../services/index.html" class="nl act">Services</a>
-          <a href="../projects/index.html" class="nl">Projects</a>
-          <a href="../contact.html" class="nl">Contact</a>
+          <a href="../" class="nl">Home</a>
+          <a href="../about" class="nl">About</a>
+          <a href="../services/" class="nl act">Services</a>
+          <a href="../projects/" class="nl">Projects</a>
+          <a href="../contact" class="nl">Contact</a>
         </nav>
-        <a href="../contact.html" class="btn bkk-submit" id="dbtn" style="font-size:.84rem;padding:11px 22px;">
+        <a href="../contact" class="btn bkk-submit" id="dbtn" style="font-size:.84rem;padding:11px 22px;">
           Book Estimate
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
@@ -299,12 +299,12 @@ function renderServiceDetail(slug) {
     </div>
     <div id="mob-nav" style="display:none;background:#FFFFF6;padding:0 24px 24px;border-bottom:1px solid rgba(1,1,1,.08);">
       <div style="border-top:1px solid rgba(1,1,1,.1);padding-top:18px;display:flex;flex-direction:column;gap:2px;">
-        <a href="../index.html" class="nl" style="padding:11px 0;border-bottom:1px solid rgba(1,1,1,.07);">Home</a>
-        <a href="../about.html" class="nl" style="padding:11px 0;border-bottom:1px solid rgba(1,1,1,.07);">About</a>
-        <a href="../services/index.html" class="nl act" style="padding:11px 0;border-bottom:1px solid rgba(1,1,1,.07);">Services</a>
-        <a href="../projects/index.html" class="nl" style="padding:11px 0;border-bottom:1px solid rgba(1,1,1,.07);">Projects</a>
-        <a href="../contact.html" class="nl" style="padding:11px 0;">Contact</a>
-        <a href="../contact.html" class="btn bkk-submit" style="margin-top:14px;justify-content:center;">Book a Free Estimate</a>
+        <a href="../" class="nl" style="padding:11px 0;border-bottom:1px solid rgba(1,1,1,.07);">Home</a>
+        <a href="../about" class="nl" style="padding:11px 0;border-bottom:1px solid rgba(1,1,1,.07);">About</a>
+        <a href="../services/" class="nl act" style="padding:11px 0;border-bottom:1px solid rgba(1,1,1,.07);">Services</a>
+        <a href="../projects/" class="nl" style="padding:11px 0;border-bottom:1px solid rgba(1,1,1,.07);">Projects</a>
+        <a href="../contact" class="nl" style="padding:11px 0;">Contact</a>
+        <a href="../contact" class="btn bkk-submit" style="margin-top:14px;justify-content:center;">Book a Free Estimate</a>
       </div>
     </div>
   </header>
@@ -317,13 +317,13 @@ function renderServiceDetail(slug) {
       <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(1,1,1,.72) 0%,rgba(1,1,1,.22) 50%,transparent 100%);"></div>
       <div style="position:absolute;bottom:0;left:0;right:0;padding:48px 24px;">
         <div style="max-width:1280px;margin:0 auto;">
-          <a href="../services/index.html" style="display:inline-flex;align-items:center;gap:8px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:.82rem;color:#010101;text-decoration:none;margin-bottom:18px;background:#FCB816;padding:10px 18px 10px 14px;border-radius:100px;transition:background .25s cubic-bezier(.22,1,.36,1),color .25s;" onmouseover="this.style.background='#010101';this.style.color='#FCB816'" onmouseout="this.style.background='#FCB816';this.style.color='#010101'">
+          <a href="../services/" style="display:inline-flex;align-items:center;gap:8px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:.82rem;color:#010101;text-decoration:none;margin-bottom:18px;background:#FCB816;padding:10px 18px 10px 14px;border-radius:100px;transition:background .25s cubic-bezier(.22,1,.36,1),color .25s;" onmouseover="this.style.background='#010101';this.style.color='#FCB816'" onmouseout="this.style.background='#FCB816';this.style.color='#010101'">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
             All Services
           </a>
           <h1 style="font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(2.2rem,4.5vw,3.8rem);color:#fff;line-height:1.06;letter-spacing:-.03em;margin-bottom:14px;">${s.title}</h1>
           <p style="font-size:1.05rem;line-height:1.72;color:rgba(255,255,255,.78);max-width:520px;margin-bottom:28px;">${s.intro}</p>
-          <a href="../contact.html" class="btn bkk-submit" style="font-size:.93rem;padding:15px 28px;">
+          <a href="../contact" class="btn bkk-submit" style="font-size:.93rem;padding:15px 28px;">
             Book a Free On-Site Estimate
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
@@ -377,7 +377,7 @@ function renderServiceDetail(slug) {
       <div class="fu">
         <h2 style="font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(2.2rem,4vw,3.4rem);letter-spacing:-.03em;line-height:1.06;margin-bottom:18px;max-width:600px;margin-left:auto;margin-right:auto;">Ready to Start Your Project?</h2>
         <p style="font-size:1.05rem;line-height:1.78;color:rgba(1,1,1,.62);max-width:460px;margin:0 auto 36px;">Tell us about your project and our team will help you plan the next step.</p>
-        <a href="../contact.html" class="btn bkk-submit" style="font-size:.97rem;padding:17px 32px;">
+        <a href="../contact" class="btn bkk-submit" style="font-size:.97rem;padding:17px 32px;">
           Book a Free On-Site Estimate
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
@@ -401,19 +401,19 @@ function renderServiceDetail(slug) {
         <div>
           <h4 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:.82rem;color:#FCB816;letter-spacing:.07em;text-transform:uppercase;margin-bottom:18px;">Services</h4>
           <div style="display:flex;flex-direction:column;gap:9px;">
-            <a href="../services/full-home-renovation.html" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseover="this.style.color='#FCB816'" onmouseout="this.style.color='rgba(255,255,255,.45)'">Home Renovation</a>
-            <a href="../services/kitchen-bath.html" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseover="this.style.color='#FCB816'" onmouseout="this.style.color='rgba(255,255,255,.45)'">Kitchen &amp; Bath</a>
-            <a href="../services/basement-finishing.html" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseover="this.style.color='#FCB816'" onmouseout="this.style.color='rgba(255,255,255,.45)'">Basement Finishing</a>
-            <a href="../services/outdoor-living.html" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseover="this.style.color='#FCB816'" onmouseout="this.style.color='rgba(255,255,255,.45)'">Outdoor Living</a>
-            <a href="../services/commercial-construction.html" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseover="this.style.color='#FCB816'" onmouseout="this.style.color='rgba(255,255,255,.45)'">Commercial</a>
+            <a href="../services/full-home-renovation" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseover="this.style.color='#FCB816'" onmouseout="this.style.color='rgba(255,255,255,.45)'">Home Renovation</a>
+            <a href="../services/kitchen-bath" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseover="this.style.color='#FCB816'" onmouseout="this.style.color='rgba(255,255,255,.45)'">Kitchen &amp; Bath</a>
+            <a href="../services/basement-finishing" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseover="this.style.color='#FCB816'" onmouseout="this.style.color='rgba(255,255,255,.45)'">Basement Finishing</a>
+            <a href="../services/outdoor-living" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseover="this.style.color='#FCB816'" onmouseout="this.style.color='rgba(255,255,255,.45)'">Outdoor Living</a>
+            <a href="../services/commercial-construction" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseover="this.style.color='#FCB816'" onmouseout="this.style.color='rgba(255,255,255,.45)'">Commercial</a>
           </div>
         </div>
         <div>
           <h4 style="font-family:'Montserrat',sans-serif;font-weight:700;font-size:.82rem;color:#FCB816;letter-spacing:.07em;text-transform:uppercase;margin-bottom:18px;">Company</h4>
           <div style="display:flex;flex-direction:column;gap:9px;">
-            <a href="../about.html" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseover="this.style.color='#FCB816'" onmouseout="this.style.color='rgba(255,255,255,.45)'">About Us</a>
-            <a href="../projects/index.html" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseover="this.style.color='#FCB816'" onmouseout="this.style.color='rgba(255,255,255,.45)'">Projects</a>
-            <a href="../contact.html" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseover="this.style.color='#FCB816'" onmouseout="this.style.color='rgba(255,255,255,.45)'">Contact</a>
+            <a href="../about" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseover="this.style.color='#FCB816'" onmouseout="this.style.color='rgba(255,255,255,.45)'">About Us</a>
+            <a href="../projects/" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseover="this.style.color='#FCB816'" onmouseout="this.style.color='rgba(255,255,255,.45)'">Projects</a>
+            <a href="../contact" style="font-size:.83rem;color:rgba(255,255,255,.45);text-decoration:none;" onmouseover="this.style.color='#FCB816'" onmouseout="this.style.color='rgba(255,255,255,.45)'">Contact</a>
           </div>
         </div>
         <div>
