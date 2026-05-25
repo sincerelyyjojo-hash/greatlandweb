@@ -322,22 +322,17 @@
           </div>
 
           <!-- Row 5: Message -->
-          <div style="margin-bottom:14px;">
+          <div style="margin-bottom:28px;">
             <label class="fl" for="msg">Message / Project Details</label>
             <textarea class="fi" id="msg" name="message" placeholder="Tell us about your project — scope, goals, any specific requirements or questions..." style="height:130px;resize:vertical;"></textarea>
           </div>
 
-          <!-- Row 6: Upload Photos -->
-          <div style="margin-bottom:28px;">
-            <label class="fl">Upload Photos <span style="font-weight:400;color:rgba(1,1,1,.4);">(Optional)</span></label>
-            <div id="dropzone" style="border:1.5px dashed rgba(1,1,1,.14);border-radius:12px;padding:24px;text-align:center;cursor:pointer;transition:border-color .2s,background .2s;" onmouseenter="this.style.borderColor='#FCB816';this.style.background='rgba(252,184,22,.05)'" onmouseleave="this.style.borderColor='rgba(1,1,1,.14)';this.style.background='transparent'" onclick="document.getElementById('photos').click()">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(1,1,1,.28)" stroke-width="1.5" style="margin:0 auto 10px;display:block;"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-              <div style="font-size:.84rem;color:rgba(1,1,1,.42);">Click to upload project photos</div>
-              <div style="font-size:.74rem;color:rgba(1,1,1,.3);margin-top:4px;">JPG, PNG, HEIC up to 10MB each</div>
-              <input type="file" id="photos" name="photos" multiple accept="image/*" style="display:none;" onchange="sf(this)">
-            </div>
-            <div id="fl2" style="margin-top:8px;font-size:.77rem;color:rgba(1,1,1,.45);"></div>
-          </div>
+          <!-- Web3Forms hidden config -->
+          <input type="hidden" name="access_key" value="3f5bf2a2-722f-4c5f-8d44-05b3c5a51603">
+          <input type="hidden" name="subject" value="New Quote Request — Greatland Construction">
+          <input type="hidden" name="from_name" value="Greatland Construction Website">
+          <input type="hidden" name="botcheck" style="display:none;">
+
 
           <!-- Submit -->
           <button type="submit" id="sbtn" class="btn bkk-submit" style="width:100%;justify-content:center;font-size:.97rem;padding:17px;">
@@ -511,28 +506,51 @@
   });
   mnav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { hbtn.classList.remove('op'); mnav.classList.remove('op'); }));
 
-  // Form submit
-  function hs(e) {
+  // Form submit — sends to Web3Forms → greatlandconstruction88@gmail.com
+  async function hs(e) {
     e.preventDefault();
     const btn = document.getElementById('sbtn');
-    btn.innerHTML = '✓ Sent! We\'ll be in touch soon';
-    btn.style.background = '#22c55e';
-    btn.style.color = '#fff';
-    btn.disabled = true;
-    setTimeout(() => {
-      btn.innerHTML = 'Submit Request <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>';
-      btn.style.background = '';
-      btn.style.color = '';
-      btn.disabled = false;
-      e.target.reset();
-      document.getElementById('fl2').textContent = '';
-    }, 4000);
-  }
+    const form = e.target;
+    const arrowSVG = '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>';
 
-  // File list
-  function sf(inp) {
-    const fl = document.getElementById('fl2');
-    fl.textContent = inp.files.length ? 'Selected: ' + Array.from(inp.files).map(f => f.name).join(', ') : '';
+    btn.disabled = true;
+    btn.innerHTML = 'Sending…';
+    btn.style.opacity = '0.75';
+
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: new FormData(form)
+      });
+      const data = await res.json();
+
+      if (data.success) {
+        btn.innerHTML = '✓ Sent! We\'ll be in touch soon';
+        btn.style.background = '#22c55e';
+        btn.style.color = '#fff';
+        btn.style.opacity = '1';
+        setTimeout(() => {
+          btn.innerHTML = 'Submit Request ' + arrowSVG;
+          btn.style.background = '';
+          btn.style.color = '';
+          btn.disabled = false;
+          form.reset();
+        }, 4000);
+      } else {
+        throw new Error(data.message || 'Submission failed');
+      }
+    } catch (err) {
+      btn.innerHTML = 'Something went wrong — please try again';
+      btn.style.background = '#ef4444';
+      btn.style.color = '#fff';
+      btn.style.opacity = '1';
+      setTimeout(() => {
+        btn.innerHTML = 'Submit Request ' + arrowSVG;
+        btn.style.background = '';
+        btn.style.color = '';
+        btn.disabled = false;
+      }, 3500);
+    }
   }
 
   // Smooth scroll with nav offset
