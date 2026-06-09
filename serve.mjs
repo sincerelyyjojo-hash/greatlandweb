@@ -34,6 +34,8 @@ const server = createServer(async (req, res) => {
   if (url === '/projects') url = '/projects/index.html';
   if (url.startsWith('/projects/') && !url.includes('.')) url = url + '.html';
   if (url.startsWith('/services/') && !url.includes('.')) url = url + '.html';
+  if (url === '/blog' || url === '/blog/') url = '/blog/index.html';
+  if (url.startsWith('/blog/') && !url.includes('.')) url = url + '.html';
   const filePath = join(__dirname, url);
   const ext = extname(filePath).toLowerCase();
   const contentType = mime[ext] || 'application/octet-stream';
