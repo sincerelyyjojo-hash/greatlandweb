@@ -754,6 +754,165 @@
 </style>
 
 <!-- ═══════════════════════════════════════════════════════════════
+     BLOG PREVIEW
+═══════════════════════════════════════════════════════════════ -->
+<section id="blog-preview" style="padding:88px 0 100px;background:#fff;">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px;">
+
+    <!-- Header row — mirrors Services section -->
+    <div class="fu" style="display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:44px;flex-wrap:wrap;">
+      <div>
+        <h2 class="hd" style="font-size:clamp(2.2rem,3.8vw,3.4rem);margin-bottom:14px;">Construction &amp; Renovation Insights</h2>
+        <p style="font-size:1.02rem;line-height:1.75;color:rgba(1,1,1,.52);max-width:520px;">Helpful project tips, renovation ideas, and outdoor living advice for homeowners and business owners across the GTA.</p>
+      </div>
+      <div style="display:flex;gap:10px;flex-shrink:0;padding-bottom:6px;">
+        <button class="scarr" id="bc-prev" onclick="bcNav(-1)" aria-label="Previous blog posts">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <button class="scarr" id="bc-next" onclick="bcNav(1)" aria-label="Next blog posts">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Carousel viewport -->
+    <div id="bc-clip" style="overflow:hidden;padding:8px 0 16px;">
+      <div id="bc-track" style="display:flex;gap:24px;will-change:transform;">
+
+        <!-- Post 1: Outdoor Renovation Guide (newest) -->
+        <a href="blog/how-to-plan-home-renovation" class="blg-c fu">
+          <div class="blg-c-img">
+            <img src="outdoor_living/new%20header.png" alt="How to Plan an Outdoor Renovation in the GTA" loading="lazy">
+            <div class="blg-c-ov"></div>
+          </div>
+          <div class="blg-c-body">
+            <span class="blg-cat">Outdoor Living</span>
+            <h3 class="blg-c-title">How to Plan an Outdoor Renovation in the GTA</h3>
+            <p class="blg-c-excerpt">A complete guide on planning outdoor upgrades—from interlocking and fencing to sod, artificial grass, and driveway paving, done right from the start.</p>
+            <div class="blg-c-foot">
+              <span class="blg-c-date">June 8, 2026</span>
+              <span class="blg-c-link">Read More <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Post 2: Basement Finishing Ideas -->
+        <a href="blog/basement-finishing-ideas" class="blg-c fu d1">
+          <div class="blg-c-img">
+            <img src="https://placehold.co/800x520/E8EDF5/5A7099" alt="Basement Finishing Ideas" loading="lazy">
+            <div class="blg-c-ov"></div>
+          </div>
+          <div class="blg-c-body">
+            <span class="blg-cat">Basement Renovation</span>
+            <h3 class="blg-c-title">Basement Finishing Ideas That Add Comfort and Function</h3>
+            <p class="blg-c-excerpt">From family rooms to home offices and guest suites, learn how to make the most of your lower level.</p>
+            <div class="blg-c-foot">
+              <span class="blg-c-date">May 26, 2026</span>
+              <span class="blg-c-link">Read More <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Post 3: Kitchen Renovation Tips -->
+        <a href="blog/kitchen-renovation-tips" class="blg-c fu d2">
+          <div class="blg-c-img">
+            <img src="https://placehold.co/800x520/F5EDE8/996650" alt="Kitchen Renovation Tips" loading="lazy">
+            <div class="blg-c-ov"></div>
+          </div>
+          <div class="blg-c-body">
+            <span class="blg-cat">Kitchen &amp; Bath</span>
+            <h3 class="blg-c-title">What to Know Before Starting a Kitchen Renovation</h3>
+            <p class="blg-c-excerpt">Understand layout, storage, finishes, and project planning before transforming one of the most used spaces in your home.</p>
+            <div class="blg-c-foot">
+              <span class="blg-c-date">May 19, 2026</span>
+              <span class="blg-c-link">Read More <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Post 4: Outdoor Living Upgrades -->
+        <a href="blog/outdoor-living-upgrades" class="blg-c fu d3">
+          <div class="blg-c-img">
+            <img src="https://placehold.co/800x520/E8F2E8/508050" alt="Outdoor Living Upgrades" loading="lazy">
+            <div class="blg-c-ov"></div>
+          </div>
+          <div class="blg-c-body">
+            <span class="blg-cat">Outdoor Living</span>
+            <h3 class="blg-c-title">Outdoor Living Upgrades That Make Your Backyard More Usable</h3>
+            <p class="blg-c-excerpt">Patios, decks, pergolas, interlock, and landscape upgrades that turn your yard into a space you actually use.</p>
+            <div class="blg-c-foot">
+              <span class="blg-c-date">May 12, 2026</span>
+              <span class="blg-c-link">Read More <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Post 5: Commercial Renovation Tips -->
+        <a href="blog/commercial-renovation-tips" class="blg-c fu d4">
+          <div class="blg-c-img">
+            <img src="https://placehold.co/800x520/F0EFED/807060" alt="Commercial Renovation Tips" loading="lazy">
+            <div class="blg-c-ov"></div>
+          </div>
+          <div class="blg-c-body">
+            <span class="blg-cat">Commercial Construction</span>
+            <h3 class="blg-c-title">Commercial Renovation Tips for Business Owners</h3>
+            <p class="blg-c-excerpt">A practical look at planning commercial improvements while balancing budget, schedule, code, and customer experience.</p>
+            <div class="blg-c-foot">
+              <span class="blg-c-date">May 5, 2026</span>
+              <span class="blg-c-link">Read More <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Post 6: Repair vs Replace -->
+        <a href="blog/repair-vs-replace-fence-driveway" class="blg-c fu d5">
+          <div class="blg-c-img">
+            <img src="https://placehold.co/800x520/EEE8E0/887060" alt="Repair vs Replace Fence or Driveway" loading="lazy">
+            <div class="blg-c-ov"></div>
+          </div>
+          <div class="blg-c-body">
+            <span class="blg-cat">Exterior Upgrades</span>
+            <h3 class="blg-c-title">When Should You Repair vs. Replace Your Fence or Driveway?</h3>
+            <p class="blg-c-excerpt">Learn the signs that tell you whether small repairs are enough—or a full replacement makes more sense.</p>
+            <div class="blg-c-foot">
+              <span class="blg-c-date">April 28, 2026</span>
+              <span class="blg-c-link">Read More <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+    <!-- View All Blog Posts button -->
+    <div style="display:flex;justify-content:center;margin-top:44px;" class="fu">
+      <a href="blog/" class="btn bko-blog">View All Blog Posts →</a>
+    </div>
+
+  </div>
+</section>
+<style>
+  .blg-c { background:var(--cr); border-radius:20px; overflow:hidden; border:1.5px solid rgba(252,184,22,.32); flex-shrink:0; text-decoration:none; color:inherit; display:flex; flex-direction:column; transition:border-color .28s cubic-bezier(.22,1,.36,1), box-shadow .28s cubic-bezier(.22,1,.36,1); }
+  .blg-c:hover { border-color:var(--y); box-shadow:0 4px 24px rgba(252,184,22,.16); }
+  .blg-c:focus-visible { outline:3px solid var(--y); outline-offset:2px; }
+  .blg-c-img { height:200px; overflow:hidden; position:relative; flex-shrink:0; }
+  .blg-c-img img { width:100%; height:100%; object-fit:cover; transition:transform .55s cubic-bezier(.22,1,.36,1); display:block; }
+  .blg-c:hover .blg-c-img img { transform:scale(1.06); }
+  .blg-c-ov { position:absolute; inset:0; background:linear-gradient(to top,rgba(1,1,1,.14),transparent 55%); pointer-events:none; }
+  .blg-cat { display:inline-block; background:rgba(252,184,22,.15); color:var(--bk); font-family:'Montserrat',sans-serif; font-weight:700; font-size:.7rem; letter-spacing:.06em; text-transform:uppercase; padding:5px 12px; border-radius:100px; margin-bottom:12px; }
+  .blg-c-body { padding:18px 20px 22px; flex:1; display:flex; flex-direction:column; }
+  .blg-c-title { font-family:'Montserrat',sans-serif; font-weight:800; font-size:.97rem; letter-spacing:-.02em; line-height:1.3; margin-bottom:10px; color:var(--bk); }
+  .blg-c-excerpt { font-size:.83rem; line-height:1.65; color:rgba(1,1,1,.52); flex:1; margin-bottom:16px; }
+  .blg-c-foot { display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:8px; }
+  .blg-c-date { font-size:.76rem; color:rgba(1,1,1,.4); font-family:'Inter',sans-serif; }
+  .blg-c-link { font-family:'Montserrat',sans-serif; font-weight:700; font-size:.78rem; color:var(--bk); display:inline-flex; align-items:center; gap:5px; transition:gap .2s cubic-bezier(.22,1,.36,1), opacity .2s; opacity:.65; }
+  .blg-c:hover .blg-c-link { gap:9px; opacity:1; }
+  .bko-blog { background:transparent; color:var(--bk); border:2px solid rgba(1,1,1,.28); transition:background .22s cubic-bezier(.22,1,.36,1), color .22s, border-color .22s; }
+  .bko-blog:hover { background:var(--bk); color:var(--cr); border-color:var(--bk); }
+  .bko-blog:focus-visible { outline:3px solid rgba(1,1,1,.3); outline-offset:2px; }
+</style>
+
+<!-- ═══════════════════════════════════════════════════════════════
      FINAL CTA
 ═══════════════════════════════════════════════════════════════ -->
 <section style="padding:88px 0;background:var(--y);">
@@ -1068,6 +1227,20 @@
       breakpoints: [[800, 3], [500, 2]],
     });
     window.scNav = function(d) { if (svc) svc.go(d); };
+  })();
+
+  // ── Blog preview carousel instance ────────────────────────────
+  (function() {
+    const bc = makeCarousel({
+      clipId:      'bc-clip',
+      trackId:     'bc-track',
+      prevId:      'bc-prev',
+      nextId:      'bc-next',
+      gap:         24,
+      duration:    '.5s',
+      breakpoints: [[800, 3], [500, 2]],
+    });
+    window.bcNav = function(d) { if (bc) bc.go(d); };
   })();
 
   // ── Hero Carousel ──────────────────────────────────────────────
